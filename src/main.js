@@ -4,7 +4,7 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 Vue.http.options.root = '/';
-Vue.http.headers.common['Authorization'] = 'Basic YXBpOnBhc3N3b3Jk';
+Vue.http.headers.common['Authorization'] = 'Basic dnVlOldLVGtjSmtQNHJyNA==';
 Vue.config.productionTip = false;
 
 new Vue({
