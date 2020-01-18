@@ -11,7 +11,7 @@
                                         <use xlink:href="/../assets/svg/sprite/sprite.svg#it-pa"></use>
                                     </svg>
                                     <div class="it-brand-text">
-                                        <h2 class="no_toc">Nome del Comune</h2>
+                                        <h2 class="no_toc">Comune di Trento</h2>
                                         <h3 class="no_toc d-none d-md-block">
                                             Uno dei tanti Comuni d'Italia
                                         </h3>
@@ -30,11 +30,13 @@
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Giunta e consiglio">Giunta e
+                                        <a class="list-item" href="#" title="Vai alla pagina: Giunta e consiglio">Giunta
+                                            e
                                             consiglio</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Aree di competenza">Aree di
+                                        <a class="list-item" href="#" title="Vai alla pagina: Aree di competenza">Aree
+                                            di
                                             competenza</a>
                                     </li>
                                     <li>
@@ -44,7 +46,8 @@
                                         <a class="list-item" href="#" title="Vai alla pagina: Luoghi">Luoghi</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Associazioni e società partecipate">Associazioni
+                                        <a class="list-item" href="#"
+                                           title="Vai alla pagina: Associazioni e società partecipate">Associazioni
                                             e società partecipate</a>
                                     </li>
                                 </ul>
@@ -63,18 +66,22 @@
                                         <a class="list-item" href="#" title="Vai alla pagina: Sostegno">Sostegno</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Domande e iscrizioni">Domande e
+                                        <a class="list-item" href="#" title="Vai alla pagina: Domande e iscrizioni">Domande
+                                            e
                                             iscrizioni</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Segnalazioni">Segnalazioni</a>
+                                        <a class="list-item" href="#"
+                                           title="Vai alla pagina: Segnalazioni">Segnalazioni</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Autorizzazioni e concessioni">Autorizzazioni
+                                        <a class="list-item" href="#"
+                                           title="Vai alla pagina: Autorizzazioni e concessioni">Autorizzazioni
                                             e concessioni</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Certificati e dichiarazioni">Certificati
+                                        <a class="list-item" href="#"
+                                           title="Vai alla pagina: Certificati e dichiarazioni">Certificati
                                             e dichiarazioni</a>
                                     </li>
                                 </ul>
@@ -106,11 +113,13 @@
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Progetti e attività">Progetti e
+                                        <a class="list-item" href="#" title="Vai alla pagina: Progetti e attività">Progetti
+                                            e
                                             attività</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Delibere, determine e ordinanze">Delibere,
+                                        <a class="list-item" href="#"
+                                           title="Vai alla pagina: Delibere, determine e ordinanze">Delibere,
                                             determine e ordinanze</a>
                                     </li>
                                     <li>
@@ -120,7 +129,8 @@
                                         <a class="list-item" href="#" title="Vai alla pagina: Concorsi">Concorsi</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Albo pretorio">Albo pretorio</a>
+                                        <a class="list-item" href="#" title="Vai alla pagina: Albo pretorio">Albo
+                                            pretorio</a>
                                     </li>
                                 </ul>
                             </div>
@@ -145,17 +155,19 @@
                                 <a href="#" title="Vai alla pagina: Contatti">Contatti</a>
                             </h4>
                             <p>
-                                <strong>Nome del Comune</strong><br>
-                                Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
+                                <strong>Comune di Trento</strong><br>
+                                Via Belenzani, 19 - 38122 Trento
                             </p>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: Posta Elettronica Certificata">Posta
+                                        <a class="list-item" href="#"
+                                           title="Vai alla pagina: Posta Elettronica Certificata">Posta
                                             Elettronica Certificata</a>
                                     </li>
                                     <li>
-                                        <a class="list-item" href="#" title="Vai alla pagina: URP - Ufficio Relazioni con il Pubblico">URP
+                                        <a class="list-item" href="#"
+                                           title="Vai alla pagina: URP - Ufficio Relazioni con il Pubblico">URP
                                             - Ufficio Relazioni con il Pubblico</a>
                                     </li>
                                 </ul>
@@ -166,8 +178,10 @@
                                 <a href="#" title="Vai alla pagina: Newsletter">Newsletter</a>
                             </h4>
                             <form action="#" class="form-newsletter" method="post">
-                                <label class="text-white font-weight-semibold active" for="input-newsletter" style="transition: none 0s ease 0s;">Iscriviti per riceverla</label>
-                                <input class="form-control" id="input-newsletter" name="input-newsletter" placeholder="mail@example.com" type="email">
+                                <label class="text-white font-weight-semibold active" for="input-newsletter"
+                                       style="transition: none 0s ease 0s;">Iscriviti per riceverla</label>
+                                <input class="form-control" id="input-newsletter" name="input-newsletter"
+                                       placeholder="mail@example.com" type="email">
                                 <button class="btn btn-primary btn-icon" type="submit">
                                     <svg class="icon icon-white">
                                         <use xlink:href="/../assets/svg/sprite/sprite.svg#it-mail"></use>

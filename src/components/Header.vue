@@ -5,11 +5,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="it-header-slim-wrapper-content">
-                            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
+                            <a class="d-none d-lg-block navbar-brand" href="#">Provincia autonoma di Trento</a>
                             <div class="nav-mobile">
                                 <nav>
-                                    <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu4" role="button" aria-expanded="false" aria-controls="menu4">
-                                        <span>Ente appartenenza/Owner</span>
+                                    <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu4" role="button"
+                                       aria-expanded="false" aria-controls="menu4">
+                                        <span>Provincia autonoma di Trento</span>
                                         <svg class="icon">
                                             <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
                                         </svg>
@@ -24,7 +25,8 @@
                             </div>
                             <div class="it-header-slim-right-zone">
                                 <div class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                                       aria-expanded="false">
                                         <span>ITA</span>
                                         <svg class="icon d-none d-lg-block">
                                             <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
@@ -64,8 +66,8 @@
                                             <use xlink:href="../assets/svg/sprite.svg#it-code-circle"></use>
                                         </svg>
                                         <div class="it-brand-text">
-                                            <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
-                                            <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                                            <h2 class="no_toc">Comune di Trento</h2>
+                                            <h3 class="no_toc d-none d-md-block">Area personale</h3>
                                         </div>
                                     </a>
                                 </div>
@@ -116,7 +118,8 @@
                         <div class="col-12">
                             <!--start nav-->
                             <nav class="navbar navbar-expand-lg has-megamenu">
-                                <button class="custom-navbar-toggler" type="button" aria-controls="nav02" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav02">
+                                <button class="custom-navbar-toggler" type="button" aria-controls="nav02"
+                                        aria-expanded="false" aria-label="Toggle navigation" data-target="#nav02">
                                     <svg class="icon">
                                         <use xlink:href="../assets/svg/sprite.svg#it-burger"></use>
                                     </svg>
@@ -124,16 +127,37 @@
                                 <div class="navbar-collapsable" id="nav02" style="display: none;">
                                     <div class="overlay" style="display: none;"></div>
                                     <div class="close-div sr-only">
-                                        <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+                                        <button class="btn close-menu" type="button"><span class="it-close"></span>close
+                                        </button>
                                     </div>
                                     <div class="menu-wrapper">
                                         <ul class="navbar-nav">
-                                            <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
-                                            <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
+                                            <li class="nav-item active">
+                                                <router-link class="nav-link active" to="/anagrafica">
+                                                    <span>Anagrafica </span><span class="sr-only">current</span>
+                                                </router-link>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <router-link class="nav-link" to="/famiglia"><span>Famiglia </span><span
+                                                        class="sr-only">current</span></router-link>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <router-link class="nav-link" to="/domanda"><span>Domanda Attiva </span><span
+                                                        class="sr-only">current</span></router-link>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <router-link class="nav-link" to="/nidi">
+                                                    <span>Nidi Disponibili </span><span class="sr-only">current</span>
+                                                </router-link>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <router-link class="nav-link" to="/icef"><span>Icef </span><span
+                                                        class="sr-only">current</span></router-link>
+                                            </li>
+
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                                                   aria-expanded="false">
                                                     <span>Dropdown item</span>
                                                     <svg class="icon icon-xs">
                                                         <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
@@ -145,17 +169,22 @@
                                                             <li>
                                                                 <h3 class="no_toc" id="heading-es-5">Heading</h3>
                                                             </li>
-                                                            <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-                                                            <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-                                                            <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                                                            <li><a class="list-item"
+                                                                   href="#"><span>Link list 1</span></a></li>
+                                                            <li><a class="list-item"
+                                                                   href="#"><span>Link list 2</span></a></li>
+                                                            <li><a class="list-item"
+                                                                   href="#"><span>Link list 3</span></a></li>
                                                             <li><span class="divider"></span></li>
-                                                            <li><a class="list-item" href="#"><span>Link list 4</span></a></li>
+                                                            <li><a class="list-item"
+                                                                   href="#"><span>Link list 4</span></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </li>
                                             <li class="nav-item dropdown megamenu">
-                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                                                   aria-expanded="false">
                                                     <span>Megamenu Label</span>
                                                     <svg class="icon icon-xs">
                                                         <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
@@ -169,9 +198,12 @@
                                                                     <li>
                                                                         <h3 class="no_toc">Heading 1</h3>
                                                                     </li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 1 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 2 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 3 </span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -181,9 +213,12 @@
                                                                     <li>
                                                                         <h3 class="no_toc">Heading 2</h3>
                                                                     </li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 1 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 2 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 3 </span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -193,9 +228,12 @@
                                                                     <li>
                                                                         <h3 class="no_toc">Heading 3</h3>
                                                                     </li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                                                    <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 1 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 2 </span></a></li>
+                                                                    <li><a class="list-item"
+                                                                           href="#"><span>Link list 3</span></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>

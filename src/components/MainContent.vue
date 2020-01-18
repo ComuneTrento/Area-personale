@@ -5,8 +5,7 @@
                 <div class="container position-relative">
                     <div class="row">
                         <div class="col-xl-8 offset-xl-2 position-static">
-                            <h1 class="section-background-header">Lista Famiglia</h1>
-                            <Globo></Globo>
+                            <router-view></router-view>
                         </div>
                     </div>
 
@@ -20,13 +19,8 @@
 </template>
 
 <script>
-  import Globo from './Globo';
-
   export default {
-    name: 'Main',
-    components: {
-      Globo,
-    },
+    name: 'MainComponent',
   };
 </script>
 

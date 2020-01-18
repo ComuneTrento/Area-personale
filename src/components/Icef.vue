@@ -1,0 +1,47 @@
+<template>
+    <div>
+        <h1 class="section-background-header">Icef</h1>
+        <div v-if="errorMessage" class="alert alert-warning" role="alert">{{errorMessage}}</div>
+        <div v-if="response">
+            <pre>{{response}}</pre>
+        </div>
+    </div>
+</template>
+
+<script>
+  export default {
+    name: 'Icef',
+    data() {
+      return {
+        response: '',
+        errorMessage: '',
+      };
+    },
+    methods: {
+      getIcef() {
+
+        this.$http.post('https://globo.ship.opencontent.io', {
+          'name': 'getIcef',
+          'parameters': {
+            'codiceFiscale': 'DBRLNC89D59Z129C',
+          },
+          'account': 'BDARYN15E01L378M',
+        }, {headers: {'authorization': 'Basic dnVlOldLVGtjSmtQNHJyNA=='}}).then(result => {
+          if (result.body.status === 'OK')
+            this.response = result.body.results;
+          else
+            this.errorMessage = result.body.message;
+        }, error => {
+          this.errorMessage = 'Richiesta non valida' + error;
+        })
+      },
+    },
+    beforeMount() {
+      this.getIcef();
+    },
+  };
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
