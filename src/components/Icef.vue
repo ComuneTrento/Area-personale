@@ -27,10 +27,10 @@
           },
           'account': 'BDARYN15E01L378M',
         }, {headers: {'authorization': 'Basic dnVlOldLVGtjSmtQNHJyNA=='}}).then(result => {
-          if (result.body.status === 'OK')
+          if (result.status === 'OK')
             this.response = result.body.results;
           else
-            this.errorMessage = result.body.message;
+            this.errorMessage = result.message;
         }, error => {
           this.errorMessage = 'Richiesta non valida' + error;
         })
