@@ -1,4 +1,4 @@
-# globo-test
+# area-personale
 
 ## Project setup
 ```
