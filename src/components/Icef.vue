@@ -1,6 +1,11 @@
 <template>
     <div>
         <h1 class="section-background-header">Icef</h1>
+        <div v-if="!errorMessage && !response" class="col-6 col-lg-3">
+            <div class="progress-spinner progress-spinner-active">
+                <span class="sr-only">Caricamento...</span>
+            </div>
+        </div>
         <div v-if="errorMessage" class="alert alert-warning" role="alert">{{errorMessage}}</div>
         <div v-if="response">
             <pre>{{response}}</pre>
@@ -23,9 +28,9 @@
         this.$http.post('https://globo.ship.opencontent.io', {
           'name': 'getIcef',
           'parameters': {
-            'codiceFiscale': 'DBRLNC89D59Z129C',
+            'codiceFiscale': 'MJSKNS15C26L378C',
           },
-          'account': 'BDARYN15E01L378M',
+          'account': 'STZSLY79A59Z604U',
         }, {headers: {'authorization': 'Basic dnVlOldLVGtjSmtQNHJyNA=='}}).then(result => {
           if (result.status === 'OK')
             this.response = result.body.results;

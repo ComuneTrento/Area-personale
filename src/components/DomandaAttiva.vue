@@ -1,6 +1,11 @@
 <template>
     <div>
         <h1 class="section-background-header">Domanda attiva</h1>
+        <div v-if="!errorMessage && !response" class="col-6 col-lg-3">
+            <div class="progress-spinner progress-spinner-active">
+                <span class="sr-only">Caricamento...</span>
+            </div>
+        </div>
         <div v-if="errorMessage" class="alert alert-warning" role="alert">{{errorMessage}}</div>
         <div v-if="response">
             <ul>

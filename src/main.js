@@ -8,18 +8,22 @@ Vue.use(VueRouter);
 Vue.http.options.root = '/';
 Vue.config.productionTip = false;
 
-import Anagrafica from './components/Anagrafica';
-import Famiglia from './components/Famiglia';
+import Homepage from './components/Homepage';
 import DomandaAttiva from './components/DomandaAttiva';
 import NidiDisponibili from './components/NidiDisponibili';
 import Icef from './components/Icef';
+import Anagrafica from './components/Anagrafica';
+import Famiglia from './components/Famiglia';
 
 const routes = [
-  {path: '/anagrafica', component: Anagrafica},
-  {path: '/famiglia', component: Famiglia},
+
+  {path: '/anagrafica/:id', component: Anagrafica},
+  {path: '/famiglia/:id', component: Famiglia},
   {path: '/domanda', component: DomandaAttiva},
   {path: '/nidi', component: NidiDisponibili},
   {path: '/icef', component: Icef},
+  {path: '/', component: Homepage},
+
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`

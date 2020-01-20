@@ -132,14 +132,75 @@
                                     </div>
                                     <div class="menu-wrapper">
                                         <ul class="navbar-nav">
-                                            <li class="nav-item active">
-                                                <router-link class="nav-link active" to="/anagrafica">
-                                                    <span>Anagrafica </span><span class="sr-only">current</span>
-                                                </router-link>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                                                   aria-expanded="false">
+                                                    <span>Anagrafica</span>
+                                                    <svg class="icon icon-xs">
+                                                        <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
+                                                    </svg>
+                                                </a>
+                                                <div class="dropdown-menu">
+                                                    <div class="link-list-wrapper">
+                                                        <ul class="link-list">
+                                                            <li>
+                                                                <h3 class="no_toc">Persone</h3>
+                                                            </li>
+                                                            <li>
+                                                                <router-link class="list-item"
+                                                                             to="/anagrafica/ZNLDLA14P53L378G" replace><span>ADELE ZANELLA </span><span
+                                                                        class="sr-only">current</span></router-link>
+                                                            </li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/anagrafica/BDARYN15E01L378M" replace><span>RAYEN ABAIDI </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/anagrafica/RCCMRC01T13L378B" replace><span>MIRCO RICCARDI </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/anagrafica/BBAKVN02D21L378N" replace><span>KELVIN KYEI NIMARKO ABABIO </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/anagrafica/RCCCST72L09A952" replace><span>Errore </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </li>
-                                            <li class="nav-item active">
-                                                <router-link class="nav-link" to="/famiglia"><span>Famiglia </span><span
-                                                        class="sr-only">current</span></router-link>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                                                   aria-expanded="false">
+                                                    <span>Famiglia</span>
+                                                    <svg class="icon icon-xs">
+                                                        <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
+                                                    </svg>
+                                                </a>
+                                                <div class="dropdown-menu">
+                                                    <div class="link-list-wrapper">
+                                                        <ul class="link-list">
+                                                            <li>
+                                                                <h3 class="no_toc">Persone</h3>
+                                                            </li>
+                                                            <li>
+                                                                <router-link class="list-item"
+                                                                             to="/famiglia/2028363" replace><span>RAYEN ABAIDI </span><span
+                                                                        class="sr-only">current</span></router-link>
+                                                            </li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/famiglia/110995" replace><span>CRISTIAN RICCARDI </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/famiglia/2013284" replace><span>KELVIN KYEI NIMARKO ABABIO </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/famiglia/2023056" replace><span>KEVIN SNAJDER MEJIA ASTAIZA </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                            <li><router-link class="list-item"
+                                                                             to="/famiglia/123" replace><span>Errore </span><span
+                                                                    class="sr-only">current</span></router-link></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </li>
                                             <li class="nav-item active">
                                                 <router-link class="nav-link" to="/domanda"><span>Domanda Attiva </span><span
@@ -153,92 +214,6 @@
                                             <li class="nav-item active">
                                                 <router-link class="nav-link" to="/icef"><span>Icef </span><span
                                                         class="sr-only">current</span></router-link>
-                                            </li>
-
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-                                                   aria-expanded="false">
-                                                    <span>Dropdown item</span>
-                                                    <svg class="icon icon-xs">
-                                                        <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
-                                                    </svg>
-                                                </a>
-                                                <div class="dropdown-menu">
-                                                    <div class="link-list-wrapper">
-                                                        <ul class="link-list">
-                                                            <li>
-                                                                <h3 class="no_toc" id="heading-es-5">Heading</h3>
-                                                            </li>
-                                                            <li><a class="list-item"
-                                                                   href="#"><span>Link list 1</span></a></li>
-                                                            <li><a class="list-item"
-                                                                   href="#"><span>Link list 2</span></a></li>
-                                                            <li><a class="list-item"
-                                                                   href="#"><span>Link list 3</span></a></li>
-                                                            <li><span class="divider"></span></li>
-                                                            <li><a class="list-item"
-                                                                   href="#"><span>Link list 4</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item dropdown megamenu">
-                                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-                                                   aria-expanded="false">
-                                                    <span>Megamenu Label</span>
-                                                    <svg class="icon icon-xs">
-                                                        <use xlink:href="../assets/svg/sprite.svg#it-expand"></use>
-                                                    </svg>
-                                                </a>
-                                                <div class="dropdown-menu">
-                                                    <div class="row">
-                                                        <div class="col-12 col-lg-4">
-                                                            <div class="link-list-wrapper">
-                                                                <ul class="link-list">
-                                                                    <li>
-                                                                        <h3 class="no_toc">Heading 1</h3>
-                                                                    </li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 1 </span></a></li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 2 </span></a></li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 3 </span></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-lg-4">
-                                                            <div class="link-list-wrapper">
-                                                                <ul class="link-list">
-                                                                    <li>
-                                                                        <h3 class="no_toc">Heading 2</h3>
-                                                                    </li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 1 </span></a></li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 2 </span></a></li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 3 </span></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-lg-4">
-                                                            <div class="link-list-wrapper">
-                                                                <ul class="link-list">
-                                                                    <li>
-                                                                        <h3 class="no_toc">Heading 3</h3>
-                                                                    </li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 1 </span></a></li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 2 </span></a></li>
-                                                                    <li><a class="list-item"
-                                                                           href="#"><span>Link list 3</span></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </li>
                                         </ul>
                                     </div>
