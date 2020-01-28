@@ -6,13 +6,13 @@
                      aria-orientation="vertical">
                     <a class="nav-link active" id="nav-vertical-tab-ico1-tab" data-toggle="tab"
                        href="#nav-vertical-tab-ico1" role="tab" aria-controls="nav-vertical-tab-ico1"
-                       aria-selected="true">I tuoi dati
+                       aria-selected="true">I miei dati
                         <svg class="icon icon-primary">
                             <use xlink:href="../assets/dist/svg/sprite.svg#it-user"></use>
                         </svg>
                     </a>
                     <a class="nav-link" id="nav-vertical-tab-ico2-tab" data-toggle="tab" href="#nav-vertical-tab-ico2"
-                       role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">La tua famiglia
+                       role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">La mia famiglia
                         <svg class="icon icon-primary">
                             <use xlink:href="../assets/dist/svg/sprite.svg#it-list"></use>
                         </svg>
