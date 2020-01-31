@@ -179,20 +179,19 @@
                                     <div class="menu-wrapper">
                                         <ul class="navbar-nav">
                                             <li class="nav-item ">
-                                                <router-link class="nav-link" to="amministrazione">
-                                                    <span>Amministrazione</span></router-link>
+                                                <a class="nav-link" href="https://www.comune.trento.it/Comune/">
+                                                    <span>Amministrazione</span></a>
                                             </li>
                                             <li class="nav-item ">
-                                                <router-link class="nav-link" to="novità"><span>Novità</span>
-                                                </router-link>
+                                                <a class="nav-link" href="https://www.comune.trento.it/Comunicazione/Il-Comune-informa"><span>Novità</span>
+                                                </a>
                                             </li>
                                             <li class="nav-item ">
-                                                <router-link class="nav-link" to="servizi"><span>Servizi</span>
-                                                </router-link>
+                                                <a class="nav-link" href="https://servizi.comune.trento.it/Servizi"><span>Servizi</span>
+                                                </a>
                                             </li>
                                             <li class="nav-item active">
-                                                <router-link class="nav-link" to="documenti"><span>Documenti</span>
-                                                </router-link>
+                                                <a class="nav-link" href="https://servizi.comune.trento.it/Documenti-e-dati"><span>Documenti</span></a>
                                             </li>
                                         </ul>
                                         <ul class="navbar-nav navbar-secondary">

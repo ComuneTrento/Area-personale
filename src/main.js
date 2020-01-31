@@ -17,19 +17,10 @@ import Famiglia from './components/Famiglia';
 import Profile from './components/Profile';
 import Homepage from './components/Homepage';
 import PersonalArea from './components/PersonalArea';
-import Amministrazione from './components/Amministrazione';
-import Documenti from './components/Documenti';
-import Servizi from './components/Servizi';
-import Novita from './components/Novita';
 import Login from './components/Login';
 
 const routes = [
-
-  {path: '/amministrazione', component: Amministrazione},
   {path: '/login', component: Login},
-  {path: '/novità', component: Novita},
-  {path: '/servizi', component: Servizi},
-  {path: '/documenti', component: Documenti},
   {path: '/anagrafica/:id', component: Anagrafica},
   {path: '/famiglia/:id', component: Famiglia},
   {path: '/domanda', component: DomandaAttiva},
@@ -38,7 +29,6 @@ const routes = [
   {path: '/profile', component: Profile, name: 'profile'},
   {path: '/personal', component: PersonalArea, name: 'personal'},
   {path: '*', component: Homepage},
-
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`
