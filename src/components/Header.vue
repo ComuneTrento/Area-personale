@@ -122,23 +122,37 @@
                                         <span>Seguici su</span>
                                         <ul>
                                             <li>
-                                                <a href="#" aria-label="Facebook" target="_blank">
+                                                <a href="https://www.facebook.com/comuneditrento" aria-label="Facebook" target="_blank">
                                                     <svg class="icon">
                                                         <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" aria-label="Github" target="_blank">
+                                                <a href="https://twitter.com/comunetn" aria-label="Twitter" target="_blank">
                                                     <svg class="icon">
-                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-github"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" aria-label="Twitter" target="_blank">
+                                                <a href="https://www.linkedin.com/company/progetto-trento-smart-city" aria-label="Linkedin" target="_blank">
                                                     <svg class="icon">
-                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-linkedin"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/livetrento/" aria-label="Instagram" target="_blank">
+                                                    <svg class="icon">
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-instagram"></use>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/channel/UCOQDc17RT6D7oEGCLUwgPQw" aria-label="YouTube" target="_blank">
+                                                    <svg class="icon">
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-youtube"></use>
                                                     </svg>
                                                 </a>
                                             </li>
@@ -196,15 +210,19 @@
                                         </ul>
                                         <ul class="navbar-nav navbar-secondary">
                                             <li class="nav-item ">
-                                                <a class="nav-link " href="#">
-                                                    Argomento 1</a>
+                                                <a class="nav-link " href="https://servizi.comune.trento.it/Argomenti/Abitazione">
+                                                    Abitazione</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">
-                                                    Argomento 2</a>
+                                                <a class="nav-link" href="https://servizi.comune.trento.it/Argomenti/Istruzione">
+                                                    Istruzione</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="https://servizi.comune.trento.it/Argomenti/Procedura-elettorale-e-voto">
+                                                    Procedura elettorale e voto</a>
                                             </li>
                                             <li class="nav-item ">
-                                                <a class="nav-link " href="#">
+                                                <a class="nav-link " href="https://servizi.comune.trento.it/Argomenti">
                                                     <span class="font-weight-bold">Tutti gli argomenti...</span>
                                                 </a>
                                             </li>
