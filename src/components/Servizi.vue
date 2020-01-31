@@ -29,7 +29,7 @@
                             <label for="ricerca-amministrazione" style="width: auto;">Cerca contenuti in
                                 "Servizi"</label>
                             <span aria-hidden="true" class="autocomplete-icon">
-              <svg class="icon icon-sm"><use xlink:href="../assets/dist/svg/sprite.svg#it-search"></use></svg>
+              <svg class="icon icon-sm"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg>
             </span>
                         </form>
                     </div>
@@ -39,7 +39,7 @@
                             <span class="chip-label">Tutto</span>
                             <button>
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-close"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
                                 </svg>
                                 <span class="sr-only">Elimina label</span>
                             </button>
@@ -47,7 +47,7 @@
                         <div class="ml-2 d-inline">
                             <button class="btn btn-icon btn-outline-primary btn-sm align-top">
                                 <svg class="icon icon-primary">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-plus"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-plus"></use>
                                 </svg>
                                 <span>Aggiungi filtro</span>
                             </button>
@@ -82,7 +82,7 @@
                                 <a class="list-item large medium left-icon" href="#altri-servizi" data-toggle="collapse"
                                    aria-expanded="false" aria-controls="altri-servizi">
                                     <svg class="icon icon-primary right">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-more-items"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-more-items"></use>
                                     </svg>
                                 </a>
                                 <ul class="link-sublist collapse px-0" id="altri-servizi">
@@ -139,7 +139,7 @@
                                     <div class="flag-icon"></div>
                                     <div class="etichetta">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                         </svg>
                                         <span>Scuola e formazione</span>
                                     </div>
@@ -151,7 +151,7 @@
                                            href="/design-comuni-prototipi/esempi/bootstrap-italia/template-servizi-servizio.html">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -166,7 +166,7 @@
                                     <div class="flag-icon invisible"></div>
                                     <div class="etichetta">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-user"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                         </svg>
                                         <span>Funzionari amministrativi</span>
                                     </div>
@@ -177,7 +177,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -192,7 +192,7 @@
                                     <div class="flag-icon invisible"></div>
                                     <div class="etichetta">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                         </svg>
                                         <span>Uffici</span>
                                     </div>
@@ -204,7 +204,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -219,7 +219,7 @@
                                     <div class="flag-icon invisible"></div>
                                     <div class="etichetta">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                         </svg>
                                         <span>Luoghi</span>
                                     </div>
@@ -231,7 +231,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -246,7 +246,7 @@
                                     <div class="flag-icon invisible"></div>
                                     <div class="etichetta">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-user"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                         </svg>
                                         <span>Politici</span>
                                     </div>
@@ -257,7 +257,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -272,7 +272,7 @@
                                     <div class="flag-icon invisible"></div>
                                     <div class="etichetta">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                         </svg>
                                         <span>Luoghi</span>
                                     </div>
@@ -284,7 +284,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -316,7 +316,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -335,7 +335,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -354,7 +354,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -373,7 +373,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -392,7 +392,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -411,7 +411,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -430,7 +430,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -449,7 +449,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -468,7 +468,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -487,7 +487,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -506,7 +506,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -525,7 +525,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -544,7 +544,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -563,7 +563,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -582,7 +582,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>

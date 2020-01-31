@@ -34,14 +34,14 @@
                                href="#nav-vertical-tab-ico1" role="tab" aria-controls="nav-vertical-tab-ico1"
                                aria-selected="true">I miei dati
                                 <svg class="icon icon-primary">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-user"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                 </svg>
                             </a>
                             <a class="nav-link" id="nav-vertical-tab-ico2-tab" data-toggle="tab"
                                href="#nav-vertical-tab-ico2"
                                role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">La mia famiglia
                                 <svg class="icon icon-primary">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-list"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-list"></use>
                                 </svg>
                             </a>
                         </div>
@@ -101,7 +101,7 @@
                                             <div class="card-body pb-5">
                                                 <div class="category-top">
                                                     <svg class="icon">
-                                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-user"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                                     </svg>
                                                     <span class="category">{{familyMember.nome}} {{familyMember.cognome}}</span>
                                                 </div>
@@ -147,7 +147,7 @@
                                                 <a class="read-more" href="#">
                                                     <div class="float-right">
                                                         <svg class="icon">
-                                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-flag"></use>
+                                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-flag"></use>
                                                         </svg>
                                                         <span class="text">{{familyMember.grado_descrizione}}</span>
                                                     </div>
@@ -176,7 +176,7 @@
                                 <div class="card card-teaser card-column shadow my-3 rounded">
                                     <div class="card-header">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-mail"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-mail"></use>
                                         </svg>
                                         <h5 class="card-title">
                                             Messaggi
@@ -191,7 +191,7 @@
                                 <div class="card card-teaser card-column shadow my-3 rounded">
                                     <div class="card-header">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-horn"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-horn"></use>
                                         </svg>
                                         <h5 class="card-title">
                                             Scadenze
@@ -206,7 +206,7 @@
                                 <div class="card card-teaser card-column shadow my-3 rounded">
                                     <div class="card-header">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-folder"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-folder"></use>
                                         </svg>
                                         <h5 class="card-title">Le mie pratiche</h5>
                                     </div>
@@ -219,7 +219,7 @@
                                 <div class="card card-teaser card-column shadow my-3 rounded">
                                     <div class="card-header">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-file"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
                                         </svg>
                                         <h5 class="card-title">I miei documenti</h5>
                                     </div>

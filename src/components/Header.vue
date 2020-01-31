@@ -12,7 +12,7 @@
                                        href="#">
                                         <span>ITA</span>
                                         <svg class="icon icon-white d-none d-lg-block">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-expand"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                         </svg>
                                     </a>
                                     <div class="dropdown-menu">
@@ -41,7 +41,7 @@
                                                  width="20" class="border rounded-circle icon-white" alt="Mario Rossi"></span>
                                         <span class="d-none d-lg-block">{{user.nome}} {{user.cognome}}</span>
                                         <svg class="icon icon-white d-none d-lg-block">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-expand"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                         </svg>
                                     </a>
                                     <div class="dropdown-menu" x-placement="bottom-start"
@@ -79,7 +79,7 @@
                                                         <li>
                                                             <a class="list-item" href="#" @click="logout()"><span>Logout
                                                                 <svg class="icon icon-primary icon-sm left">
-                                                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                                                 </svg></span></a>
                                                         </li>
                                                     </ul>
@@ -92,7 +92,7 @@
                                 <router-link v-else v-bind:to="'login'" class="btn btn-primary btn-icon btn-full"><span
                                         class="rounded-icon">
                                             <svg class="icon icon-primary"><use
-                                                    xlink:href="../assets/dist/svg/sprite.svg#it-user"></use></svg>
+                                                    xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use></svg>
                                         </span>
                                     <span class="d-none d-lg-block">Accedi all'area personale</span></router-link>
                             </div>
@@ -109,9 +109,6 @@
                             <div class="it-header-center-content-wrapper">
                                 <div class="it-brand-wrapper">
                                     <a href="#">
-                                        <!--svg class="icon">
-                                            <use xlink:href="../assets/svg/sprite.svg#it-code-circle"></use>
-                                        </svg-->
                                         <img class="icon" src="../../public/Trento-logo-removebg-preview.png">
 
                                         <div class="it-brand-text">
@@ -127,21 +124,21 @@
                                             <li>
                                                 <a href="#" aria-label="Facebook" target="_blank">
                                                     <svg class="icon">
-                                                        <use xlink:href="../assets/svg/sprite.svg#it-facebook"></use>
+                                                        <use xlink:href="bootstrap-italis/svg/sprite.svg#it-facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#" aria-label="Github" target="_blank">
                                                     <svg class="icon">
-                                                        <use xlink:href="../assets/svg/sprite.svg#it-github"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-github"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#" aria-label="Twitter" target="_blank">
                                                     <svg class="icon">
-                                                        <use xlink:href="/../assets/svg/sprite.svg#it-twitter"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
                                                     </svg>
                                                 </a>
                                             </li>
@@ -151,7 +148,7 @@
                                         <span class="d-none d-md-block">Cerca</span>
                                         <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                                             <svg class="icon">
-                                                <use xlink:href="../assets/svg/sprite.svg#it-search"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -169,7 +166,7 @@
                                 <button aria-controls="nav10" aria-expanded="false" aria-label="Toggle navigation"
                                         class="custom-navbar-toggler" data-target="#nav10" type="button">
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-burger"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-burger"></use>
                                     </svg>
                                 </button>
                                 <div class="navbar-collapsable" id="nav10">

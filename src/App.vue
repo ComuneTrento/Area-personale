@@ -9,8 +9,6 @@
 
 <script>
   import CookieBar from './components/CookieBar';
-
-  window.__PUBLIC_PATH__ = '';
   import Header from './components/Header';
   import MainContent from './components/MainContent';
   import Footer from './components/Footer';
@@ -27,6 +25,4 @@
 </script>
 
 <style>
-    @import 'assets/css/fonts.css';
-    @import 'assets/css/bootstrap-italia.min.css';
 </style>

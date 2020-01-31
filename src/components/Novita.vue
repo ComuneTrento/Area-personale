@@ -29,7 +29,7 @@
                             <label for="ricerca-amministrazione" style="width: auto;">Cerca contenuti tra le
                                 novità</label>
                             <span aria-hidden="true" class="autocomplete-icon">
-              <svg class="icon icon-sm"><use xlink:href="../assets/dist/svg/sprite.svg#it-search"></use></svg>
+              <svg class="icon icon-sm"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg>
             </span>
                         </form>
                     </div>
@@ -39,7 +39,7 @@
                             <span class="chip-label">Tutto</span>
                             <button>
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-close"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
                                 </svg>
                                 <span class="sr-only">Elimina label</span>
                             </button>
@@ -47,7 +47,7 @@
                         <div class="ml-2 d-inline">
                             <button class="btn btn-icon btn-outline-primary btn-sm align-top">
                                 <svg class="icon icon-primary">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-plus"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-plus"></use>
                                 </svg>
                                 <span>Aggiungi filtro</span>
                             </button>
@@ -109,7 +109,7 @@
                                            href="/design-comuni-prototipi/esempi/bootstrap-italia/template-novita-notizia.html">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -124,7 +124,7 @@
                                     <div class="flag-icon invisible"></div>
                                     <div class="etichetta">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-user"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                         </svg>
                                         <span>Notizie</span>
                                     </div>
@@ -136,7 +136,7 @@
                                            href="/design-comuni-prototipi/esempi/bootstrap-italia/template-novita-notizia.html">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -166,7 +166,7 @@
                                             salienti.</p>
                                         <a class="read-more" href="#"><span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -198,7 +198,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -217,7 +217,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -236,7 +236,7 @@
                                         <a class="read-more" href="#">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>

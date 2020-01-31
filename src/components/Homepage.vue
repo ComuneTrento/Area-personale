@@ -11,7 +11,7 @@
                             <div class="card-body pb-5">
                                 <div class="category-top">
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-calendar"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use>
                                     </svg>
                                     <a class="category" href="#">Notizie</a>
                                     <span class="data">18 mag 2018</span>
@@ -27,7 +27,7 @@
                                    href="/design-comuni-prototipi/esempi/bootstrap-italia/template-novita.html">
                                     <span class="text">Tutte le novità</span>
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg##it-arrow-right"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg##it-arrow-right"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -46,7 +46,7 @@
                                     <div class="card-body p-4">
                                         <div class="category-top">
                                             <svg class="icon">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                             </svg>
                                             <a class="category" href="#">Giunta e consiglio</a>
                                         </div>
@@ -61,7 +61,7 @@
                                 <a class="read-more pl-4" href="/design-comuni-prototipi/esempi/bootstrap-italia/template-amministrazione.html">
                                     <span class="text">Tutta l'amministrazione</span>
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -69,7 +69,7 @@
                                 <div class="card-body pb-5">
                                     <div class="category-top">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                         </svg>
                                         <a class="category" href="#">Pagamenti</a>
                                     </div>
@@ -79,7 +79,7 @@
                                 <a class="read-more" href="#">
                                     <span class="text">Tutti i servizi</span>
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                                 <div class="card-body pb-5">
                                     <div class="category-top">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                         </svg>
                                         <a class="category" href="#">Bandi</a>
                                     </div>
@@ -97,7 +97,7 @@
                                 <a class="read-more" href="/design-comuni-prototipi/esempi/bootstrap-italia/template-documenti.html">
                                     <span class="text">Tutti i documenti</span>
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -109,19 +109,19 @@
                             <button type="button" class="mt-1 btn btn-secondary btn-sm">Tutto</button>
                             <button type="button" class="mt-1 btn btn-outline-secondary btn-sm btn-icon">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                 </svg>
                                 <span>Consigli comunali</span>
                             </button>
                             <button type="button" class="mt-1 btn btn-outline-secondary btn-sm btn-icon">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-calendar"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use>
                                 </svg>
                                 <span>Eventi</span>
                             </button>
                             <button type="button" class="mt-1 btn btn-outline-secondary btn-sm btn-icon">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-settings"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-settings"></use>
                                 </svg>
                                 Scadenze
                             </button>
@@ -271,7 +271,7 @@
                                 <div class="card-body pb-5">
                                     <div class="category-top">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-info-circle"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use>
                                         </svg>
                                     </div>
                                     <h3 class="card-title">Cantieri in città</h3>
@@ -292,7 +292,7 @@
                                 <a class="read-more" href="#">
                                     <span class="text">Esplora argomento</span>
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -300,7 +300,7 @@
                                 <div class="card-body pb-5">
                                     <div class="category-top">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-clock"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-clock"></use>
                                         </svg>
                                     </div>
                                     <h3 class="card-title">Estate in città</h3>
@@ -309,25 +309,25 @@
                                         <ul class="link-list">
                                             <li>
                                                 <a class="list-item active icon-left" href="#">
-                                                    <svg class="icon icon-primary"><use xlink:href="../assets/dist/svg/sprite.svg#it-calendar"></use></svg>
+                                                    <svg class="icon icon-primary"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>
                                                     <span>Eventi questo weekend</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="list-item icon-left" href="#">
-                                                    <svg class="icon icon-primary"><use xlink:href="../assets/dist/svg/sprite.svg#it-calendar"></use></svg>
+                                                    <svg class="icon icon-primary"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>
                                                     <span>Cosa fare questa settimana</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="list-item icon-left" href="#">
-                                                    <svg class="icon icon-primary"><use xlink:href="../assets/dist/svg/sprite.svg#it-calendar"></use></svg>
+                                                    <svg class="icon icon-primary"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>
                                                     <span>Agosto metropolitano</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="list-item icon-left" href="#">
-                                                    <svg class="icon icon-primary"><use xlink:href="../assets/dist/svg/sprite.svg#it-calendar"></use></svg>
+                                                    <svg class="icon icon-primary"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>
                                                     <span>Orari estivi metro e bus in vigore dal 9 giugno</span>
                                                 </a>
                                             </li>
@@ -337,7 +337,7 @@
                                 <a class="read-more" href="#">
                                     <span class="text">Esplora argomento</span>
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -345,7 +345,7 @@
                                 <div class="card-body pb-5">
                                     <div class="category-top">
                                         <svg class="icon">
-                                            <use xlink:href="../assets/dist/svg/sprite.svg#it-camera"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-camera"></use>
                                         </svg>
                                     </div>
                                     <h3 class="card-title">Sport</h3>
@@ -354,19 +354,19 @@
                                         <ul class="link-list">
                                             <li>
                                                 <a class="list-item active icon-left" href="#">
-                                                    <svg class="icon icon-primary"><use xlink:href="../assets/dist/svg/sprite.svg#it-pa"></use></svg>
+                                                    <svg class="icon icon-primary"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use></svg>
                                                     <span>Tutte le strutture turistiche della città</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="list-item icon-left" href="#">
-                                                    <svg class="icon icon-primary"><use xlink:href="../assets/dist/svg/sprite.svg#it-calendar"></use></svg>
+                                                    <svg class="icon icon-primary"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>
                                                     <span>Da lunedì 3 settembre chiudono le vasche della piscina comunale</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="list-item icon-left" href="#">
-                                                    <svg class="icon icon-primary"><use xlink:href="../assets/dist/svg/sprite.svg#it-settings"></use></svg>
+                                                    <svg class="icon icon-primary"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-settings"></use></svg>
                                                     <span>Concessione contributi ad enti, associazioni, società sportive</span>
                                                 </a>
                                             </li>
@@ -376,7 +376,7 @@
                                 <a class="read-more" href="#">
                                     <span class="text">Esplora argomento</span>
                                     <svg class="icon">
-                                        <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                     </svg>
                                 </a>
                             </div>
@@ -482,7 +482,7 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <button type="submit" class="border-0 px-0">
-                                                    <svg class="icon icon-sm"><use xlink:href="../assets/dist/svg/sprite.svg#it-search"></use></svg>
+                                                    <svg class="icon icon-sm"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg>
                                                 </button>
                                             </div>
                                         </div>

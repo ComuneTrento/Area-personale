@@ -15,7 +15,7 @@
                                         <router-link v-bind:to="'profile'" class="d-none d-lg-block">
                                             <span>Profilo</span>
                                             <svg class="icon icon-primary icon-xs right">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-settings"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-settings"></use>
                                             </svg>
                                         </router-link>
                                     </div>
@@ -23,7 +23,7 @@
                                         <a href="#" @click="logout">
                                             <span>Logout</span>
                                             <svg class="icon icon-primary icon-xs right">
-                                                <use xlink:href="../assets/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -895,7 +895,7 @@
                         <div class="card card-teaser card-column shadow my-3 rounded">
                             <div class="card-header pl-0">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-mail"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-mail"></use>
                                 </svg>
                                 <h4 class="card-title">
                                     Messaggi
@@ -912,7 +912,7 @@
                         <div class="card card-teaser card-column shadow my-3 rounded">
                             <div class="card-header pl-0">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-horn"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-horn"></use>
                                 </svg>
                                 <h4 class="card-title">Scadenze</h4>
                             </div>
@@ -925,7 +925,7 @@
                         <div class="card card-teaser card-column shadow my-3 rounded">
                             <div class="card-header pl-0">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-folder"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-folder"></use>
                                 </svg>
                                 <h4 class="card-title">Le mie pratiche</h4>
                             </div>
@@ -938,7 +938,7 @@
                         <div class="card card-teaser card-column shadow my-3 rounded">
                             <div class="card-header pl-0">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-file"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
                                 </svg>
                                 <h4 class="card-title">I miei documenti</h4>
                             </div>
@@ -952,7 +952,7 @@
                         <div class="card card-teaser card-column shadow my-3 rounded">
                             <div class="card-header pl-0">
                                 <svg class="icon">
-                                    <use xlink:href="../assets/dist/svg/sprite.svg#it-card"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-card"></use>
                                 </svg>
                                 <h4 class="card-title">I miei pagamenti</h4>
                             </div>
