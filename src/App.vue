@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <Header :user="user"></Header>
-        <MainContent :user="user"></MainContent>
+        <Header></Header>
+        <MainContent></MainContent>
         <Footer></Footer>
         <CookieBar></CookieBar>
     </div>
@@ -28,5 +28,4 @@
 
 <style>
     @import 'assets/css/bootstrap-italia.min.css';
-    @import 'assets/css/fonts.css.scss';
 </style>

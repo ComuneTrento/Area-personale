@@ -20,14 +20,14 @@ import PersonalArea from './components/PersonalArea';
 import Amministrazione from './components/Amministrazione';
 import Documenti from './components/Documenti';
 import Servizi from './components/Servizi';
-import Novità from './components/Novità';
+import Novita from './components/Novita';
 import Login from './components/Login';
 
 const routes = [
 
   {path: '/amministrazione', component: Amministrazione},
   {path: '/login', component: Login},
-  {path: '/novità', component: Novità},
+  {path: '/novità', component: Novita},
   {path: '/servizi', component: Servizi},
   {path: '/documenti', component: Documenti},
   {path: '/anagrafica/:id', component: Anagrafica},

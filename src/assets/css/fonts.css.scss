@@ -1,21 +1,125 @@
 @font-face {
-    font-family: 'Titillium Web';
-    src:  url('../fonts/Titillium_Web/TitilliumWeb-Black.woff2') format('woff2'),
-    url('../fonts/Titillium_Web/TitilliumWeb-Black.woff') format('woff');
+    font-family: 'TitilliumWeb-Black';
+    src: url('../fonts/Titillium_Web/TitilliumWeb-Black.woff2') format('woff2'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Black.woff') format('woff'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Titillium Web';
-    src:  url('../fonts/Titillium_Web/TitilliumWeb-Bold.woff2') format('woff2'),
-    url('../fonts/Titillium_Web/TitilliumWeb-Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: 'TitilliumWeb-Bold';
+    src: url('../fonts/Titillium_Web/TitilliumWeb-Bold.woff2') format('woff2'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Bold.woff') format('woff'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Bold.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Titillium Web';
-    src:  url('../fonts/Titillium_Web/TitilliumWeb-Light.woff2') format('woff2'),
-    url('../fonts/Titillium_Web/TitilliumWeb-Light.woff') format('woff');
-    font-weight: initial;
+    font-family: 'TitilliumWeb-Light';
+    src: url('../fonts/Titillium_Web/TitilliumWeb-Light.woff2') format('woff2'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Light.woff') format('woff'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Light.ttf') format('ttf');
+    font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'TitilliumWeb-ExtraLight';
+    src: url('../fonts/Titillium_Web/TitilliumWeb-ExtraLight.woff2') format('woff2'),
+    url('../fonts/Titillium_Web/TitilliumWeb-ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url('../fonts/Titillium_Web/TitilliumWeb-Regular.woff2') format('woff2'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Regular.woff') format('woff'),
+    url('../fonts/Titillium_Web/TitilliumWeb-Regular.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-SemiBold';
+    src: url('../fonts/Titillium_Web/TitilliumWeb-SemiBold.woff2') format('woff2'),
+    url('../fonts/Titillium_Web/TitilliumWeb-SemiBold.woff') format('woff'),
+    url('../fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-Bold';
+    src: url('../fonts/Roboto_Mono/RobotoMono-Bold.woff2') format('woff2'),
+    url('../fonts/Roboto_Mono/RobotoMono-Bold.woff') format('woff'),
+    url('../fonts/Roboto_Mono/RobotoMono-Bold.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-Light';
+    src: url('../fonts/Roboto_Mono/RobotoMono-Light.woff2') format('woff2'),
+    url('../fonts/Roboto_Mono/RobotoMono-Light.woff') format('woff'),
+    url('../fonts/Roboto_Mono/RobotoMono-Light.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-Medium';
+    src: url('../fonts/Roboto_Mono/RobotoMono-Medium.woff2') format('woff2'),
+    url('../fonts/Roboto_Mono/RobotoMono-Medium.woff') format('woff'),
+    url('../fonts/Roboto_Mono/RobotoMono-Medium.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-Regular';
+    src: url('../fonts/Roboto_Mono/RobotoMono-Regular.woff2') format('woff2'),
+    url('../fonts/Roboto_Mono/RobotoMono-Regular.woff') format('woff'),
+    url('../fonts/Roboto_Mono/RobotoMono-Regular.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-Thin';
+    src: url('../fonts/Roboto_Mono/RobotoMono-Thin.woff2') format('woff2'),
+    url('../fonts/Roboto_Mono/RobotoMono-Thin.woff') format('woff'),
+    url('../fonts/Roboto_Mono/RobotoMono-Thin.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Lora-Bold';
+    src: url('../fonts/Lora/Lora-Bold.woff2') format('woff2'),
+    url('../fonts/Lora/Lora-Bold.woff') format('woff'),
+    url('../fonts/Lora/Lora-Bold.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Lora-Regular';
+    src: url('../fonts/Lora/Lora-Regular.woff2') format('woff2'),
+    url('../fonts/Lora/Lora-Regular.woff') format('woff'),
+    url('../fonts/Lora/Lora-Regular.ttf') format('ttf');
+
+    font-weight: normal;
+    font-style: normal
+}
+

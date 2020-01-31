@@ -109,9 +109,11 @@
                             <div class="it-header-center-content-wrapper">
                                 <div class="it-brand-wrapper">
                                     <a href="#">
-                                        <svg class="icon">
+                                        <!--svg class="icon">
                                             <use xlink:href="../assets/svg/sprite.svg#it-code-circle"></use>
-                                        </svg>
+                                        </svg-->
+                                        <img class="icon" src="../../public/Trento-logo-removebg-preview.png">
+
                                         <div class="it-brand-text">
                                             <h2 class="no_toc">Comune di Trento</h2>
                                             <h3 class="no_toc d-none d-md-block">Area personale</h3>
