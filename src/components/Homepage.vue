@@ -151,7 +151,7 @@
                                         <a class="read-more" v-bind:href="service['link']">
                                             <span class="text">Leggi di più</span>
                                             <svg class="icon">
-                                                <use xlink:href="/design-comuni-prototipi/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                             </svg>
                                         </a>
                                     </div>
@@ -204,7 +204,7 @@
       };
     },
     mounted() {
-      this.getServices('https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27');
+      this.getServices('https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D');
     },
     methods: {
       getServices(url) {
