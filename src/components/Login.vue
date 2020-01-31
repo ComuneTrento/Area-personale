@@ -64,10 +64,6 @@
         this.user = this.$store.getters.user;
       }
     },
-    mounted() {
-      // eslint-disable-next-line no-console
-      console.log(this.$store.getters.user);
-    },
     methods: {
       login: function() {
         this.user = {

@@ -106,30 +106,6 @@
                                                     <span class="category">{{familyMember.nome}} {{familyMember.cognome}}</span>
                                                 </div>
                                                 <div class="card-text">
-                                                    <!--div>
-                                                        <div class="row">
-                                                            <span class="d-block col-12"><b>Data di nascita</b></span><span class="col-12">{{familyMember.datanascita}}</span>
-                                                        </div>
-                                                        <div class="row">
-                                                            <span class="d-block col-12"><b>Luogo di nascita</b></span><span class="col-12">{{familyMember.comuneNascita}}</span>
-                                                        </div>
-                                                        <div class="row">
-                                                            <span class="d-block col-12"><b>Codice fiscale</b></span><span class="col-12">{{familyMember.codiceFiscale}}</span>
-                                                        </div>
-                                                        <div class="row">
-                                                            <span class="d-block col-12"><b>Indirizzo di residenza</b></span><span class="col-12">{{familyMember.indirizzo}} {{familyMember.numeroCivico}}{{familyMember.barra}}<br>{{familyMember.cap}} - {{familyMember.citta}} ({{familyMember.provincia}})</span>
-                                                        </div>
-                                                        <div class="row">
-                                                            <span class="d-block col-12"><b>Nazionalità</b></span>
-                                                            <span  v-if="familyMember.sesso === 'M'" class="col-12">{{familyMember.nazionalita_maschile}}</span>
-                                                            <span  v-else class="col-12">{{familyMember.nazionalita}}</span>
-                                                        </div>
-                                                        <div class="row">
-                                                            <span class="d-block col-12"><b>Indirizzo email</b></span>
-                                                            <span  v-if="familyMember.email" class="col-6">{{familyMember.email}}</span>
-                                                            <span  v-else class="col-12"> -- </span>
-                                                        </div>
-                                                    </div-->
                                                     <div><p>Nato/a il {{familyMember.datanascita}} a
                                                         {{familyMember.comuneNascita}}</p>
                                                         <p>Codice Fiscale: {{familyMember.codiceFiscale}}</p>
@@ -245,7 +221,7 @@
     name: 'Profile',
     data() {
       return {
-        fiscalCode: '',
+        user: null,
         userData: null,
         errorMessage: null,
         familyList: [],
@@ -260,7 +236,7 @@
             'contesto': 'GLOBO',
             'listaAut': 'PGLOBO',
           },
-          'account': this.fiscalCode,
+          'account': this.user.fiscalCode,
         }, {headers: {'authorization': 'Basic dnVlOldLVGtjSmtQNHJyNA=='}}).then(result => {
           if (result.body.status === 'OK') {
             if (user) {
@@ -269,7 +245,6 @@
             } else {
               this.familyList.push(result.body.results);
             }
-
           } else
             this.errorMessage = result.body.message;
         }, error => {
@@ -277,17 +252,15 @@
         });
       },
       getListaFamigliaREST() {
-        // eslint-disable-next-line no-console
         this.$http.post('https://globo.ship.opencontent.io', {
           'name': 'getListaFamigliaREST',
           'parameters': {
             'codiceFamiglia': this.userData.codiceFamiglia,
           },
-          'account': this.fiscalCode,
+          'account': this.user.fiscalCode,
         }, {headers: {'authorization': 'Basic dnVlOldLVGtjSmtQNHJyNA=='}}).then(result => {
           if (result.body.status === 'OK') {
             Object.keys(result.body.results.listaCodiceFiscale).forEach((familyMember) => {
-              // eslint-disable-next-line no-console
               this.getPersonaREST(familyMember, false);
             });
           } else
@@ -298,9 +271,12 @@
       },
     },
     beforeMount() {
-      // eslint-disable-next-line no-console
-      this.fiscalCode = this.$store.state.user.codiceFiscale;
-      this.getPersonaREST(this.fiscalCode, true);
+      this.user = this.$store.state.user;
+      if (!this.user) {
+        this.$router.push('login');
+      } else {
+        this.getPersonaREST(this.user.fiscalCode, true);
+      }
     },
   };
 </script>

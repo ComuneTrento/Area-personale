@@ -1,6 +1,6 @@
 <template>
     <section id="area-riservata">
-        <div class="section section-background-header section-user-header py-5">
+        <div v-if="user" class="section section-background-header section-user-header py-5">
             <div class="container position-relative">
                 <div class="row">
                     <div class="col-xl-8 offset-xl-2 position-static">
@@ -979,6 +979,9 @@
     },
     beforeMount() {
       this.user = this.$store.state.user;
+      if (!this.user) {
+        this.$router.push('login');
+      }
     },
     methods: {
       logout() {
