@@ -27,5 +27,6 @@
 </script>
 
 <style>
+    @import 'assets/css/fonts.css';
     @import 'assets/css/bootstrap-italia.min.css';
 </style>

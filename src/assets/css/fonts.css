@@ -3,7 +3,7 @@
     src: url('../fonts/Titillium_Web/TitilliumWeb-Black.woff2') format('woff2'),
     url('../fonts/Titillium_Web/TitilliumWeb-Black.woff') format('woff'),
     url('../fonts/Titillium_Web/TitilliumWeb-Black.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -12,7 +12,7 @@
     src: url('../fonts/Titillium_Web/TitilliumWeb-Bold.woff2') format('woff2'),
     url('../fonts/Titillium_Web/TitilliumWeb-Bold.woff') format('woff'),
     url('../fonts/Titillium_Web/TitilliumWeb-Bold.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -21,7 +21,7 @@
     src: url('../fonts/Titillium_Web/TitilliumWeb-Light.woff2') format('woff2'),
     url('../fonts/Titillium_Web/TitilliumWeb-Light.woff') format('woff'),
     url('../fonts/Titillium_Web/TitilliumWeb-Light.ttf') format('ttf');
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -29,7 +29,7 @@
     font-family: 'TitilliumWeb-ExtraLight';
     src: url('../fonts/Titillium_Web/TitilliumWeb-ExtraLight.woff2') format('woff2'),
     url('../fonts/Titillium_Web/TitilliumWeb-ExtraLight.woff') format('woff');
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -39,7 +39,7 @@
     url('../fonts/Titillium_Web/TitilliumWeb-Regular.woff') format('woff'),
     url('../fonts/Titillium_Web/TitilliumWeb-Regular.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal
 }
 
@@ -49,7 +49,7 @@
     url('../fonts/Titillium_Web/TitilliumWeb-SemiBold.woff') format('woff'),
     url('../fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -59,7 +59,7 @@
     url('../fonts/Roboto_Mono/RobotoMono-Bold.woff') format('woff'),
     url('../fonts/Roboto_Mono/RobotoMono-Bold.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -69,7 +69,7 @@
     url('../fonts/Roboto_Mono/RobotoMono-Light.woff') format('woff'),
     url('../fonts/Roboto_Mono/RobotoMono-Light.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -79,7 +79,7 @@
     url('../fonts/Roboto_Mono/RobotoMono-Medium.woff') format('woff'),
     url('../fonts/Roboto_Mono/RobotoMono-Medium.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -89,7 +89,7 @@
     url('../fonts/Roboto_Mono/RobotoMono-Regular.woff') format('woff'),
     url('../fonts/Roboto_Mono/RobotoMono-Regular.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal;
 }
 
@@ -99,7 +99,7 @@
     url('../fonts/Roboto_Mono/RobotoMono-Thin.woff') format('woff'),
     url('../fonts/Roboto_Mono/RobotoMono-Thin.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal
 }
 
@@ -109,7 +109,7 @@
     url('../fonts/Lora/Lora-Bold.woff') format('woff'),
     url('../fonts/Lora/Lora-Bold.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal
 }
 
@@ -119,7 +119,7 @@
     url('../fonts/Lora/Lora-Regular.woff') format('woff'),
     url('../fonts/Lora/Lora-Regular.ttf') format('ttf');
 
-    font-weight: normal;
+    font-weight: initial;
     font-style: normal
 }
 
