@@ -8,7 +8,7 @@
                             <div class="it-brand-wrapper">
                                 <a href="#">
                                     <svg class="icon">
-                                        <use xlink:href="/../assets/svg/sprite/sprite.svg#it-pa"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite/sprite.svg#it-pa"></use>
                                     </svg>
                                     <div class="it-brand-text">
                                         <h2 class="no_toc">Comune di Trento</h2>
@@ -184,7 +184,7 @@
                                        placeholder="mail@example.com" type="email">
                                 <button class="btn btn-primary btn-icon" type="submit">
                                     <svg class="icon icon-white">
-                                        <use xlink:href="/../assets/svg/sprite/sprite.svg#it-mail"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite/sprite.svg#it-mail"></use>
                                     </svg>
                                     <span>Iscriviti</span>
                                 </button>
@@ -198,28 +198,28 @@
                                 <li class="list-inline-item">
                                     <a class="p-2 text-white" href="#" target="_blank">
                                         <svg class="icon icon-sm icon-white align-top">
-                                            <use xlink:href="/../assets/svg/sprite/sprite.svg#it-designers-italia"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite/sprite.svg#it-designers-italia"></use>
                                         </svg>
                                         <span class="sr-only">Designers Italia</span></a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a class="p-2 text-white" href="#" target="_blank">
                                         <svg class="icon icon-sm icon-white align-top">
-                                            <use xlink:href="/../assets/svg/sprite/sprite.svg#it-twitter"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite/sprite.svg#it-twitter"></use>
                                         </svg>
                                         <span class="sr-only">Twitter</span></a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a class="p-2 text-white" href="#" target="_blank">
                                         <svg class="icon icon-sm icon-white align-top">
-                                            <use xlink:href="/../assets/svg/sprite/sprite.svg#it-medium"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite/sprite.svg#it-medium"></use>
                                         </svg>
                                         <span class="sr-only">Medium</span></a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a class="p-2 text-white" href="#" target="_blank">
                                         <svg class="icon icon-sm icon-white align-top">
-                                            <use xlink:href="/../assets/svg/sprite/sprite.svg#it-behance"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite/sprite.svg#it-behance"></use>
                                         </svg>
                                         <span class="sr-only">Behance</span></a>
                                 </li>

@@ -124,7 +124,7 @@
                                             <li>
                                                 <a href="#" aria-label="Facebook" target="_blank">
                                                     <svg class="icon">
-                                                        <use xlink:href="bootstrap-italis/svg/sprite.svg#it-facebook"></use>
+                                                        <use xlink:href="bootstrap-italia/svg/sprite.svg#it-facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
