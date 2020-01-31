@@ -38,7 +38,7 @@
             this.errorMessage = result.message;
         }, error => {
           this.errorMessage = 'Richiesta non valida' + error;
-        })
+        });
       },
     },
     beforeMount() {

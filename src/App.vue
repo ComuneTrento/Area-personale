@@ -23,13 +23,7 @@
       MainContent,
       Header,
     },
-    data() {
-      return {
-        user: true,
-      };
-    }
   };
-
 </script>
 
 <style>

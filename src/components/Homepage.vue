@@ -16,12 +16,15 @@
                                     <a class="category" href="#">Notizie</a>
                                     <span class="data">18 mag 2018</span>
                                 </div>
-                                <h1 class="h4 card-title">Parte l'estate con oltre 300 eventi in centro e nei quartieri, tutti gli eventi previsti</h1>
-                                <p class="card-text">Inaugurazione lunedì 2 luglio con il concerto gratuito in piazza XX Settembre degli Sweet Soul Revue. Sul palco 20 musicisti da tutto il mondo.</p>
+                                <h1 class="h4 card-title">Parte l'estate con oltre 300 eventi in centro e nei quartieri,
+                                    tutti gli eventi previsti</h1>
+                                <p class="card-text">Inaugurazione lunedì 2 luglio con il concerto gratuito in piazza XX
+                                    Settembre degli Sweet Soul Revue. Sul palco 20 musicisti da tutto il mondo.</p>
                                 <div class="chip chip-simple chip-primary">
                                     <a href="#" class="chip-label">Estate in città</a>
                                 </div>
-                                <a class="read-more pb-3" href="/design-comuni-prototipi/esempi/bootstrap-italia/template-novita.html">
+                                <a class="read-more pb-3"
+                                   href="/design-comuni-prototipi/esempi/bootstrap-italia/template-novita.html">
                                     <span class="text">Tutte le novità</span>
                                     <svg class="icon">
                                         <use xlink:href="../assets/dist/svg/sprite.svg##it-arrow-right"></use>
