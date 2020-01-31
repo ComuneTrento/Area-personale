@@ -980,9 +980,6 @@
     beforeMount() {
       this.user = this.$store.state.user;
     },
-    mounted() {
-      console.log('mounted')
-    }
     methods: {
       logout() {
         this.user = null;
