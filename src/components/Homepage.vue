@@ -6,8 +6,9 @@
                     <nav aria-label="breadcrumb" class="breadcrumb-container">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <router-link :to="{ path: '/' }">Home</router-link><span
-                                    class="separator">/</span>
+                                <router-link :to="{ path: '/' }">Home</router-link>
+                                <span
+                                        class="separator">/</span>
                             </li>
                             <li aria-current="page" class="breadcrumb-item active">
                                 Servizi
@@ -21,25 +22,24 @@
             <div class="row">
                 <div class="col-lg-7 px-lg-4 py-lg-2">
                     <h1>Servizi</h1>
-                    <p>Scopri tutti i servizi offerti dal Comune di Trento e <b>fruibili in modalità online</b>, senza bisogno di recarsi agli uffici comunali</p>
-                    <!--div class="form-group mt-5">
-                        <form>
-                            <input id="ricerca-amministrazione" type="search">
+                    <p>Scopri tutti i servizi offerti dal Comune di Trento e <b>fruibili in modalità online</b>, senza
+                        bisogno di recarsi agli uffici comunali</p>
+                    <div class="form-group mt-5">
+                        <div class="form-group">
+                            <input id="ricerca-amministrazione" v-model="search" type="search" @change="getServicesByName()">
                             <label for="ricerca-amministrazione" style="width: auto;">Cerca contenuti in
                                 "Servizi"</label>
-                            <span aria-hidden="true" class="autocomplete-icon">
-              <svg class="icon icon-sm"><use
-                      xlink:href="/design-comuni-prototipi/assets/bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg>
-            </span>
-                        </form>
-                    </div-->
+                            <span aria-hidden="true" class="autocomplete-icon"><svg class="icon icon-sm"><use
+                                    xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg></span>
+                        </div>
+                    </div>
                     <!--div id="filtri-ricerca-amministrazione">
                         <h6 class="small">Filtri</h6>
                         <div class="chip chip-lg">
                             <span class="chip-label">Tutto</span>
                             <button>
                                 <svg class="icon">
-                                    <use xlink:href="/design-comuni-prototipi/assets/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
                                 </svg>
                                 <span class="sr-only">Elimina label</span>
                             </button>
@@ -47,7 +47,7 @@
                         <div class="ml-2 d-inline">
                             <button class="btn btn-icon btn-outline-primary btn-sm align-top">
                                 <svg class="icon icon-primary">
-                                    <use xlink:href="/design-comuni-prototipi/assets/bootstrap-italia/dist/svg/sprite.svg#it-plus"></use>
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-plus"></use>
                                 </svg>
                                 <span>Aggiungi filtro</span>
                             </button>
@@ -64,7 +64,8 @@
                                 <a class="list-item" href="#" @click="getServicesByTopic(topic)">{{ topic }}</a>
                             </li>
                             <li v-if="index >= maxTopics">
-                                <a v-if="index === maxTopics" class="list-item large medium left-icon" href="#altri-servizi" data-toggle="collapse"
+                                <a v-if="index === maxTopics" class="list-item large medium left-icon"
+                                   href="#altri-servizi" data-toggle="collapse"
                                    aria-expanded="false" aria-controls="altri-servizi">
                                     <svg class="icon icon-primary right">
                                         <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-more-items"></use>
@@ -142,7 +143,8 @@
                                        @click="changePage(index, $event)">{{index}}</a>
                                 </li>
                                 <li class="page-item">
-                                    <a id="nextPageLink" class="page-link" href="#servicesList" tabindex="-1" aria-hidden="true"
+                                    <a id="nextPageLink" class="page-link" href="#servicesList" tabindex="-1"
+                                       aria-hidden="true"
                                        @click="changePage(currentPage +1 , $event)">
                                         <span class="sr-only">Pagina successiva</span>
                                         <svg class="icon icon-primary">
@@ -170,12 +172,15 @@
         currentPage: 1,
         maxTopics: 4,
         topicSelected: false,
+        autocomplete: [],
+        search: '',
       };
     },
     beforeMount() {
       this.getServices(
           'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D');
-      this.getTopics('https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27topic%27%20sort%20%5Bname%3D%3Easc%5D');
+      this.getTopics(
+          'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27topic%27%20sort%20%5Bname%3D%3Easc%5D');
     },
     methods: {
       getServices(url) {
@@ -190,6 +195,7 @@
               topics: item.data['ita-IT'].topics,
             };
             this.services.push(service);
+            this.autocomplete.push([{text: service.name, link: service.link}]);
           });
 
           if (nextPage) {
@@ -234,7 +240,19 @@
           url = 'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D';
         }
         this.getServices(url);
-      }
+      },
+      getServicesByName() {
+        this.services = [];
+        let url = '';
+        if (this.search) {
+          url = `https://servizi.comune.trento.it/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20raw%5Battr_name_t%5D%20%3D%20%5B%22${this.search}%22%5D`;
+          // eslint-disable-next-line no-console
+          console.log(url);
+        } else {
+          url = 'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D';
+        }
+        this.getServices(url);
+      },
     },
   };
 </script>
