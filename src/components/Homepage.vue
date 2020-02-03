@@ -168,7 +168,7 @@
                                     <a class="page-link" href="#" tabindex="-1" aria-hidden="true"
                                        @click="changePage(currentPage -1 , $event)">
                                         <svg class="icon icon-primary">
-                                            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
                                         </svg>
                                     </a>
                                 </li>
@@ -185,7 +185,7 @@
                                        @click="changePage(currentPage +1 , $event)">
                                         <span class="sr-only">Pagina successiva</span>
                                         <svg class="icon icon-primary">
-                                            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                         </svg>
                                     </a>
                                 </li>
