@@ -215,6 +215,7 @@
       getServices(url) {
         this.$http.get(url).then(result => {
           let nextPage = result.body.nextPageQuery;
+          if (nextPage && !nextPage.startsWith('https')) nextPage = nextPage.replace('http', 'https');
           result.body.searchHits.forEach((item) => {
             let service = {
               name: item.data['ita-IT'].name,
