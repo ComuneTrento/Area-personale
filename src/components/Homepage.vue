@@ -131,7 +131,7 @@
                             <h3 class="mb-4 text-primary">Tutti i servizi</h3>
                         </div>
                     </div>
-                    <div class="row" id="servecesList">
+                    <div class="row" id="servicesList">
                         <div v-for="(service, index) in services" v-bind:key="index" class="col-12 col-sm-6 col-lg-4">
                             <!--start card-->
                             <article v-if="(index / 9) < currentPage && (index / 9) >= currentPage -1"
