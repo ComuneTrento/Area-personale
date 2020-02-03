@@ -26,8 +26,8 @@
                         bisogno di recarsi agli uffici comunali</p>
                     <div class="form-group mt-5">
                         <div class="form-group">
-                            <input id="ricerca-amministrazione" v-model="search" type="search" @change="getServicesByName()">
-                            <label for="ricerca-amministrazione" style="width: auto;">Cerca contenuti in
+                            <input id="ricerca-servizio" v-model="search" type="search" @change="getServicesByName()">
+                            <label for="ricerca-servizio" style="width: auto;">Cerca contenuti in
                                 "Servizi"</label>
                             <span aria-hidden="true" class="autocomplete-icon"><svg class="icon icon-sm"><use
                                     xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg></span>
