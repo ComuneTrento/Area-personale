@@ -131,10 +131,10 @@
                             <h3 class="mb-4 text-primary">Tutti i servizi</h3>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="servecesList">
                         <div v-for="(service, index) in services" v-bind:key="index" class="col-12 col-sm-6 col-lg-4">
                             <!--start card-->
-                            <article v-if="(index / 6) < currentPage && (index / 6) >= currentPage -1"
+                            <article v-if="(index / 9) < currentPage && (index / 9) >= currentPage -1"
                                      class="card-wrapper card-space">
                                 <div class="card card-bg card-big rounded shadow">
                                     <div v-if="index === 0" class="flag-icon"></div>
@@ -165,7 +165,7 @@
                         <nav class="pagination-wrapper justify-content-center" aria-label="Esempio di paginazione">
                             <ul class="pagination">
                                 <li class="page-item">
-                                    <a class="page-link" href="#" tabindex="-1" aria-hidden="true"
+                                    <a id="prevPageLink" class="page-link" href="#" tabindex="-1" aria-hidden="true"
                                        @click="changePage(currentPage -1 , $event)">
                                         <svg class="icon icon-primary">
                                             <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
@@ -181,7 +181,7 @@
                                        @click="changePage(index, $event)">{{index}}</a>
                                 </li>
                                 <li class="page-item">
-                                    <a class="page-link" href="#" tabindex="-1" aria-hidden="true"
+                                    <a id="nextPageLink" class="page-link" href="#servicesList" tabindex="-1" aria-hidden="true"
                                        @click="changePage(currentPage +1 , $event)">
                                         <span class="sr-only">Pagina successiva</span>
                                         <svg class="icon icon-primary">
@@ -197,6 +197,7 @@
         </section>
     </main>
 </template>
+
 
 <script>
   export default {
@@ -235,11 +236,10 @@
         });
       },
       getPages() {
-        return Math.ceil(this.services.length / 6);
+        return Math.ceil(this.services.length / 9);
       },
-      changePage(pageNumber, event) {
-        if (pageNumber > 0 && pageNumber < (this.services.length / 6) + 1) {
-          event.preventDefault();
+      changePage(pageNumber) {
+        if (pageNumber > 0 && pageNumber < this.getPages() + 1) {
           this.currentPage = pageNumber;
         }
       },
