@@ -57,7 +57,7 @@
                     <div class="link-list-wrapper">
                         <ul v-for="(topic, index) in topics" v-bind:key="index">
                             <li v-if="index === 0">
-                                <h3 id="heading-senza-link2">Tutti i servizi</h3>
+                                <h3 id="heading-senza-link">Tutti i servizi</h3>
                             </li>
                             <li v-if="index < maxTopics">
                                 <a class="list-item" href="#" @click="getServicesByTopic(topic)">{{ topic }}</a>

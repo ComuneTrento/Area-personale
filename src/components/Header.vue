@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="it-header-slim-wrapper-content">
-                            <a class="d-lg-block navbar-brand" href="#">Provincia Autonoma di Trento</a>
+                            <a class="d-lg-block navbar-brand" href="http://www.provincia.tn.it/">Provincia Autonoma di Trento</a>
                             <div class="header-slim-right-zone">
                                 <div class="nav-item dropdown">
                                     <a aria-expanded="false" class="nav-link dropdown-toggle" data-toggle="dropdown"
@@ -108,7 +108,7 @@
                         <div class="col-12">
                             <div class="it-header-center-content-wrapper">
                                 <div class="it-brand-wrapper">
-                                    <a href="#">
+                                    <a href="https://www.comune.trento.it/">
                                         <img class="icon" src="../../public/Trento-logo-removebg-preview.png">
 
                                         <div class="it-brand-text">
