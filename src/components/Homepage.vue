@@ -7,11 +7,10 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <router-link :to="{ path: '/' }">Home</router-link>
-                                <span
-                                        class="separator">/</span>
+                                <span v-if="topicSelected" class="separator">/</span>
                             </li>
-                            <li aria-current="page" class="breadcrumb-item active">
-                                Servizi
+                            <li v-if="topicSelected" class="breadcrumb-item active">
+                                {{topicSelected}}
                             </li>
                         </ol>
                     </nav>
@@ -177,9 +176,12 @@
         topics: [],
         currentPage: 1,
         maxTopics: 4,
-        topicSelected: false,
+        topicSelected: null,
         autocomplete: [],
         search: '',
+        themes: ['Agricoltura', 'Ambiente', 'Anagrafe e stato civile', 'Appalti pubblici', 'Attività produttive e commercio', 'Autorizzazioni', 'Cultura e tempo libero',
+        'Edilizia e urbanistica', 'Edicazione e formazione', 'Elezioni e partecipazione', 'Giustizia e sicurezza pubblica', 'Mobilità e trasporti', 'Salute, benessere e assistenza',
+        'Tributi e finanze', 'Turismo', 'Vita lavorativa']
       };
     },
     beforeMount() {
@@ -239,10 +241,11 @@
         this.services = [];
         let url = '';
         if (topic) {
-          this.topicSelected = true;
+          this.topicSelected = topic;
+          // url = `https://servizi.comune.trento.it/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20service_theme%20in%20%5B%22${topic}%22%5D`
           url = `https://servizi.comune.trento.it/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20topics.name%20in%20%5B%22${topic}%22%5D`;
         } else {
-          this.topicSelected = false;
+          this.topicSelected = null;
           url = 'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D';
         }
         this.getServices(url);
