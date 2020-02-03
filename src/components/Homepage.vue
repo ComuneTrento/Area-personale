@@ -54,73 +54,34 @@
                         </div>
                     </div-->
                 </div>
-                <!--div class="col-lg-4 offset-lg-1 pt-5 pt-lg-2">
+                <div class="col-lg-4 offset-lg-1 pt-5 pt-lg-2">
                     <div class="link-list-wrapper">
-                        <ul class="link-list">
-                            <li>
-                                <h3 id="heading-senza-link">Tutti i servizi</h3>
+                        <ul v-for="(topic, index) in topics" v-bind:key="index">
+                            <li v-if="index === 0">
+                                <h3 id="heading-senza-link2">Tutti i servizi</h3>
                             </li>
-                            <li>
-                                <a class="list-item" href="#">Anagrafe e stato civile</a>
+                            <li v-if="index < maxTopics">
+                                <a class="list-item" href="#" @click="getServicesByTopic(topic)">{{ topic }}</a>
                             </li>
-                            <li>
-                                <a class="list-item" href="#">Cultura e tempo libero</a>
-                            </li>
-                            <li>
-                                <a class="list-item" href="#">Vita lavorativa</a>
-                            </li>
-                            <li>
-                                <a class="list-item" href="#">Attività produttiva e commercio</a>
-                            </li>
-                            <li>
-                                <a class="list-item" href="#">Appalti pubblici</a>
-                            </li>
-                            <li>
-                                <a class="list-item" href="#">Catasto e urbanistica</a>
-                            </li>
-                            <li>
-                                <a class="list-item large medium left-icon" href="#altri-servizi" data-toggle="collapse"
+                            <li v-if="index >= maxTopics">
+                                <a v-if="index === maxTopics" class="list-item large medium left-icon" href="#altri-servizi" data-toggle="collapse"
                                    aria-expanded="false" aria-controls="altri-servizi">
                                     <svg class="icon icon-primary right">
-                                        <use xlink:href="/design-comuni-prototipi/assets/bootstrap-italia/dist/svg/sprite.svg#it-more-items"></use>
+                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-more-items"></use>
                                     </svg>
                                 </a>
                                 <ul class="link-sublist collapse px-0" id="altri-servizi">
                                     <li>
-                                        <a class="list-item" href="#">Turismo</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Mobilità e trasporti</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Educazione e formazione</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Giustizia e sicurezza pubblica</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Tributi e finanze</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Ambiente</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Salute, benessere e assistenza</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Autorizzazioni</a>
-                                    </li>
-                                    <li>
-                                        <a class="list-item" href="#">Agricoltura</a>
+                                        <a class="list-item" href="#" @click="getServicesByTopic(topic)">{{topic}}</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a class="list-item medium" href="#tutti-i-servizi">Tutti i servizi</a>
+                            <li v-if="index === topics.length -1 && topicSelected">
+                                <a class="list-item medium" href="#" @click="getServicesByTopic()">Tutti i servizi</a>
                             </li>
                         </ul>
                     </div>
-                </div-->
+                </div>
             </div>
         </section>
         <section id="Tutti i servizi">
@@ -205,12 +166,16 @@
     data() {
       return {
         services: [],
+        topics: [],
         currentPage: 1,
+        maxTopics: 4,
+        topicSelected: false,
       };
     },
-    mounted() {
+    beforeMount() {
       this.getServices(
           'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D');
+      this.getTopics('https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27topic%27%20sort%20%5Bname%3D%3Easc%5D');
     },
     methods: {
       getServices(url) {
@@ -235,6 +200,21 @@
           this.errorMessage = 'Richiesta non valida' + error;
         });
       },
+      getTopics(url) {
+        this.$http.get(url).then(result => {
+          let nextPage = result.body.nextPageQuery;
+          if (nextPage && !nextPage.startsWith('https')) nextPage = nextPage.replace('http', 'https');
+          result.body.searchHits.forEach((item) => {
+            this.topics.push(item.data['ita-IT'].name);
+          });
+          if (nextPage) {
+            // Request next page
+            this.getTopics(nextPage);
+          }
+        }, error => {
+          this.errorMessage = 'Richiesta non valida' + error;
+        });
+      },
       getPages() {
         return Math.ceil(this.services.length / 9);
       },
@@ -243,6 +223,18 @@
           this.currentPage = pageNumber;
         }
       },
+      getServicesByTopic(topic) {
+        this.services = [];
+        let url = '';
+        if (topic) {
+          this.topicSelected = true;
+          url = `https://servizi.comune.trento.it/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20topics.name%20in%20%5B%22${topic}%22%5D`;
+        } else {
+          this.topicSelected = false;
+          url = 'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D';
+        }
+        this.getServices(url);
+      }
     },
   };
 </script>
