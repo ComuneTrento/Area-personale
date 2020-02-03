@@ -93,67 +93,73 @@
                             <h3 class="mb-4 text-primary">Tutti i servizi</h3>
                         </div>
                     </div>
-                    <div class="row" id="servicesList">
-                        <div v-for="(service, index) in services" v-bind:key="index" class="col-12 col-sm-6 col-lg-4">
-                            <!--start card-->
-                            <article v-if="(index / 9) < currentPage && (index / 9) >= currentPage -1"
-                                     class="card-wrapper card-space">
-                                <div class="card card-bg card-big rounded shadow">
-                                    <div v-if="index === 0" class="flag-icon"></div>
-                                    <div v-else class="flag-icon invisible"></div>
-                                    <div class="row px-5 d-flex flex-row-reverse">
-                                        <div v-for="(topic, topicindex) in service.topics" v-bind:key="topicindex">
-                                            <div class="chip chip-simple">
-                                                <span class="chip-label">{{ topic.name['ita-IT'] }}</span>
+                    <div v-if="services.length === 0">
+                        <p>La ricerca non ha prodotto alcun risultato</p>
+                    </div>
+                    <div v-else>
+                        <div class="row" id="servicesList">
+                            <div v-for="(service, index) in services" v-bind:key="index"
+                                 class="col-12 col-sm-6 col-lg-4">
+                                <!--start card-->
+                                <article v-if="(index / 9) < currentPage && (index / 9) >= currentPage -1"
+                                         class="card-wrapper card-space">
+                                    <div class="card card-bg card-big rounded shadow ">
+                                        <div v-if="index === 0" class="flag-icon"></div>
+                                        <div v-else class="flag-icon invisible"></div>
+                                        <div class="row px-5 d-flex flex-row-reverse">
+                                            <div v-for="(topic, topicindex) in service.topics" v-bind:key="topicindex">
+                                                <div class="chip chip-simple">
+                                                    <span class="chip-label">{{ topic.name['ita-IT'] }}</span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{service.name}}</h5>
+                                            <p class="card-text">{{service.abstract | striphtml }}</p>
+                                            <a class="read-more" v-bind:href="service['link']">
+                                                <span class="text">Leggi di più</span>
+                                                <svg class="icon">
+                                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{service.name}}</h5>
-                                        <p class="card-text">{{service.abstract | striphtml }}</p>
-                                        <a class="read-more" v-bind:href="service['link']">
-                                            <span class="text">Leggi di più</span>
-                                            <svg class="icon">
-                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </article>
+                                <!--end card-->
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <nav class="pagination-wrapper justify-content-center" aria-label="Esempio di paginazione">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a id="prevPageLink" class="page-link" href="#" tabindex="-1" aria-hidden="true"
+                                           @click="changePage(currentPage -1 , $event)">
+                                            <svg class="icon icon-primary">
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
                                             </svg>
                                         </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <!--end card-->
+                                    </li>
+                                    <li v-for="index in this.getPages()" :key="index" class="page-item">
+                                        <a v-if="currentPage === index" class="page-link" href="#" aria-current="page"
+                                           @click="changePage(index, $event)">
+                                            <span>{{index}}</span>
+                                        </a>
+                                        <a v-else class="page-link" href="#"
+                                           @click="changePage(index, $event)">{{index}}</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a id="nextPageLink" class="page-link" href="#servicesList" tabindex="-1"
+                                           aria-hidden="true"
+                                           @click="changePage(currentPage +1 , $event)">
+                                            <span class="sr-only">Pagina successiva</span>
+                                            <svg class="icon icon-primary">
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                    </div>
-                    <div class="mt-2">
-                        <nav class="pagination-wrapper justify-content-center" aria-label="Esempio di paginazione">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a id="prevPageLink" class="page-link" href="#" tabindex="-1" aria-hidden="true"
-                                       @click="changePage(currentPage -1 , $event)">
-                                        <svg class="icon icon-primary">
-                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li v-for="index in this.getPages()" :key="index" class="page-item">
-                                    <a v-if="currentPage === index" class="page-link" href="#" aria-current="page"
-                                       @click="changePage(index, $event)">
-                                        <span>{{index}}</span>
-                                    </a>
-                                    <a v-else class="page-link" href="#"
-                                       @click="changePage(index, $event)">{{index}}</a>
-                                </li>
-                                <li class="page-item">
-                                    <a id="nextPageLink" class="page-link" href="#servicesList" tabindex="-1"
-                                       aria-hidden="true"
-                                       @click="changePage(currentPage +1 , $event)">
-                                        <span class="sr-only">Pagina successiva</span>
-                                        <svg class="icon icon-primary">
-                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
