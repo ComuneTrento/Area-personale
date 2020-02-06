@@ -105,13 +105,13 @@
                                     <div class="card card-bg card-big rounded shadow ">
                                         <div v-if="index === 0" class="flag-icon"></div>
                                         <div v-else class="flag-icon invisible"></div>
-                                        <div class="row px-5 d-flex flex-row-reverse">
+                                        <!--div class="row px-5 d-flex flex-row-reverse">
                                             <div v-for="(topic, topicindex) in service.topics" v-bind:key="topicindex">
                                                 <div class="chip chip-simple">
                                                     <span class="chip-label">{{ topic.name['ita-IT'] }}</span>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div-->
                                         <div class="card-body">
                                             <h5 class="card-title">{{service.name}}</h5>
                                             <p class="card-text">{{service.abstract | striphtml }}</p>
