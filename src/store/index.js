@@ -9,7 +9,10 @@ export default new Vuex.Store({
   },
   getters: {
     user: state => {
-      return state.message;
+      return state.user;
+    },
+    fiscalCode: state => {
+      return state.user.codiceFiscale;
     },
   },
   mutations: {
