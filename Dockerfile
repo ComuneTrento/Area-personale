@@ -22,7 +22,7 @@ RUN npm run build
 
 FROM abiosoft/caddy
 
-RUN apk --no-cache add curl
+RUN apk --update-cache --upgrade --no-cache add curl
 
 COPY Caddyfile /etc/
 
