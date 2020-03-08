@@ -1,0 +1,19 @@
+bind 0.0.0.0
+tls off
+
+status 200 /health
+
+expires {
+    match .css$ 1y 
+    match .js$ 1m 
+    match .png$ 1d 
+    match .html$ 5i30s 
+}
+
+request_id X-Request-ID
+header /  X-Request-Id {request_id}
+
+redir 302 {
+  if {path} is /
+  / /area-personale
+}
