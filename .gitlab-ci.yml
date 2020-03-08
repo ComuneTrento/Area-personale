@@ -4,9 +4,10 @@ services:
   - docker:dind
 
 stages:
-  - onerul
+  - build 
 
 build_latest:
+  stage: build 
   script:
     - echo "master @ ${CI_COMMIT_SHORT_SHA}" > VERSION
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
@@ -17,7 +18,7 @@ build_latest:
 
 pages:
   image: node:latest
-  stage: deploy
+  stage: build 
   script:
     - npm install --progress=false
     - npm run build
