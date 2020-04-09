@@ -4,30 +4,45 @@ import VueRouter from 'vue-router';
 import VueCookies from 'vue-cookies';
 import VueResource from 'vue-resource';
 import store from './store/index';
+import VueMoment from 'vue-moment'
 
 import DomandaAttiva from './components/DomandaAttiva';
 import NidiDisponibili from './components/NidiDisponibili';
-import Anagrafica from './components/Anagrafica';
-import Profile from './components/Profile';
+import Profile from './components/AreaPersonaleComponents/Profile';
 import Homepage from './components/Homepage';
-import PersonalArea from './components/PersonalArea';
-import Login from './components/Login';
+import PersonalArea from './components/AreaPersonaleComponents/PersonalArea';
+import Login from './components/MainComponents/Login';
+import i18n from './i18n'
+import Documenti from './components/AreaPersonaleComponents/Documenti';
+import Pratiche from './components/AreaPersonaleComponents/Pratiche';
+import Pagamenti from './components/AreaPersonaleComponents/Pagamenti';
+import Messaggi from './components/AreaPersonaleComponents/Messaggi';
+import Scadenze from './components/AreaPersonaleComponents/Scadenze';
+import NotFound from './components/NotFound';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(VueCookies);
+Vue.use(VueMoment);
 
 Vue.http.options.root = '/';
 Vue.config.productionTip = false;
 
 const routes = [
   {path: '/login', component: Login},
-  {path: '/anagrafica/:id', component: Anagrafica},
   {path: '/domanda', component: DomandaAttiva},
   {path: '/nidi', component: NidiDisponibili},
   {path: '/profile', component: Profile, name: 'profile'},
-  {path: '/personal', component: PersonalArea, name: 'personal'},
-  {path: '*', component: Homepage},
+  {path: '/personal', component: PersonalArea, name: 'personal', children: [
+      { path: '', component: Pratiche },
+      { path: 'pratiche', component: Pratiche },
+      { path: 'documents', component: Documenti },
+      { path: 'payments', component: Pagamenti },
+      { path: 'messages', component: Messaggi },
+      { path: 'deadlines', component: Scadenze },
+    ]},
+  {path: '/', component: Homepage},
+  {path: '*', component: NotFound},
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`
@@ -55,5 +70,6 @@ export const app = new Vue();
 new Vue({
   router,
   store,
-  render: h => h(App),
+  i18n,
+  render: h => h(App)
 }).$mount('#app');

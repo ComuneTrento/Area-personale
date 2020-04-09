@@ -1,0 +1,166 @@
+{
+  "cookie-bar": {
+    "message": "This site uses technical, analytics and third parts cookies\nBy continuing to browse, you accept the use of cookies.",
+    "info": "Informations",
+    "accept": "Accept",
+    "cookies": " cookies"
+  },
+  "home": "Home",
+  "pagina_non_trovata": "Page not found",
+  "pagina_non_trovata_descrizione": "The page you're searching for does not exists",
+  "le_mie_pratiche": "My practices",
+  "i_miei_documenti": "My documents",
+  "i_miei_pagamenti": "My payments",
+  "pagamenti": "Payments",
+  "messaggi": "Messages",
+  "scadenze": "Deadlines",
+  "profilo": "Profile",
+  "logout": "Logout",
+  "accedi_area_personale": "Login to personal area",
+  "amministrazione": "Administration",
+  "servizi": "Services",
+  "descrizione_servizi_1": "Discover all the services offered by the Municipality of Trento and",
+  "descrizione_servizi_2": "available in online mode",
+  "descrizione_servizi_3": ", without going to the municipal offices",
+  "tutti_i_servizi": "All services",
+  "no_risultati": "The search did not return any results",
+  "leggi_di_piu": "Read more",
+  "pagina_precedente": "Previous page",
+  "pagina_successiva": "Next page",
+  "documenti": "Documents",
+  "cerca_contenuti_in": "Search for content in\n",
+  "novita": "Announcements",
+  "amministrazione_trasparente": "Transparent administration",
+  "contatti": "Contacts",
+  "newsletter": "Newsletter",
+  "seguici_su": "Follow us",
+  "link_utili": "Useful links section",
+  "abitazione": "House",
+  "istruzione": "Education",
+  "procedura_elettorale_e_voto": "Electoral procedure and vote",
+  "tutti_gli_argomenti": "All topics...",
+  "comune": "Municipality of Trento",
+  "provincia": "Autonomous Province of Trento",
+  "descrizione_comune": "One of the many Municipalities of Italy",
+  "vai_alla_pagina": "Go to page: ",
+  "cerca": "Search",
+  "caricamento": "Loading...",
+  "no_data": "No data to display",
+  "footer": {
+    "sezioni": {
+      "amministrazione": {
+        "giunta_e_consiglio": "Junta and council",
+        "aree_competenza": "Areas of expertise",
+        "dipendenti": "Employees",
+        "luoghi": "Places",
+        "associazioni_e_società_partecipate": "Associations and subsidiaries"
+      },
+      "servizi": {
+        "pagamenti": "Payments",
+        "sostegno": "Support",
+        "domande_e_iscrizioni": "Demands and subscriptions",
+        "segnalazioni": "Reports",
+        "autorizzazioni_e_concessioni": "Authorizations and concessions",
+        "certificati_e_dichiarazioni": "Certificates and declatarions"
+      },
+      "documenti": {
+        "progetti_e_attivita": "Projects and activities",
+        "determine_delibere_e_ordinanze": "Determines, resolutions e decrees",
+        "bandi": "Notices",
+        "consorsi": "Competitions",
+        "albo_pretorio": "Praetorian register"
+      },
+      "novita": {
+        "notizie": "News",
+        "eventi": "Events",
+        "comunicati_stampa": "Press releases"
+      },
+      "amministrazione_trasparente": {
+        "testo": "The published personal data are reusable only under the conditions provided for by the EU directive 2003/98 / EC and by the legislative decree 36/2006"
+      },
+      "contatti": {
+        "pec": "Certified Electronic Mail",
+        "urp": "PRO - Public Relations Office"
+      },
+      "newsletter": {
+        "iscriviti_per_ricevere": "Sign up to receive it",
+        "iscriviti": "Sign up"
+      },
+      "link_utili": {
+        "media_policy": "Media policy",
+        "legal_notes": "Note legali",
+        "privacy_policy": "Privacy policy",
+        "mappa_del_sito": "Mappa del sito"
+      }
+    }
+  },
+  "login": {
+    "accedi_ai_servizi_di_service_provider": "Access the Service Provider services",
+    "seleziona_modalità_di_accesso": "Select the access method you prefer",
+    "spid_descrizione": "SPID is the unique system of access to online services of the Public Administration. If you already have a SPID digital identity, log in with your credentials. If you don't have SPID yet, ask one of the managers.",
+    "entra_con_spid": "Sign in with SPID",
+    "no_spid": "Don't you have SPID?",
+    "scopri": "Find out more."
+  },
+  "area_personale": {
+    "titolo": "Personal area",
+    "bentornato": "Welcome",
+    "bentornata": "Welcome",
+    "i_miei_documenti": "My documents",
+    "i_miei_pagamenti": "My payments",
+    "descrizione_scadenze": "Dates to remember and deadlines for municipal services",
+    "descrizione_messaggi": "Messages and notifications from the Municipality on the state of your practices",
+    "descrizione_pratiche": "All the services you have requested or activated from this organization",
+    "descrizione_documenti": "Certificates and documents issued by the Authority collected in a convenient and easily accessible way",
+    "descrizione_pagamenti": "All payments on payment to this Authority",
+    "profilo": {
+      "titolo": "Personal profile",
+      "i_miei_dati": "My personal data",
+      "la_mia_famiglia": "My family",
+      "iscrizione_alle_liste": "Subscription to the lists",
+      "iscrizione_alle_liste_seggi_elettorali": "Registration on the lists of the electoral seats",
+      "anagrafica": "Personal data",
+      "nome": "Name",
+      "data_di_nascita": "Date of birth",
+      "luogo_di_nascita": "Place of birth",
+      "nato_il": "Born on",
+      "nato_a": "in",
+      "codice_fiscale": "Fiscal cole",
+      "residenza": "Resident in",
+      "stato": "State",
+      "nazionalita": "Nationality",
+      "email": "Email address",
+      "matricola": "Freshman",
+      "famiglia": "Family",
+      "nucleo_familiare": "Family",
+      "dimensione_nucleo_familiare": "Family size",
+      "padre": "Father",
+      "madre": "Mother",
+      "figlio": "Son",
+      "figlia": "Daughter",
+      "icef": "Icef",
+      "dichiarazione_icef": "ICEF declaration",
+      "codice_fiscale_richiedente": "Applicant fiscal code",
+      "richiedente": "Applican",
+      "coefficiente":"Coefficient",
+      "calcolato_il": "Calculated on"
+    },
+    "documenti": {
+      "filtro_documenti": "Documents filter",
+      "numero_comunicazione": "Comunication number",
+      "anno": "Year",
+      "descrizione": "Description",
+      "data_comunicazione": "Comunication date",
+      "visualizza": "Display"
+    },
+    "pagamenti": {
+      "filtro_pagamenti": "Payments filter",
+      "tipo_debito": "Debt type",
+      "causale": "Causal",
+      "scadenza": "Deadline",
+      "importo": "Amount",
+      "stato_pagamento": "Payment status",
+      "avviso": "Notice"
+    }
+  }
+}

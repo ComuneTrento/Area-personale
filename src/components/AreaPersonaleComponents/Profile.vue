@@ -6,15 +6,15 @@
                     <nav class="breadcrumb-container" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <router-link :to="{ path: '/' }">Home</router-link>
+                                <router-link :to="{ path: '/' }">{{$t('home')}}</router-link>
                                 <span class="separator">/</span>
                             </li>
                             <li class="breadcrumb-item">
-                                <router-link :to="{ path: 'personal' }">Area Personale</router-link>
+                                <router-link :to="{ path: '/personal/pratiche' }">{{$t('area_personale.titolo')}}</router-link>
                                 <span class="separator">/</span>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Profilo
+                                {{$t('profilo')}}
                             </li>
                         </ol>
                     </nav>
@@ -22,7 +22,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 px-lg-4 py-lg-2">
-                    <h1>Profilo personale</h1>
+                    <h1>{{$t('area_personale.profilo.titolo')}}</h1>
                 </div>
             </div>
             <div class="bd-example-tabs mt-5">
@@ -32,28 +32,28 @@
                              aria-orientation="vertical">
                             <a class="nav-link active" id="nav-vertical-tab-ico1-tab" data-toggle="tab"
                                href="#nav-vertical-tab-ico1" role="tab" aria-controls="nav-vertical-tab-ico1"
-                               aria-selected="true">I miei dati
+                               aria-selected="true">{{$t('area_personale.profilo.i_miei_dati')}}
                                 <svg class="icon icon-primary">
                                     <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                 </svg>
                             </a>
                             <a class="nav-link" id="nav-vertical-tab-ico2-tab" data-toggle="tab"
                                href="#nav-vertical-tab-ico2"
-                               role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">La mia famiglia
+                               role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">{{$t('area_personale.profilo.la_mia_famiglia')}}
                                 <svg class="icon icon-primary">
                                     <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-list"></use>
                                 </svg>
                             </a>
                             <a class="nav-link" id="nav-vertical-tab-ico3-tab" data-toggle="tab"
                                href="#nav-vertical-tab-ico3"
-                               role="tab" aria-controls="nav-vertical-tab-ico3" aria-selected="false">Icef
+                               role="tab" aria-controls="nav-vertical-tab-ico3" aria-selected="false">{{$t('area_personale.profilo.icef')}}
                                 <svg class="icon icon-primary">
                                     <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chart-line"></use>
                                 </svg>
                             </a>
                             <a class="nav-link" id="nav-vertical-tab-ico4-tab" data-toggle="tab"
                                href="#nav-vertical-tab-ico4"
-                               role="tab" aria-controls="nav-vertical-tab-ico4" aria-selected="false">Iscrizione alle liste
+                               role="tab" aria-controls="nav-vertical-tab-ico4" aria-selected="false">{{$t('area_personale.profilo.iscrizione_alle_liste')}}
                                 <svg class="icon icon-primary">
                                     <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
                                 </svg>
@@ -66,34 +66,34 @@
                                  aria-labelledby="nav-vertical-tab-ico1-tab">
                                 <div v-if="!errorMessage && !userData" class="col-6 col-lg-3">
                                     <div class="progress-spinner progress-spinner-active">
-                                        <span class="sr-only">Caricamento...</span>
+                                        <span class="sr-only">{{$t('caricamento')}}</span>
                                     </div>
                                 </div>
                                 <div v-if="userData">
                                     <h4>{{userData.nome}} {{userData.cognome}}</h4>
                                     <div>
                                         <div class="row">
-                                            <span class="d-block col-6"><b>Data di nascita</b></span><span
+                                            <span class="d-block col-6"><b>{{$t('area_personale.profilo.data_di_nascita')}}</b></span><span
                                                 class="col-6">{{userData.datanascita}}</span>
                                         </div>
                                         <div class="row">
-                                            <span class="d-block col-6"><b>Luogo di nascita</b></span><span
+                                            <span class="d-block col-6"><b>{{$t('area_personale.profilo.luogo_di_nascita')}}</b></span><span
                                                 class="col-6">{{userData.comuneNascita}}</span>
                                         </div>
                                         <div class="row">
-                                            <span class="d-block col-6"><b>Codice fiscale</b></span><span class="col-6">{{userData.codiceFiscale}}</span>
+                                            <span class="d-block col-6"><b>{{$t('area_personale.profilo.codice_fiscale')}}</b></span><span class="col-6">{{userData.codiceFiscale}}</span>
                                         </div>
                                         <div class="row">
-                                            <span class="d-block col-6"><b>Indirizzo di residenza</b></span><span
+                                            <span class="d-block col-6"><b>{{$t('area_personale.profilo.residenza')}}</b></span><span
                                                 class="col-6">{{userData.indirizzo}} {{userData.numeroCivico}}{{userData.barra}}<br>{{userData.cap}} - {{userData.citta}} ({{userData.provincia}})</span>
                                         </div>
                                         <div class="row">
-                                            <span class="d-block col-6"><b>Nazionalità</b></span>
+                                            <span class="d-block col-6"><b>{{$t('area_personale.profilo.nazionalita')}}</b></span>
                                             <span v-if="userData.sesso === 'M'" class="col-6">{{userData.nazionalita_maschile}}</span>
                                             <span v-else class="col-6">{{userData.nazionalita}}</span>
                                         </div>
                                         <div class="row">
-                                            <span class="d-block col-6"><b>Indirizzo email</b></span>
+                                            <span class="d-block col-6"><b>{{$t('area_personale.profilo.email')}}</b></span>
                                             <span v-if="userData.email" class="col-6">{{userData.email}}</span>
                                             <span v-else class="col-6"> -- </span>
                                         </div>
@@ -102,10 +102,10 @@
                             </div>
                             <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico2" role="tabpanel"
                                  aria-labelledby="nav-vertical-tab-ico2-tab">
-                                <h4>Nucleo Familiare</h4>
+                                <h4>{{$t('area_personale.profilo.nucleo_familiare')}}</h4>
                                 <div v-if="!errorMessage && familyList.length === 0" class="col-6 col-lg-3">
                                     <div class="progress-spinner progress-spinner-active">
-                                        <span class="sr-only">Caricamento...</span>
+                                        <span class="sr-only">{{$t('caricamento')}}</span>
                                     </div>
                                 </div>
                                 <div v-else>
@@ -120,17 +120,17 @@
                                                     <span class="category">{{familyMember.nome}} {{familyMember.cognome}}</span>
                                                 </div>
                                                 <div class="card-text">
-                                                    <div><p>Nato/a il {{familyMember.datanascita}} a
+                                                    <div><p>{{$t('area_personale.profilo.nato_il')}} {{familyMember.datanascita}} {{$t('area_personale.profilo.nato_a')}}
                                                         {{familyMember.comuneNascita}}</p>
-                                                        <p>Codice Fiscale: {{familyMember.codiceFiscale}}</p>
-                                                        <p>Residente in {{familyMember.indirizzo}}
+                                                        <p>{{$t('area_personale.profilo.codice_fiscale')}}: {{familyMember.codiceFiscale}}</p>
+                                                        <p>{{$t('area_personale.profilo.residenza')}}{{familyMember.indirizzo}}
                                                             {{familyMember.numeroCivico}}{{familyMember.barra}}</p>
                                                         <p>{{familyMember.cap}} {{familyMember.citta}}
                                                             ({{familyMember.provincia}})</p>
-                                                        <p v-if="familyMember.sesso === 'M'">Nazionalità:
+                                                        <p v-if="familyMember.sesso === 'M'">{{$t('area_personale.profilo.nazionalita')}}:
                                                             {{familyMember.nazionalita_maschile}}</p>
-                                                        <p v-else>Nazionalità: {{familyMember.nazionalita}}</p>
-                                                        <p v-if="familyMember.email">Indirizzo email:
+                                                        <p v-else>{{$t('area_personale.profilo.nazionalita')}}: {{familyMember.nazionalita}}</p>
+                                                        <p v-if="familyMember.email">{{$t('area_personale.profilo.email')}}:
                                                             {{familyMember.email}}</p></div>
                                                 </div>
                                                 <a class="read-more" href="#">
@@ -150,27 +150,27 @@
                                  aria-labelledby="nav-vertical-tab-ico3-tab">
                                 <div v-if="!icefData && !icefMessage">
                                     <div class="progress-spinner progress-spinner-active">
-                                        <span class="sr-only">Caricamento...</span>
+                                        <span class="sr-only">{{$t('caricamento')}}</span>
                                     </div>
                                 </div>
                                 <div v-else>
-                                    <h4>Dichiarazione ICEF</h4>
+                                    <h4>{{$t('area_personale.profilo.dichiarazione_icef')}}</h4>
                                     <div v-if="icefMessage" class="alert alert-info" >{{icefMessage}}</div>
                                     <div v-if="icefData">
                                         <div>
                                             <div class="row">
-                                                <span class="d-block col-6"><b>Codice fiscale del richiedente</b></span><span
+                                                <span class="d-block col-6"><b>{{$t('area-perosonale.profilo.codice_fiscale_richiedente')}}</b></span><span
                                                     class="col-6">{{icefData.codiceFiscaleRichiedente}}</span>
                                             </div>
                                             <div class="row">
-                                                <span class="d-block col-6"><b>Richiedente</b></span><span
+                                                <span class="d-block col-6"><b>{{$t('area-perosonale.profilo.dichiarazione_icef')}}</b></span><span
                                                     class="col-6">{{icefData.nomeRichiedente}} {{icefData.cognomeRichiedente}}</span>
                                             </div>
                                             <div class="row">
-                                                <span class="d-block col-6"><b>Coefficiente</b></span><span class="col-6">{{icefData.coefficienteIcef}}</span>
+                                                <span class="d-block col-6"><b>{{$t('area-perosonale.profilo.richiedente')}}</b></span><span class="col-6">{{icefData.coefficienteIcef}}</span>
                                             </div>
                                             <div class="row">
-                                                <span class="d-block col-6"><b>Calcolato il</b></span>
+                                                <span class="d-block col-6"><b>{{$t('area-perosonale.profilo.calcolato_il')}}</b></span>
                                                 <span class="col-6">{{icefData.dataCalcolo}}</span>
                                             </div>
                                         </div>
@@ -179,7 +179,7 @@
                             </div>
                             <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico4" role="tabpanel"
                                  aria-labelledby="nav-vertical-tab-ico4-tab">
-                                <h4>Iscrizione alle liste dei Seggi Elettorali</h4>
+                                <h4>{{$t('area_personale.profilo.iscrizione_alle_liste_seggi_elettorali')}}</h4>
                             </div>
                         </div>
                     </div>
@@ -264,7 +264,7 @@
     },
     beforeMount() {
       if (!this.$store.state.user) {
-        this.$router.push('login');
+        this.$router.push('/login');
       } else {
         this.fiscalCode = this.$store.state.user.codiceFiscale;
         this.getPersonaREST(this.fiscalCode, true);

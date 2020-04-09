@@ -8,10 +8,10 @@
 </template>
 
 <script>
-  import CookieBar from './components/CookieBar';
-  import Header from './components/Header';
-  import MainContent from './components/MainContent';
-  import Footer from './components/Footer';
+  import CookieBar from './components/MainComponents/CookieBar';
+  import Header from './components/MainComponents/Header';
+  import MainContent from './components/MainComponents/MainContent';
+  import Footer from './components/MainComponents/Footer';
 
   export default {
     name: 'app',
@@ -25,4 +25,9 @@
 </script>
 
 <style>
+    .progress-spinner.progress-spinner-active {
+        margin-left: calc(50% - 24px);
+    }
 </style>
+
+
