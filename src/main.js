@@ -4,7 +4,6 @@ import VueRouter from 'vue-router';
 import VueCookies from 'vue-cookies';
 import VueResource from 'vue-resource';
 import store from './store/index';
-import VueMoment from 'vue-moment'
 
 import DomandaAttiva from './components/DomandaAttiva';
 import NidiDisponibili from './components/NidiDisponibili';
@@ -23,7 +22,6 @@ import NotFound from './components/NotFound';
 Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(VueCookies);
-Vue.use(VueMoment);
 
 Vue.http.options.root = '/';
 Vue.config.productionTip = false;
