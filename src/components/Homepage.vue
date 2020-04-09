@@ -6,7 +6,11 @@
                     <nav aria-label="breadcrumb" class="breadcrumb-container">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <router-link :to="{ path: '/' }">Home</router-link>
+                                <a v-bind:href="$store.getters.comune.url">{{$t('comune')}}</a>
+                                <span class="separator">/</span>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a v-bind:href="$store.getters.comune.links.sezione_servizi.servizi">{{$t('servizi')}}</a>
                                 <span v-if="topicSelected" class="separator">/</span>
                             </li>
                             <li v-if="topicSelected" class="breadcrumb-item active">
@@ -20,44 +24,27 @@
         <section id="intro" class="container px-4 my-4">
             <div class="row">
                 <div class="col-lg-7 px-lg-4 py-lg-2">
-                    <h1>Servizi</h1>
-                    <p>Scopri tutti i servizi offerti dal Comune di Trento e <b>fruibili in modalità online</b>, senza
-                        bisogno di recarsi agli uffici comunali</p>
+                    <h1>{{$t('servizi')}}</h1>
+                    <p>{{$t('descrizione_servizi_1')}} <b>{{$t('descrizione_servizi_2')}}</b> {{$t('descrizione_servizi_3')}}
+                    </p>
                     <div class="form-group mt-5">
                         <div class="form-group">
                             <input id="ricerca-servizio" v-model="search" type="search" @change="getServicesByName()">
-                            <label for="ricerca-servizio" style="width: auto;">Cerca contenuti in
-                                "Servizi"</label>
-                            <span aria-hidden="true" class="autocomplete-icon"><svg class="icon icon-sm"><use
-                                    xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg></span>
+                            <label for="ricerca-servizio" style="width: auto;">{{$t('cerca_contenuti_in')}}
+                                "{{$t('servizi')}}"</label>
+                            <span aria-hidden="true" class="autocomplete-icon">
+                                <svg class="icon icon-sm">
+                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use>
+                                </svg>
+                            </span>
                         </div>
                     </div>
-                    <!--div id="filtri-ricerca-amministrazione">
-                        <h6 class="small">Filtri</h6>
-                        <div class="chip chip-lg">
-                            <span class="chip-label">Tutto</span>
-                            <button>
-                                <svg class="icon">
-                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
-                                </svg>
-                                <span class="sr-only">Elimina label</span>
-                            </button>
-                        </div>
-                        <div class="ml-2 d-inline">
-                            <button class="btn btn-icon btn-outline-primary btn-sm align-top">
-                                <svg class="icon icon-primary">
-                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-plus"></use>
-                                </svg>
-                                <span>Aggiungi filtro</span>
-                            </button>
-                        </div>
-                    </div-->
                 </div>
                 <div class="col-lg-4 offset-lg-1 pt-5 pt-lg-2">
                     <div class="link-list-wrapper">
                         <ul v-for="(topic, index) in topics" v-bind:key="index">
                             <li v-if="index === 0">
-                                <h3 id="heading-senza-link">Tutti i servizi</h3>
+                                <h3 id="heading-senza-link">{{$t('tutti_i_servizi')}}</h3>
                             </li>
                             <li v-if="index < maxTopics">
                                 <a class="list-item" href="#" @click="getServicesByTopic(topic)">{{ topic }}</a>
@@ -77,26 +64,29 @@
                                 </ul>
                             </li>
                             <li v-if="index === topics.length -1 && topicSelected">
-                                <a class="list-item medium" href="#" @click="getServicesByTopic()">Tutti i servizi</a>
+                                <a class="list-item medium" href="#" @click="getServicesByTopic()">{{$t('tutti_i_servizi')}}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="Tutti i servizi">
+        <section id="publicServices">
             <div class="bg-100 py-5">
                 <div class="container px-4">
                     <div class="row">
                         <div class="col">
-                            <h3 class="mb-4 text-primary">Tutti i servizi</h3>
+                            <h3 class="mb-4 text-primary">{{$t('tutti_i_servizi')}}</h3>
                         </div>
                     </div>
-                    <div v-if="services.length === 0">
-                        <p>La ricerca non ha prodotto alcun risultato</p>
+                    <div v-if="loadingServices" class="progress-spinner progress-spinner-active">
+                        <span class="sr-only">{{$t('caricamento')}}</span>
                     </div>
-                    <div v-else>
-                        <div class="row" id="servicesList">
+                    <div v-else-if="!loadingServices && services.length === 0">
+                        <p>{{$t('no_risultati')}}</p>
+                    </div>
+                    <div v-else-if="!loadingServices">
+                        <div class="row" id="services_list">
                             <div v-for="(service, index) in services" v-bind:key="index"
                                  class="col-12 col-sm-6 col-lg-4">
                                 <!--start card-->
@@ -105,18 +95,11 @@
                                     <div class="card card-bg card-big rounded shadow ">
                                         <div v-if="index === 0" class="flag-icon"></div>
                                         <div v-else class="flag-icon invisible"></div>
-                                        <!--div class="row px-5 d-flex flex-row-reverse">
-                                            <div v-for="(topic, topicindex) in service.topics" v-bind:key="topicindex">
-                                                <div class="chip chip-simple">
-                                                    <span class="chip-label">{{ topic.name['ita-IT'] }}</span>
-                                                </div>
-                                            </div>
-                                        </div-->
                                         <div class="card-body">
                                             <h5 class="card-title">{{service.name}}</h5>
                                             <p class="card-text">{{service.abstract | striphtml }}</p>
                                             <a class="read-more" v-bind:href="service['link']">
-                                                <span class="text">Leggi di più</span>
+                                                <span class="text">{{$t('leggi_di_piu')}}</span>
                                                 <svg class="icon">
                                                     <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                                 </svg>
@@ -128,18 +111,21 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                            <nav class="pagination-wrapper justify-content-center" aria-label="Esempio di paginazione">
+                            <nav class="pagination-wrapper justify-content-center" aria-label="Paginazione">
                                 <ul class="pagination">
                                     <li class="page-item">
-                                        <a id="prevPageLink" class="page-link" href="#" tabindex="-1" aria-hidden="true"
+                                        <a id="prevPageLink" class="page-link" href="#" tabindex="-1"
+                                           aria-hidden="true"
                                            @click="changePage(currentPage -1 , $event)">
+                                            <span class="sr-only">{{$t('pagina_precedente')}}</span>
                                             <svg class="icon icon-primary">
                                                 <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li v-for="index in this.getPages()" :key="index" class="page-item">
-                                        <a v-if="currentPage === index" class="page-link" href="#" aria-current="page"
+                                        <a v-if="currentPage === index" class="page-link" href="#"
+                                           aria-current="page"
                                            @click="changePage(index, $event)">
                                             <span>{{index}}</span>
                                         </a>
@@ -147,10 +133,10 @@
                                            @click="changePage(index, $event)">{{index}}</a>
                                     </li>
                                     <li class="page-item">
-                                        <a id="nextPageLink" class="page-link" href="#servicesList" tabindex="-1"
+                                        <a id="nextPageLink" class="page-link" href="#" tabindex="-1"
                                            aria-hidden="true"
                                            @click="changePage(currentPage +1 , $event)">
-                                            <span class="sr-only">Pagina successiva</span>
+                                            <span class="sr-only">{{$t('pagina_successiva')}}</span>
                                             <svg class="icon icon-primary">
                                                 <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                             </svg>
@@ -172,54 +158,99 @@
     name: 'Homepage',
     data() {
       return {
+        loadingServices: false,
         services: [],
         topics: [],
         currentPage: 1,
         maxTopics: 4,
         topicSelected: null,
-        autocomplete: [],
         search: '',
-        themes: ['Agricoltura', 'Ambiente', 'Anagrafe e stato civile', 'Appalti pubblici', 'Attività produttive e commercio', 'Autorizzazioni', 'Cultura e tempo libero',
-        'Edilizia e urbanistica', 'Edicazione e formazione', 'Elezioni e partecipazione', 'Giustizia e sicurezza pubblica', 'Mobilità e trasporti', 'Salute, benessere e assistenza',
-        'Tributi e finanze', 'Turismo', 'Vita lavorativa']
+        themes: [
+          'Agricoltura',
+          'Ambiente',
+          'Anagrafe e stato civile',
+          'Appalti pubblici',
+          'Attività produttive e commercio',
+          'Autorizzazioni',
+          'Cultura e tempo libero',
+          'Edilizia e urbanistica',
+          'Edicazione e formazione',
+          'Elezioni e partecipazione',
+          'Giustizia e sicurezza pubblica',
+          'Mobilità e trasporti',
+          'Salute, benessere e assistenza',
+          'Tributi e finanze',
+          'Turismo',
+          'Vita lavorativa'],
       };
     },
     beforeMount() {
       this.getServices(
-          'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D');
+          `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`);
       this.getTopics(
-          'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27topic%27%20sort%20%5Bname%3D%3Easc%5D');
+          `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27topic%27%20sort%20%5Bname%3D%3Easc%5D`);
+    },
+    watch: {
+      '$i18n.locale': function() {
+        this.services = [];
+        if (this.topicSelected)
+          this.getServicesByTopic(this.topicSelected);
+        else
+          this.getServices(
+              `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`);
+
+      },
     },
     methods: {
       getServices(url) {
+        this.loadingServices = true;
+        let language = '';
+        this.$store.getters.locales.forEach((locale) => {
+          if (locale.locale === this.$i18n.locale) {
+            language = locale.api;
+          }
+        });
         this.$http.get(url).then(result => {
           let nextPage = result.body.nextPageQuery;
           if (nextPage && !nextPage.startsWith('https')) nextPage = nextPage.replace('http', 'https');
           result.body.searchHits.forEach((item) => {
+            if (!item.metadata.languages.includes(language)) {
+              language = 'ita-IT';
+            }
             let service = {
-              name: item.data['ita-IT'].name,
-              abstract: item.data['ita-IT'].abstract,
+              name: item.data[language].name,
+              abstract: item.data[language].abstract,
               link: `https://servizi.comune.trento.it/openpa/object/${item.metadata.id}`,
-              topics: item.data['ita-IT'].topics,
+              topics: item.data[language].topics,
             };
             this.services.push(service);
-            this.autocomplete.push([{text: service.name, link: service.link}]);
           });
-
           if (nextPage) {
             // Request next page
             this.getServices(nextPage);
+          } else {
+            this.loadingServices = false;
           }
         }, error => {
           this.errorMessage = 'Richiesta non valida' + error;
         });
       },
       getTopics(url) {
+        this.loadingServices = true;
+        let language = '';
+        this.$store.getters.locales.forEach((locale) => {
+          if (locale.locale === this.$i18n.locale) {
+            language = locale.api;
+          }
+        });
         this.$http.get(url).then(result => {
           let nextPage = result.body.nextPageQuery;
           if (nextPage && !nextPage.startsWith('https')) nextPage = nextPage.replace('http', 'https');
           result.body.searchHits.forEach((item) => {
-            this.topics.push(item.data['ita-IT'].name);
+            if (!item.metadata.languages.includes(language)) {
+              language = 'ita-IT';
+            }
+            this.topics.push(item.data[language].name);
           });
           if (nextPage) {
             // Request next page
@@ -232,7 +263,9 @@
       getPages() {
         return Math.ceil(this.services.length / 9);
       },
-      changePage(pageNumber) {
+      changePage(pageNumber, event) {
+        event.preventDefault();
+        document.getElementById("publicServices").scrollIntoView();
         if (pageNumber > 0 && pageNumber < this.getPages() + 1) {
           this.currentPage = pageNumber;
         }
@@ -242,11 +275,10 @@
         let url = '';
         if (topic) {
           this.topicSelected = topic;
-          // url = `https://servizi.comune.trento.it/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20service_theme%20in%20%5B%22${topic}%22%5D`
-          url = `https://servizi.comune.trento.it/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20topics.name%20in%20%5B%22${topic}%22%5D`;
+          url = `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20topics.name%20in%20%5B%22${topic}%22%5D`;
         } else {
           this.topicSelected = null;
-          url = 'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D';
+          url = `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`;
         }
         this.getServices(url);
       },
@@ -254,11 +286,9 @@
         this.services = [];
         let url = '';
         if (this.search) {
-          url = `https://servizi.comune.trento.it/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20raw%5Battr_name_t%5D%20%3D%20%5B%22${this.search}%22%5D`;
-          // eslint-disable-next-line no-console
-          console.log(url);
+          url = `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20raw%5Battr_name_t%5D%20%3D%20%5B%22${this.search}%22%5D`;
         } else {
-          url = 'https://servizi.comune.trento.it/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D';
+          url = `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`;
         }
         this.getServices(url);
       },

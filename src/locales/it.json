@@ -1,0 +1,166 @@
+{
+  "cookie-bar": {
+    "message": "Questo sito utilizza cookie tecnici, analytics e di terze parti.\nProseguendo nella navigazione accetti l’utilizzo dei cookie.",
+    "info": "Informazioni",
+    "accept": "Accetto",
+    "cookies": " i cookies"
+  },
+  "home": "Home",
+  "pagina_non_trovata": "Pagina non trovata",
+  "pagina_non_trovata_descrizione": "La pagina che stai cercando non esiste",
+  "le_mie_pratiche": "Le mie pratiche",
+  "i_miei_documenti": "I miei documenti",
+  "i_miei_pagamenti": "I miei pagamenti",
+  "pagamenti": "Pagamenti",
+  "messaggi": "Messaggi",
+  "scadenze": "Scadenze",
+  "profilo": "Profilo",
+  "logout": "Logout",
+  "accedi_area_personale": "Accedi all'area personale",
+  "amministrazione": "Amministrazione",
+  "servizi": "Servizi",
+  "descrizione_servizi_1": "Scopri tutti i servizi offerti dal Comune di Trento e ",
+  "descrizione_servizi_2": "fruibili in modalità online",
+  "descrizione_servizi_3": ", senza bisogno di recarsi agli uffici comunali",
+  "tutti_i_servizi": "Tutti i servizi",
+  "no_risultati": "la ricerca non ha prodotto alcun risultato",
+  "leggi_di_piu": "Leggi di piu",
+  "pagina_precedente": "Pagina precedente",
+  "pagina_successiva": "Pagina successiva",
+  "documenti": "Documenti",
+  "cerca_contenuti_in": "Cerca contenuti in",
+  "novita": "Novità",
+  "amministrazione_trasparente": "Amministrazione trasparente",
+  "contatti": "Contatti",
+  "newsletter": "Newsletter",
+  "seguici_su": "Seguici su",
+  "link_utili": "Sezione Link Utili",
+  "abitazione": "Abitazione",
+  "istruzione": "Istruzione",
+  "procedura_elettorale_e_voto": "Procedura elettorale e voto",
+  "tutti_gli_argomenti": "Tutti gli argomenti...",
+  "comune": "Comune di Trento",
+  "provincia": "Provincia Autonoma di Trento",
+  "descrizione_comune": "Uno dei tanti Comuni d'Italia",
+  "vai_alla_pagina": "Vai alla pagina: ",
+  "cerca": "Cerca",
+  "caricamento": "Caricamento...",
+  "no_data": "Non sono presenti dati da visualizzare",
+  "footer": {
+    "sezioni": {
+      "amministrazione": {
+        "giunta_e_consiglio": "Giunta e consiglio",
+        "aree_competenza": "Aree di competenza",
+        "dipendenti": "Dipendenti",
+        "luoghi": "Luoghi",
+        "associazioni_e_società_partecipate": "Associazioni e società partecipate"
+      },
+      "servizi": {
+        "pagamenti": "Pagamenti",
+        "sostegno": "Sostegno",
+        "domande_e_iscrizioni": "Domande e iscrizioni",
+        "segnalazioni": "Segnalazioni",
+        "autorizzazioni_e_concessioni": "Autorizzazioni e concessioni",
+        "certificati_e_dichiarazioni": "Certificati e dichiarazioni"
+      },
+      "documenti": {
+        "progetti_e_attivita": "Progetti e attività",
+        "determine_delibere_e_ordinanze": "Determine, delibere e ordinanze",
+        "bandi": "Bandi",
+        "consorsi": "Concorsi",
+        "albo_pretorio": "Albo pretorio"
+      },
+      "novita": {
+        "notizie": "Notizie",
+        "eventi": "Eventi",
+        "comunicati_stampa": "Comunicati stampa"
+      },
+      "amministrazione_trasparente": {
+        "testo": "I dati personali pubblicati sono riutilizzabili solo alle condizioni previste dalla direttiva comunitaria 2003/98/CE e dal d.lgs. 36/2006"
+      },
+      "contatti": {
+        "pec": "Posta Elettronica Certficata",
+        "urp": "URP - Ufficio Relazioni con il Pubblico"
+      },
+      "newsletter": {
+        "iscriviti_per_ricevere": "Iscriviti per riceverla",
+        "iscriviti": "Iscriviti"
+      },
+      "link_utili": {
+        "media_policy": "Media policy",
+        "legal_notes": "Note legali",
+        "privacy_policy": "Privacy policy",
+        "mappa_del_sito": "Mappa del sito"
+      }
+    }
+  },
+  "login": {
+    "accedi_ai_servizi_di_service_provider": "Accedi ai servizi di Service Provider",
+    "seleziona_modalità_di_accesso": "Seleziona la modalità di accesso che preferisci",
+    "spid_descrizione": "SPID è il sistema unico di accesso ai servizi online della Pubblica Amministrazione. Se hai già un'identità digitale SPID, accedi con le tue credenziali. Se non hai ancora SPID, richiedilo ad uno dei gestori.",
+    "entra_con_spid": "Entra con SPID",
+    "no_spid": "Non hai SPID?",
+    "scopri": "Scopri di piu."
+  },
+  "area_personale": {
+    "titolo": "Area personale",
+    "bentornato": "Bentornato",
+    "bentornata": "Bentornata",
+    "i_miei_documenti": "I miei documenti",
+    "i_miei_pagamenti": "I miei pagamenti",
+    "descrizione_scadenze": "Date da ricordare e scadenze relative ai servizi comunali",
+    "descrizione_messaggi": "Messaggi e notifiche dal Comune sullo stato delle tue pratiche",
+    "descrizione_pratiche": "Tutti i servizi che hai richiesto o attivato presso questo Ente",
+    "descrizione_documenti": "Certificati e documenti rilasciati dall'Ente raccolti in modo comodo e facilmente consultabile",
+    "descrizione_pagamenti": "Tutti i pagamenti su pagoPa verso questo Ente",
+    "profilo": {
+      "titolo": "Profilo personale",
+      "i_miei_dati": "I miei dati anagrafici",
+      "la_mia_famiglia": "La mia famiglia",
+      "iscrizione_alle_liste": "Iscrizione alle liste",
+      "iscrizione_alle_liste_seggi_elettorali": "Iscrizione alle liste dei Seggi Elettorali",
+        "anagrafica": "Anagrafica",
+        "nome": "Nome",
+        "data_di_nascita": "Data di nascita",
+        "luogo_di_nascita": "Luogo di nascita",
+        "nato_il": "Nato/a il",
+        "nato_a": "a",
+        "codice_fiscale": "Codice fiscale",
+        "residenza": "Residente in",
+        "stato": "Stato",
+        "nazionalita": "Nazionalità",
+        "email": "Indirizzo email",
+        "matricola": "Matricola",
+        "famiglia": "Famiglia",
+        "nucleo_familiare": "Nucleo familiare",
+        "dimensione_nucleo_familiare": "Dimensione del nucleo familiare",
+        "padre": "Padre",
+        "madre": "Madre",
+        "figlio": "Figlio",
+        "figlia": "Figlia",
+      "icef": "Icef",
+      "dichiarazione_icef": "Dichiarazione ICEF",
+      "codice_fiscale_richiedente": "Codice fiscale del richiedente",
+      "richiedente": "Richiedente",
+      "coefficiente":"Coefficiente",
+      "calcolato_il": "Calcolato il"
+    },
+    "documenti": {
+      "filtro_documenti": "Filtro documenti",
+      "numero_comunicazione": "Numero comunicazione",
+      "anno": "Anno",
+      "descrizione": "Descrizione",
+      "data_comunicazione": "Data comunicazione",
+      "visualizza": "Visualizza"
+    },
+    "pagamenti": {
+      "filtro_pagamenti": "Filtro pagamenti",
+      "tipo_debito": "Tipo debito",
+      "causale": "Causale",
+      "scadenza": "Scadenza",
+      "importo": "Importo",
+      "stato_pagamento": "Stato pagamento",
+      "avviso": "Avviso"
+    }
+  }
+}

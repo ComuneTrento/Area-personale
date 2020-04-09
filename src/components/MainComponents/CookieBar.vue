@@ -1,10 +1,9 @@
 <template>
     <div class="cookiebar">
-        <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti
-            l’utilizzo dei cookie.</p>
-        <div class="cookiebar-buttons" id="ciao">
-            <a href="https://servizi.comune.trento.it/openpa/cookie" class="cookiebar-btn">Informazioni<span class="sr-only">cookies</span></a>
-            <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span>
+        <p>{{$t('cookie-bar.message')}}</p>
+        <div class="cookiebar-buttons" id="cookie-bar">
+            <a href="https://servizi.comune.trento.it/openpa/cookie" class="cookiebar-btn">{{$t('cookie-bar.info')}}<span class="sr-only">{{$t('cookie-bar.cookies')}}</span></a>
+            <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">{{$t('cookie-bar.accept')}}<span class="sr-only">{{$t('cookie-bar.cookies')}}</span>
             </button>
         </div>
         <img data-occookieconsent="accepted" src="">
@@ -43,8 +42,6 @@
           $(this).attr('src', $(this).attr('data-src'))
         });
         $('script[type="text/plain"][data-occookieconsent="accepted"]').each(function () {
-          // eslint-disable-next-line no-console
-          console.log($(this).attr('src'))
           if ($(this).attr('src')) {
             // eslint-disable-next-line no-useless-escape
             $(this).after('<script type="text/javascript" src="' + $(this).attr('src') + '"><\/script>')
