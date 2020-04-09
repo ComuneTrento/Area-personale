@@ -17,7 +17,7 @@ build_latest:
     - master
 
 pages:
-  image: node:alpine
+  image: node:lts
   stage: build
   script:
     - npm install --progress=false
