@@ -108,7 +108,7 @@
                                                 <svg class="icon icon-white">
                                                     <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use>
                                                 </svg>
-                                                <span>{{$t('area_personale.pagamenti.avviso')}}</span>
+                                                <span>{{$t('area_personale.pagamenti.download')}}</span>
                                             </a>
                                         </td>
                                     </tr>

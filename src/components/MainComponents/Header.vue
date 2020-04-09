@@ -289,8 +289,6 @@
     },
     methods: {
       setLocale: function (locale) {
-        // eslint-disable-next-line no-console
-        console.log('locale', locale )
         this.$i18n = locale;
       },
         logout() {

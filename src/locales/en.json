@@ -160,7 +160,7 @@
       "scadenza": "Deadline",
       "importo": "Amount",
       "stato_pagamento": "Payment status",
-      "avviso": "Notice"
+      "download": "Download"
     }
   }
 }
