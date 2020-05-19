@@ -39,14 +39,14 @@
                                         <th scope="col" @click="sort('TIPO DEBITO')">
                                             <span>{{$t('area_personale.pagamenti.tipo_debito')}}</span>
                                             <svg v-if="currentSort === 'TIPO DEBITO' && currentSortDir==='desc'" class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
                                             </svg>
                                             <svg v-else-if="currentSort === 'TIPO DEBITO' && currentSortDir==='asc'" class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                             </svg>
                                             <span v-else>
                                         <svg class="icon icon-xs">
-                                            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                         </svg>
                                     </span>
                                         </th>
@@ -55,28 +55,28 @@
                                         <th scope="col" @click="sort('IMPORTO')">
                                             <span>{{$t('area_personale.pagamenti.importo')}}</span>
                                             <svg v-if="currentSort === 'IMPORTO' && currentSortDir==='desc'" class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
                                             </svg>
                                             <svg v-else-if="currentSort === 'IMPORTO' && currentSortDir==='asc'" class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                             </svg>
                                             <span v-else>
                                         <svg class="icon icon-xs">
-                                            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                         </svg>
                                     </span>
                                         </th>
                                         <th scope="col" @click="sort('STATO PAGAMENTO')">
                                             <span>{{$t('area_personale.pagamenti.stato_pagamento')}}</span>
                                             <svg v-if="currentSort === 'STATO PAGAMENTO' && currentSortDir==='desc'" class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
                                             </svg>
                                             <svg v-else-if="currentSort === 'STATO PAGAMENTO' && currentSortDir==='asc'" class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                             </svg>
                                             <span v-else>
                                         <svg class="icon icon-xs">
-                                            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                         </svg>
                                     </span>
                                         </th>
@@ -93,20 +93,20 @@
                                         <td class="align-middle text-right">{{payment['IMPORTO']}}</td>
                                         <td class="align-middle text-center">
                                             <svg v-if="payment['STATO PAGAMENTO'] === 'PAGATO'" class="icon icon-success">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use>
                                             </svg>
                                             <svg v-else-if="payment['STATO PAGAMENTO'] === 'INVIATO'" class="icon icon-warning">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-warning-circle"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-warning-circle"></use>
                                             </svg>
                                             <svg v-else class="icon icon-danger">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close-circle"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-close-circle"></use>
                                             </svg>
                                         </td>
                                         <td class="align-middle">
                                             <a href="#" class="btn btn-secondary btn-xs btn-icon"
                                                role="button" aria-disabled="true" @click="getAvviso(payment['IUV'], $event)">
                                                 <svg class="icon icon-white">
-                                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use>
+                                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-download"></use>
                                                 </svg>
                                                 <span>{{$t('area_personale.pagamenti.download')}}</span>
                                             </a>
@@ -123,7 +123,7 @@
                                             <li class="page-item" @click="prevPage($event)">
                                                 <a class="page-link" href="#">
                                                     <svg class="icon icon-primary">
-                                                        <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
                                                     </svg>
                                                     <span class="sr-only">{{$t('pagina_precedente')}}</span>
                                                 </a>
@@ -136,7 +136,7 @@
                                                 <a class="page-link" href="#">
                                                     <span class="sr-only">{{$t('pagina_successiva')}}</span>
                                                     <svg class="icon icon-primary">
-                                                        <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                                     </svg>
                                                 </a>
                                             </li>

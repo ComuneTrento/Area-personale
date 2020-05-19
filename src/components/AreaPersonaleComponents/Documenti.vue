@@ -40,15 +40,15 @@
                                             <span>{{$t('area_personale.documenti.numero_comunicazione')}}</span>
                                             <svg v-if="currentSort === 'N. comunicazione' && currentSortDir==='desc'"
                                                  class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
                                             </svg>
                                             <svg v-else-if="currentSort === 'N. comunicazione' && currentSortDir==='asc'"
                                                  class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                             </svg>
                                             <span v-else>
                                         <svg class="icon icon-xs">
-                                            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                         </svg>
                                     </span>
                                         </th>
@@ -56,15 +56,15 @@
                                             <span>{{$t('area_personale.documenti.anno')}}</span>
                                             <svg v-if="currentSort === 'Anno' && currentSortDir==='desc'"
                                                  class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-collapse"></use>
                                             </svg>
                                             <svg v-else-if="currentSort === 'Anno' && currentSortDir==='asc'"
                                                  class="icon icon-xs">
-                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                             </svg>
                                             <span v-else>
                                         <svg class="icon icon-xs">
-                                            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                         </svg>
                                     </span>
                                         </th>
@@ -91,7 +91,7 @@
                                                role="button" aria-disabled="true"
                                                @click="getDocument(document['ID'], $event)">
                                                 <svg class="icon icon-white">
-                                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
+                                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
                                                 </svg>
                                                 <span>{{$t('area_personale.documenti.visualizza')}}</span>
                                             </a>
@@ -108,7 +108,7 @@
                                             <li class="page-item" @click="prevPage($event)">
                                                 <a class="page-link" href="#">
                                                     <svg class="icon icon-primary">
-                                                        <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use>
                                                     </svg>
                                                     <span class="sr-only">{{$t('pagina_precedente')}}</span>
                                                 </a>
@@ -123,7 +123,7 @@
                                                 <a class="page-link" href="#documents">
                                                     <span class="sr-only">{{$t('pagina_successiva')}}</span>
                                                     <svg class="icon icon-primary">
-                                                        <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>
                                                     </svg>
                                                 </a>
                                             </li>
