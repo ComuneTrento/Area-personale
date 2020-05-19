@@ -53,6 +53,7 @@
                                        to="documents"
                                        role="tab" aria-controls="tab3" aria-selected="false">{{$t('documenti')}}</router-link>
                                 </li>
+                                <!--
                                 <li class="nav-item">
                                     <router-link :class="currentPage.includes('/personal/messages') ? 'nav-link text-primary active' : 'nav-link text-primary'"
                                        to="messages"
@@ -64,6 +65,7 @@
                                        to="deadlines"
                                        role="tab" aria-controls="tab5" aria-selected="false">{{$t('scadenze')}}</router-link>
                                 </li>
+                                -->
                             </ul>
                         </div>
                     </div>

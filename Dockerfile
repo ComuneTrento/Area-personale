@@ -28,7 +28,7 @@ COPY Caddyfile /etc/
 
 EXPOSE 2015
 
-COPY --from=build /app/dist/* /srv/area-personale/
+COPY --from=build /app/dist/* /srv/
 
-HEALTHCHECK --interval=5s --timeout=1s CMD curl --fail http://localhost:2015/health || exit 1
+HEALTHCHECK --interval=5s --timeout=1s CMD curl --fail htp://localhost:2015/health || exit 1
 

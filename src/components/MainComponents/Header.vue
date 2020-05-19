@@ -1,5 +1,5 @@
 <template>
-    <div class="it-header-wrapper">
+    <header class="it-header-wrapper it-header-sticky">
         <div class="it-header-slim-wrapper">
             <div class="container">
                 <div class="row">
@@ -63,10 +63,16 @@
                                                             <router-link v-bind:to="'/personal/documents'" class="list-item">
                                                                 <span>{{$t('documenti')}}</span></router-link>
                                                         </li>
+                                                        <!--
                                                         <li>
                                                             <router-link v-bind:to="'/personal/messages'" class="list-item">
                                                                 <span>{{$t('messaggi')}}</span></router-link>
                                                         </li>
+                                                        <li>
+                                                            <router-link v-bind:to="'/personal/deadlines'" class="list-item">
+                                                                <span>{{$t('scadenze')}}</span></router-link>
+                                                        </li>
+                                                        -->
                                                         <li>
                                                             <span class="divider"></span>
                                                         </li>
@@ -109,8 +115,7 @@
                             <div class="it-header-center-content-wrapper">
                                 <div class="it-brand-wrapper">
                                     <a v-bind:href="comune.links.comune">
-                                        <img class="icon" src="../../../public/Trento-logo-removebg-preview.png">
-
+                                        <img class="icon" src="Comune-di-Trento_header_logo.png">
                                         <div class="it-brand-text">
                                             <h2 class="no_toc">{{$t('comune')}}</h2>
                                             <h3 class="no_toc d-none d-md-block">{{$t('area_personale.titolo')}}</h3>
@@ -271,7 +276,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
 </template>
 

@@ -62,8 +62,6 @@
     },
     methods: {
       login: function() {
-        // eslint-disable-next-line no-console
-        console.log(this.$i18n.locale);
         this.user = {
           "nome": "NICOLA",
           "cognome": "ZANELLA",

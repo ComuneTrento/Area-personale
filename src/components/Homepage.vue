@@ -11,10 +11,10 @@
                             </li>
                             <li class="breadcrumb-item">
                                 <a v-bind:href="$store.getters.comune.links.sezione_servizi.servizi">{{$t('servizi')}}</a>
-                                <span v-if="topicSelected" class="separator">/</span>
+                                <span v-if="themeSelected" class="separator">/</span>
                             </li>
-                            <li v-if="topicSelected" class="breadcrumb-item active">
-                                {{topicSelected}}
+                            <li v-if="themeSelected" class="breadcrumb-item active">
+                                {{themeSelected}}
                             </li>
                         </ol>
                     </nav>
@@ -25,7 +25,8 @@
             <div class="row">
                 <div class="col-lg-7 px-lg-4 py-lg-2">
                     <h1>{{$t('servizi')}}</h1>
-                    <p>{{$t('descrizione_servizi_1')}} <b>{{$t('descrizione_servizi_2')}}</b> {{$t('descrizione_servizi_3')}}
+                    <p>{{$t('descrizione_servizi_1')}} <b>{{$t('descrizione_servizi_2')}}</b>
+                        {{$t('descrizione_servizi_3')}}
                     </p>
                     <div class="form-group mt-5">
                         <div class="form-group">
@@ -42,15 +43,18 @@
                 </div>
                 <div class="col-lg-4 offset-lg-1 pt-5 pt-lg-2">
                     <div class="link-list-wrapper">
-                        <ul v-for="(topic, index) in topics" v-bind:key="index">
+                        <ul v-for="(theme, index) in themes" v-bind:key="index">
                             <li v-if="index === 0">
                                 <h3 id="heading-senza-link">{{$t('tutti_i_servizi')}}</h3>
                             </li>
-                            <li v-if="index < maxTopics">
-                                <a class="list-item" href="#" @click="getServicesByTopic(topic)">{{ topic }}</a>
+                            <li v-if="index < maxThemes">
+                                <a class="list-item" style="line-height: normal; margin-bottom: 1rem" href="#" @click="getServicesByTheme(theme)">
+                                    <b v-if="theme === themeSelected">{{ theme }}</b>
+                                    <span v-else>{{ theme }}</span>
+                                </a>
                             </li>
-                            <li v-if="index >= maxTopics">
-                                <a v-if="index === maxTopics" class="list-item large medium left-icon"
+                            <li v-if="index >= maxThemes">
+                                <a v-if="index === maxThemes" style="line-height: normal; margin-bottom: 1rem" class="list-item large medium left-icon"
                                    href="#altri-servizi" data-toggle="collapse"
                                    aria-expanded="false" aria-controls="altri-servizi">
                                     <svg class="icon icon-primary right">
@@ -59,12 +63,15 @@
                                 </a>
                                 <ul class="link-sublist collapse px-0" id="altri-servizi">
                                     <li>
-                                        <a class="list-item" href="#" @click="getServicesByTopic(topic)">{{topic}}</a>
+                                        <a class="list-item" style="line-height: normal; margin-bottom: 1rem" href="#" @click="getServicesByTheme(theme)">
+                                            <b v-if="theme === themeSelected">{{ theme }}</b>
+                                            <span v-else>{{ theme }}</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
-                            <li v-if="index === topics.length -1 && topicSelected">
-                                <a class="list-item medium" href="#" @click="getServicesByTopic()">{{$t('tutti_i_servizi')}}</a>
+                            <li v-if="index === themes.length -1 && themeSelected">
+                                <a class="list-item medium" style="line-height: normal; margin-bottom: 1rem" href="#" @click="getServicesByTheme()">{{$t('tutti_i_servizi')}}</a>
                             </li>
                         </ul>
                     </div>
@@ -162,8 +169,8 @@
         services: [],
         topics: [],
         currentPage: 1,
-        maxTopics: 4,
-        topicSelected: null,
+        maxThemes: 6,
+        themeSelected: null,
         search: '',
         themes: [
           'Agricoltura',
@@ -186,19 +193,19 @@
     },
     beforeMount() {
       this.getServices(
-          `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`);
+        `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`);
       this.getTopics(
-          `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27topic%27%20sort%20%5Bname%3D%3Easc%5D`);
+        `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27topic%27%20sort%20%5Bname%3D%3Easc%5D`);
+      //this.getThemes(`${this.$store.getters.api_url}/api/opendata/v2/tags_tree/985`);
     },
     watch: {
-      '$i18n.locale': function() {
+      '$i18n.locale': function () {
         this.services = [];
-        if (this.topicSelected)
-          this.getServicesByTopic(this.topicSelected);
+        if (this.themeSelected)
+          this.getServicesByTheme(this.themeSelected);
         else
           this.getServices(
-              `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`);
-
+            `${this.$store.getters.api_url}/api/opendata/v2/tags_tree/985`);
       },
     },
     methods: {
@@ -235,6 +242,28 @@
           this.errorMessage = 'Richiesta non valida' + error;
         });
       },
+      getThemes(url) {
+        this.loadingServices = true;
+        let language = '';
+        this.$store.getters.locales.forEach((locale) => {
+          if (locale.locale === this.$i18n.locale) {
+            language = locale.api;
+          }
+        });
+        this.$http.get(url).then(result => {
+          // eslint-disable-next-line no-console
+          console.log(result);
+          result.body.children.forEach((item) => {
+            if (!item['languageNameArray'][language]) {
+              language = 'ita-IT';
+            }
+            this.themes.push(item['keywordTranslations'][language]);
+          });
+        }, error => {
+          this.errorMessage = 'Richiesta non valida' + error;
+        });
+      },
+
       getTopics(url) {
         this.loadingServices = true;
         let language = '';
@@ -270,14 +299,14 @@
           this.currentPage = pageNumber;
         }
       },
-      getServicesByTopic(topic) {
+      getServicesByTheme(theme) {
         this.services = [];
         let url = '';
-        if (topic) {
-          this.topicSelected = topic;
-          url = `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20topics.name%20in%20%5B%22${topic}%22%5D`;
+        if (theme) {
+          this.themeSelected = theme;
+          url = `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes%20%5Bpublic_service%5D%20and%20type%20in%20%5B%22${theme}%22%5D`;
         } else {
-          this.topicSelected = null;
+          this.themeSelected = null;
           url = `${this.$store.getters.api_url}/api/opendata/v2/content/search/classes+%27public_service%27%20sort%20%5Bmodified%3D%3Edesc%5D`;
         }
         this.getServices(url);
