@@ -16,6 +16,7 @@
   "scadenze": "Scadenze",
   "profilo": "Profilo",
   "logout": "Logout",
+  "order_by": "Ordina per",
   "accedi_area_personale": "Accedi all'area personale",
   "amministrazione": "Amministrazione",
   "servizi": "Servizi",
@@ -151,7 +152,8 @@
       "anno": "Anno",
       "descrizione": "Descrizione",
       "data_comunicazione": "Data comunicazione",
-      "visualizza": "Visualizza"
+      "visualizza": "Visualizza",
+      "show_more": "+{num_results} documenti su {tot_results} totali"
     },
     "pagamenti": {
       "filtro_pagamenti": "Filtro pagamenti",
@@ -160,7 +162,8 @@
       "scadenza": "Scadenza",
       "importo": "Importo",
       "stato_pagamento": "Stato pagamento",
-      "download": "Scarica"
+      "download": "Scarica",
+      "show_more": "+{num_results} pagamenti su {tot_results} totali"
     }
   }
 }

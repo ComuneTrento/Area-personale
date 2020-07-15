@@ -3,7 +3,7 @@
         <div class="row pt-md-5">
             <div class="col d-lg-inline-flex">
                 <h2>{{$t('documenti')}}</h2>
-                <div class="dropdown ml-lg-5 mt-4 mt-lg-0">
+                <!--<div class="dropdown ml-lg-5 mt-4 mt-lg-0">
                     <button class="btn btn-secondary dropdown-toggle" type="button"
                             id="dropdownMenuButton-documenti" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -18,7 +18,7 @@
                         </a>
                         <a class="dropdown-item" href="#">filtro</a>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="py-4">
@@ -135,6 +135,89 @@
                     </div>
                 </div>
             </div>
+            <div class="d-block d-sm-none">
+                <div>
+                    <div v-if="documents.length===0 && !errorMessage">
+                        <div class="progress-spinner progress-spinner-active">
+                            <span class="sr-only">{{$t('caricamento')}}</span>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <div v-if="errorMessage" class="alert alert-info">{{errorMessage}}</div>
+                        <div v-if="documents">
+                            <div class="mb-4 float-right bootstrap-select-wrapper">
+                                <label>{{$t('order_by')}}</label>
+                                <select title="Ordina risultati" @change="sort($event.target.value)">
+                                    <option value="N. comunicazione">{{$t('area_personale.documenti.numero_comunicazione')}}</option>
+                                    <option value="Anno">{{$t('area_personale.documenti.anno')}}</option>
+                                </select>
+                            </div>
+                            <table id="documents_table" class="table border-bottom table-white shadow">
+                                <tbody>
+                                <div v-for="(document, index) in sortedDocuments" v-bind:key="index">
+                                    <tr>
+                                        <td class="align-middle">
+                                            <svg class="icon">
+                                                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
+                                            </svg>
+                                        </td>
+                                        <td class="align-middle">
+                                            <span class="text-wrap">{{document['Descrizione']}}</span>
+                                        </td>
+                                        <td class="d-none d-none d-lg-table-cell">
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="float-right">
+                                                <a data-toggle="collapse" :href="'#document' + index" role="button"
+                                                   aria-expanded="false">
+                                                    <svg class="icon icon-primary">
+                                                        <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-more-items"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="row collapse px-4" :id="'document' + index">
+                                        <table id="folders_table" class="table">
+                                            <tbody>
+                                            <tr>
+                                                <td><strong>{{$t('area_personale.documenti.numero_comunicazione')}}</strong></td>
+                                                <td>{{document['N. comunicazione']}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>{{$t('area_personale.documenti.data_comunicazione')}}</strong></td>
+                                                <td>{{document['Data comunicazione']}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-center">
+                                                    <a href="#" class="btn btn-secondary btn-icon"
+                                                       role="button" aria-disabled="true"
+                                                       @click="getDocument(document['ID'], $event)">
+                                                        <svg class="icon icon-white">
+                                                            <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
+                                                        </svg>
+                                                        <span>{{$t('area_personale.documenti.visualizza')}}</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </tr>
+                                </div>
+                                </tbody>
+                            </table>
+
+                            <div class="text-center mt-4">
+                                <div class="page-item" @click="showMore($event)">
+                                    <a href="#">
+                                        <span>{{$t('area_personale.documenti.show_more', {num_results: this.pageSize, tot_results:this.documents.length})}}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -153,6 +236,7 @@
         errorMessage: null,
         pageSize: 10,
         currentPage: 1,
+        pageIncrement: 10
       };
     },
     computed: {
@@ -166,6 +250,10 @@
       },
     },
     methods: {
+      showMore: function (event) {
+        event.preventDefault();
+        this.pageSize += this.pageIncrement;
+      },
       getNumPages() {
         return Math.ceil(this.documents.length / this.pageSize);
       },
@@ -216,7 +304,7 @@
         };
       },
       getDocumentiLista() {
-        this.$http.post('https://globo.ship.opencontent.io', {
+        this.$http.post('https://area-personale.comune.trento.it/secure/globo', {
           'name': 'getDocumentiLista',
           'parameters': {
             'codiceFiscale': 'ZNLNCL71S12L378T',
@@ -245,7 +333,7 @@
       },
       getDocument(documentId, event) {
         event.preventDefault();
-        this.$http.post('https://globo.ship.opencontent.io', {
+        this.$http.post('https://area-personale.comune.trento.it/secure/globo', {
           'name': 'getDocumento',
           'parameters': {
             'idDocumento': documentId,

@@ -72,7 +72,7 @@
                 </div>
                 <router-view></router-view>
 
-                <div class="row d-block d-xs-none">
+                <div class="row d-none">
                     <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-4 d-block d-sm-none mt-4 mt-md-5">
                         <div class="card card-teaser card-column shadow my-3 rounded">
                             <div class="card-header pl-0">

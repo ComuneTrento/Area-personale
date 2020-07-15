@@ -204,7 +204,7 @@
     },
     methods: {
       getPersonaREST(fiscalCode, user) {
-        this.$http.post('https://globo.ship.opencontent.io', {
+        this.$http.post('https://area-personale.comune.trento.it/secure/globo', {
           'name': 'getPersonaREST',
           'parameters': {
             'codiceFiscale': fiscalCode,
@@ -227,7 +227,7 @@
         });
       },
       getIcef(fiscalCode) {
-        this.$http.post('https://globo.ship.opencontent.io', {
+        this.$http.post('https://area-personale.comune.trento.it/secure/globo', {
           'name': 'getIcef',
           'parameters': {
             'codiceFiscale': 'ZNLNCL71S12L378T',
@@ -244,7 +244,7 @@
         });
       },
       getListaFamigliaREST() {
-        this.$http.post('https://globo.ship.opencontent.io', {
+        this.$http.post('https://area-personale.comune.trento.it/secure/globo', {
           'name': 'getListaFamigliaREST',
           'parameters': {
             'codiceFamiglia': this.userData.codiceFamiglia,

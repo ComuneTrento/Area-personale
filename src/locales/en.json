@@ -16,6 +16,7 @@
   "scadenze": "Deadlines",
   "profilo": "Profile",
   "logout": "Logout",
+  "order_by": "Order by",
   "accedi_area_personale": "Login to personal area",
   "amministrazione": "Administration",
   "servizi": "Services",
@@ -151,7 +152,8 @@
       "anno": "Year",
       "descrizione": "Description",
       "data_comunicazione": "Comunication date",
-      "visualizza": "Display"
+      "visualizza": "Display",
+      "show_more": "+{num_results} documents out of {tot_results} in total"
     },
     "pagamenti": {
       "filtro_pagamenti": "Payments filter",
@@ -160,7 +162,8 @@
       "scadenza": "Deadline",
       "importo": "Amount",
       "stato_pagamento": "Payment status",
-      "download": "Download"
+      "download": "Download",
+      "show_more": "+{num_results} payments out of {tot_results} in total"
     }
   }
 }

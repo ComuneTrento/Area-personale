@@ -29,7 +29,7 @@
     },
     methods: {
       getListaNidiDisponibili() {
-        this.$http.post('https://globo.ship.opencontent.io', {
+        this.$http.post('https://area-personale.comune.trento.it/secure/globo', {
           'name': 'getListaNidiDisponibili',
           'parameters': {
             'codiceVia': '10',

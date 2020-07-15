@@ -34,7 +34,7 @@
     methods: {
       getDomandaAttiva() {
         // eslint-disable-next-line no-console
-        this.$http.post('https://globo.ship.opencontent.io', {
+        this.$http.post('https://area-personale.comune.trento.it/secure/globo', {
           'name': 'getDomandaAttiva',
           'parameters': {
             'codiceFiscale': 'BBAKVN02D21L378N',
