@@ -9,7 +9,7 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
-    "bootstrap-italia": "^1.3.10",
+    "bootstrap-italia": "^1.4.0",
     "core-js": "3.6.4",
     "jquery": "3.4.1",
     "vue": "2.6.11",
