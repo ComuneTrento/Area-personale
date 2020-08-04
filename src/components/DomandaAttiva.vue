@@ -46,8 +46,8 @@
             this.response = result.body.results;
           else
             this.errorMessage = result.body.message;
-        }, error => {
-          this.errorMessage = 'Richiesta non valida:' + error;
+        }, () => {
+            location.reload()
         });
       },
     },

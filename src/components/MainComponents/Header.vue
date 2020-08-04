@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                                 <!-- logged -->
-                                <div v-if="$store.state.user" class="it-user-wrapper nav-item dropdown">
+                                <div v-if="$store.state.account" class="it-user-wrapper nav-item dropdown">
                                     <a aria-expanded="false" class="btn btn-primary btn-icon btn-full"
                                        data-toggle="dropdown" href="#">
                                         <span class="rounded-icon">
@@ -40,7 +40,7 @@
                                                 <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                             </svg>
                                         </span>
-                                        <span class="d-none d-lg-block">{{user.nome}} {{user.cognome}}</span>
+                                        <span class="d-none d-lg-block">{{ $store.getters.completeName}}</span>
                                         <svg class="icon icon-white d-none d-lg-block">
                                             <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                         </svg>
@@ -297,9 +297,8 @@
         this.$i18n = locale;
       },
         logout() {
-        this.$store.commit('SET_USER', null);
-        this.$router.push('/');
-      },
+            window.location.href = "https://area-personale.comune.trento.it/spid-auth/Logout";
+        },
     },
     created() {
       // Using the server bus

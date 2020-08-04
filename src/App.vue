@@ -21,6 +21,16 @@
       MainContent,
       Header,
     },
+    methods: {
+    },
+    mounted() {
+      this.$http.get('https://area-personale.comune.trento.it/secure/globo/auth').then(result => {
+          this.$store.commit('SET_ACCOUNT', result.body.fiscal_code);
+          this.$store.commit('SET_COMPLETE_NAME', `${result.body.name} ${result.body.surname}`);
+      }, () => {
+          location.reload()
+      });
+    }
   };
 </script>
 

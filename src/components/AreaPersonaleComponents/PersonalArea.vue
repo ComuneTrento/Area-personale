@@ -1,13 +1,9 @@
 <template>
     <section id="area-riservata">
-        <div v-if="user" class="section section-background-header section-user-header py-5">
+        <div v-if="this.$store.getters.account" class="section section-background-header section-user-header py-5">
             <div class="container position-relative">
                 <div class="row">
                     <div class="col-xl-8 offset-xl-2 position-static">
-                        <h4 v-if="user.sesso === 'M'" class="text-center">{{$t('area_personale.bentornato')}} {{user.nome}}
-                            {{user.cognome}}!</h4>
-                        <h4 v-else class="text-center">{{$t('area_personale.bentornata')}} {{user.nome | camelcase}} {{user.cognome |
-                            camelcase}}!</h4>
                         <div class="row mr-xl-2 user-settings d-none d-sm-block">
                             <div class="col-12 col-sm-6 offset-sm-3 col-md-12 offset-md-0">
                                 <div class="d-flex justify-content-center">
@@ -153,7 +149,7 @@
     name: 'PersonalArea',
     data() {
       return {
-        user: null,
+        account: null,
         activeClass: 'active'
       };
     },
@@ -163,16 +159,13 @@
       }
     },
     beforeMount() {
-      this.user = this.$store.state.user;
-      if (!this.user) {
+      if (!this.$store.getters.account) {
         this.$router.push('/login');
       }
     },
     methods: {
       logout() {
-        this.user = null;
-        this.$store.commit('SET_USER', null);
-        this.$router.push('');
+          window.location.href = "https://area-personale.comune.trento.it/spid-auth/Logout";
       },
     },
   };

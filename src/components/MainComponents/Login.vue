@@ -46,7 +46,7 @@
 </template>
 
 <script>
-  import {app} from '../../main.js';
+
 
   export default {
     name: 'Login',
@@ -91,8 +91,6 @@
           "grado_descrizione": "INTESTATARIO",
           "matricola": "262262"
         };
-        this.$store.commit('SET_USER', this.user);
-        app.$emit('loginEvent', this.user);
         this.$router.push('/personal/pratiche');
       },
     },

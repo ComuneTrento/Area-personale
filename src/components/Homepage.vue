@@ -238,8 +238,8 @@
           } else {
             this.loadingServices = false;
           }
-        }, error => {
-          this.errorMessage = 'Richiesta non valida' + error;
+        }, () => {
+            location.reload()
         });
       },
       getThemes(url) {
@@ -251,16 +251,14 @@
           }
         });
         this.$http.get(url).then(result => {
-          // eslint-disable-next-line no-console
-          console.log(result);
           result.body.children.forEach((item) => {
             if (!item['languageNameArray'][language]) {
               language = 'ita-IT';
             }
             this.themes.push(item['keywordTranslations'][language]);
           });
-        }, error => {
-          this.errorMessage = 'Richiesta non valida' + error;
+        }, () => {
+            location.reload()
         });
       },
 
@@ -285,8 +283,8 @@
             // Request next page
             this.getTopics(nextPage);
           }
-        }, error => {
-          this.errorMessage = 'Richiesta non valida' + error;
+        }, () => {
+            location.reload()
         });
       },
       getPages() {
