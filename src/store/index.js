@@ -18,6 +18,7 @@ export default new Vuex.Store({
     api_url: "https://servizi.comune.trento.it",
     account: null,
     completeName: null,
+    spidInfo: null,
     comune: {
       indirizzo: "Via Belenzani, 19 - 38122 Trento",
       links: {
@@ -92,10 +93,13 @@ export default new Vuex.Store({
   },
   getters: {
     account: state => {
-      return state.account;
+      return state.spidInfo.fiscal_code || null;
     },
     completeName: state => {
-      return state.completeName;
+      return `${state.spidInfo.name || ''} ${state.spidInfo.surname || ''}`;
+    },
+    spidInfo: state => {
+      return state.spidInfo;
     },
     comune: state => {
       return state.comune;
@@ -108,11 +112,8 @@ export default new Vuex.Store({
     },
   },
   mutations: {
-    SET_ACCOUNT: (state, account) => {
-      state.account = account;
-    },
-    SET_COMPLETE_NAME: (state, completeName) => {
-      state.completeName = completeName;
+    SET_SPID_INFO: (state, spidInfo) => {
+      state.spidInfo = spidInfo;
     },
   },
   actions: {
