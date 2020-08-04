@@ -145,7 +145,7 @@
                                             <span class="d-block col-6"><b>{{
                                                     $t('area_personale.profilo.carta_identita')
                                                 }}</b></span>
-                                            <span v-else class="col-6">{{ this.$store.getters.spidInfo.id_card }}</span>
+                                            <span class="col-6">{{ this.$store.getters.spidInfo.id_card }}</span>
                                         </div>
                                     
                                     </div>
