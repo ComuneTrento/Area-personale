@@ -8,7 +8,7 @@ import createPersistedState from 'vuex-persistedstate'
 export default new Vuex.Store({
   plugins: [createPersistedState({
     storage: window.sessionStorage,
-    paths: ['account'],
+    paths: ['spidInfo'],
   })],
   state: {
     locales: [
@@ -97,6 +97,16 @@ export default new Vuex.Store({
     },
     completeName: state => {
       return `${state.spidInfo.name || ''} ${state.spidInfo.surname || ''}`;
+    },
+    identity_card: state => {
+      let ciString = state.spidInfo.id_card.split(" ")
+
+      return {
+        "numero": ciString[1],
+        "comune_rilascio":ciString[2].replace("COMUNE", ""),
+        "data_rilascio": ciString[3],
+        "data_scadenza": ciString[4]
+      }
     },
     spidInfo: state => {
       return state.spidInfo;

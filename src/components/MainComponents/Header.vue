@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                                 <!-- logged -->
-                                <div v-if="$store.state.account" class="it-user-wrapper nav-item dropdown">
+                                <div v-if="$store.getters.account" class="it-user-wrapper nav-item dropdown">
                                     <a aria-expanded="false" class="btn btn-primary btn-icon btn-full"
                                        data-toggle="dropdown" href="#">
                                         <span class="rounded-icon">

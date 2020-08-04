@@ -395,7 +395,7 @@ export default {
                     'contesto': 'STANZA',
                     'listaAut': 'PSTANZA',
                 },
-                'account': this.$store.state.getters.account,
+                'account': this.$store.getters.account,
             }).then(result => {
                 if (result.data.status === 'KO') {
                     return this.errorMessage = result.data.message;
