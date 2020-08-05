@@ -257,14 +257,19 @@
                         </table>
                         
                         <div class="text-center mt-4">
-                            <div class="page-item" @click="showMore($event)">
+                            <div v-if="pageSize < payments.length" class="page-item" @click="showMore($event)">
+                                <a href="#"><span>{{
+                                        $t('area_personale.pagamenti.show_more', {
+                                            num_results: this.pageSize,
+                                            tot_results: this.payments.length
+                                        })
+                                    }}</span></a>
+                            </div>
+                            <div v-else class="page-item" @click="showLess($event)">
                                 <a href="#">
-                  <span>{{
-                          $t('area_personale.pagamenti.show_more', {
-                              num_results: this.pageSize,
-                              tot_results: this.payments.length
-                          })
-                      }}</span>
+                                    <span>{{
+                                            $t('area_personale.pagamenti.show_less')
+                                        }}</span>
                                 </a>
                             </div>
                         </div>
@@ -304,7 +309,11 @@ export default {
     methods: {
         showMore: function (event) {
             event.preventDefault();
-            this.pageSize += this.pageIncrement;
+            this.pageSize += Math.min(this.pageIncrement, this.payments.length - this.pageSize);
+        },
+        showLess: function (event) {
+            event.preventDefault();
+            this.pageSize = this.pageIncrement
         },
         getNumPages() {
             return Math.ceil(this.payments.length / this.pageSize);
@@ -416,7 +425,13 @@ export default {
         }
     },
     beforeMount() {
-        this.getPaymentsLista();
+        this.payments = [];
+        this.errorMessage = null;
+        if (!this.$store.getters.account) {
+            location.reload();
+        } else {
+            this.getPaymentsLista();
+        }
     },
 };
 </script>

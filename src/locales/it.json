@@ -162,7 +162,8 @@
       "descrizione": "Descrizione",
       "data_comunicazione": "Data comunicazione",
       "visualizza": "Visualizza",
-      "show_more": "+{num_results} documenti su {tot_results} totali"
+      "show_more": "+{num_results} documenti su {tot_results} totali",
+      "show_less": "Mostra meno"
     },
     "pagamenti": {
       "filtro_pagamenti": "Filtro pagamenti",
@@ -172,7 +173,8 @@
       "importo": "Importo",
       "stato_pagamento": "Stato pagamento",
       "download": "Scarica",
-      "show_more": "+{num_results} pagamenti su {tot_results} totali"
+      "show_more": "+{num_results} pagamenti su {tot_results} totali",
+      "show_less": "Mostra meno"
     }
   }
 }

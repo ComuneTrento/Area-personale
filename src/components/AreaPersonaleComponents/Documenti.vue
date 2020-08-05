@@ -223,13 +223,20 @@
                         </table>
                         
                         <div class="text-center mt-4">
-                            <div class="page-item" @click="showMore($event)">
+                            <div v-if="pageSize < documents.length" class="page-item" @click="showMore($event)">
                                 <a href="#">
                                     <span>{{
                                             $t('area_personale.documenti.show_more', {
                                                 num_results: this.pageSize,
                                                 tot_results: this.documents.length
                                             })
+                                        }}</span>
+                                </a>
+                            </div>
+                            <div v-else class="page-item" @click="showLess($event)">
+                                <a href="#">
+                                    <span>{{
+                                            $t('area_personale.documenti.show_less')
                                         }}</span>
                                 </a>
                             </div>
@@ -270,7 +277,11 @@ export default {
     methods: {
         showMore: function (event) {
             event.preventDefault();
-            this.pageSize += this.pageIncrement;
+            this.pageSize += Math.min(this.pageIncrement, this.documents.length - this.pageSize);
+        },
+        showLess: function (event) {
+            event.preventDefault();
+            this.pageSize = this.pageIncrement
         },
         getNumPages() {
             return Math.ceil(this.documents.length / this.pageSize);
@@ -376,8 +387,10 @@ export default {
         },
     },
     beforeMount() {
+        this.documents = [];
+        this.errorMessage = null;
         if (!this.$store.getters.account) {
-            this.$router.push('/login');
+            location.reload();
         } else {
             this.getDocumentiLista();
         }

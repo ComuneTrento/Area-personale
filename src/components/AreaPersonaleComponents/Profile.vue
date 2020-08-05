@@ -68,7 +68,7 @@
                     </div>
                     <div class="col-12 col-md-8 col-lg-9">
                         <div class="tab-content" id="nav-vertical-tab-icoContent">
-                            <div class="tab-pane pl-5 fade show active" id="nav-vertical-tab-ico1" role="tabpanel"
+                            <div class="tab-pane px-5 fade show active" id="nav-vertical-tab-ico1" role="tabpanel"
                                  aria-labelledby="nav-vertical-tab-ico1-tab">
                                 <div v-if="!errorMessage && !userData" class="col-6 col-lg-3">
                                     <div class="progress-spinner progress-spinner-active">
@@ -81,7 +81,8 @@
                                     </div>
                                 </div>
                                 <div v-if="userData">
-                                    <h3 class="font-weight-bold text-primary mb-5">{{ userData.nome }} {{ userData.cognome }}</h3>
+                                    <h3 class="font-weight-bold text-primary mb-5">{{ userData.nome }}
+                                        {{ userData.cognome }}</h3>
                                     <div>
                                         <div class="row">
                                             <span class="d-block col-6 text-400"><b>{{
@@ -119,11 +120,16 @@
                                                   class="col-6">{{ userData.nazionalita_maschile }}</span>
                                             <span v-else class="col-6 ">{{ userData.nazionalita }}</span>
                                         </div>
-                                        <h5 class="mt-4 text-primary font-weight-bold">{{$t('area_personale.profilo.recapiti')}}</h5>
+                                        <h5 class="mt-4 text-primary font-weight-bold">
+                                            {{ $t('area_personale.profilo.recapiti') }}</h5>
                                         <div class="row">
-                                            <span class="d-block col-6 text-400"><b>{{ $t('area_personale.profilo.email') }}</b></span>
+                                            <span class="d-block col-6 text-400"><b>{{
+                                                    $t('area_personale.profilo.email')
+                                                }}</b></span>
                                             <span v-if="userData.email" class="col-6">{{ userData.email }}</span>
-                                            <span v-else-if="this.$store.getters.spidInfo.email_address" class="col-6"> {{ this.$store.getters.spidInfo.email_address }} </span>
+                                            <span v-else-if="this.$store.getters.spidInfo.email_address" class="col-6"> {{
+                                                    this.$store.getters.spidInfo.email_address
+                                                }} </span>
                                             <span v-else class="col-6"> -- </span>
                                         </div>
                                         <div class="row">
@@ -143,30 +149,39 @@
                                             <span v-else class="col-6"> -- </span>
                                         </div>
                                         <div v-if="this.$store.getters.spidInfo.id_card">
-                                            <h5 class="mt-4 text-primary font-weight-bold">{{$t('area_personale.profilo.carta_identita')}}</h5>
+                                            <h5 class="mt-4 text-primary font-weight-bold">
+                                                {{ $t('area_personale.profilo.carta_identita') }}</h5>
                                             <div class="row">
                                                <span class="d-block col-6 text-400"><b>{{
                                                        $t('area_personale.profilo.carta_identita_numero')
                                                    }}</b></span>
-                                                <span class="col-6">{{ this.$store.getters.identity_card.numero }}</span>
+                                                <span class="col-6">{{
+                                                        this.$store.getters.identity_card.numero
+                                                    }}</span>
                                                 <span class="d-block col-6 text-400"><b>{{
                                                         $t('area_personale.profilo.carta_identita_comune')
                                                     }}</b></span>
-                                                <span class="col-6">{{ this.$store.getters.identity_card.comune_rilascio }}</span>
+                                                <span class="col-6">{{
+                                                        this.$store.getters.identity_card.comune_rilascio
+                                                    }}</span>
                                                 <span class="d-block col-6 text-400"><b>{{
                                                         $t('area_personale.profilo.carta_identita_rilascio')
                                                     }}</b></span>
-                                                <span class="col-6">{{ this.$store.getters.identity_card.data_rilascio }}</span>
+                                                <span class="col-6">{{
+                                                        this.$store.getters.identity_card.data_rilascio
+                                                    }}</span>
                                                 <span class="d-block col-6 text-400"><b>{{
                                                         $t('area_personale.profilo.carta_identita_scadenza')
                                                     }}</b></span>
-                                                <span class="col-6">{{ this.$store.getters.identity_card.data_scadenza }}</span>
+                                                <span class="col-6">{{
+                                                        this.$store.getters.identity_card.data_scadenza
+                                                    }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane pl-5 fade" id="nav-vertical-tab-ico2" role="tabpanel"
+                            <div class="tab-pane px-5 fade" id="nav-vertical-tab-ico2" role="tabpanel"
                                  aria-labelledby="nav-vertical-tab-ico2-tab">
                                 <!--h4>{{ $t('area_personale.profilo.nucleo_familiare') }}</h4-->
                                 <div v-if="!familyMessage && familyList.length === 0" class="col-6 col-lg-3">
@@ -230,7 +245,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane pl-5 fade" id="nav-vertical-tab-ico3" role="tabpanel"
+                            <div class="tab-pane px-5 fade" id="nav-vertical-tab-ico3" role="tabpanel"
                                  aria-labelledby="nav-vertical-tab-ico3-tab">
                                 <div v-if="!icefData && !icefMessage">
                                     <div class="progress-spinner progress-spinner-active">
@@ -271,7 +286,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane pl-5 fade" id="nav-vertical-tab-ico4" role="tabpanel"
+                            <div class="tab-pane px-5 fade" id="nav-vertical-tab-ico4" role="tabpanel"
                                  aria-labelledby="nav-vertical-tab-ico4-tab">
                                 <!--h4>{{ $t('area_personale.profilo.iscrizione_alle_liste_seggi_elettorali') }}</h4-->
                             </div>
@@ -360,8 +375,18 @@ export default {
         },
     },
     beforeMount() {
-        this.getPersonaREST(this.$store.getters.account, true);
-        this.getIcef(this.$store.getters.account);
+        this.userData = null
+        this.errorMessage = null
+        this.familyList = []
+        this.icefData = ''
+        this.familyMessage = ''
+        this.icefMessage = ''
+        if (!this.$store.getters.account) {
+            location.reload();
+        } else {
+            this.getPersonaREST(this.$store.getters.account, true);
+            this.getIcef(this.$store.getters.account);
+        }
     },
 };
 </script>

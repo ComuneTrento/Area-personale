@@ -282,8 +282,6 @@
 
 
 <script>
-  import {app} from '../../main.js';
-
   export default {
     name: 'Header',
     data() {
@@ -299,12 +297,6 @@
         logout() {
             window.location.href = "https://area-personale.comune.trento.it/spid-auth/Logout";
         },
-    },
-    created() {
-      // Using the server bus
-      app.$on('loginEvent', (user) => {
-        this.user = user;
-      });
     },
   };
 </script>

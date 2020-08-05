@@ -162,7 +162,8 @@
       "descrizione": "Description",
       "data_comunicazione": "Comunication date",
       "visualizza": "Display",
-      "show_more": "+{num_results} documents out of {tot_results} in total"
+      "show_more": "+{num_results} documents out of {tot_results} in total",
+      "show_less": "Show less"
     },
     "pagamenti": {
       "filtro_pagamenti": "Payments filter",
@@ -172,7 +173,8 @@
       "importo": "Amount",
       "stato_pagamento": "Payment status",
       "download": "Download",
-      "show_more": "+{num_results} payments out of {tot_results} in total"
+      "show_more": "+{num_results} payments out of {tot_results} in total",
+      "show_less": "Show less"
     }
   }
 }
