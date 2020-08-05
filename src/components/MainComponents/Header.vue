@@ -5,8 +5,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="it-header-slim-wrapper-content">
-                            <a class="d-lg-block navbar-brand"
-                               v-bind:href="comune.links.provincia">{{ $t('provincia') }}</a>
+                            <a class="d-lg-block navbar-brand" v-bind:href="comune.links.provincia">{{$t('provincia')}}</a>
                             <div class="header-slim-right-zone">
                                 <div class="nav-item dropdown">
                                     <a aria-expanded="false" class="nav-link dropdown-toggle" data-toggle="dropdown"
@@ -24,10 +23,7 @@
                                                     <ul v-for="(locale, index) in locales" v-bind:key="index"
                                                         class="link-list">
                                                         <li>
-                                                            <a class="list-item" href="#"
-                                                               @click="$i18n.locale=locale.locale"><span>{{
-                                                                    locale.nome
-                                                                }}</span></a>
+                                                            <a class="list-item" href="#" @click="$i18n.locale=locale.locale"><span>{{locale.nome}}</span></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -44,7 +40,7 @@
                                                 <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                             </svg>
                                         </span>
-                                        <span class="d-none d-lg-block">{{ completeName }}</span>
+                                        <span class="d-none d-lg-block">{{ this.$store.getters.completeName}}</span>
                                         <svg class="icon icon-white d-none d-lg-block">
                                             <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                         </svg>
@@ -56,19 +52,16 @@
                                                 <div class="link-list-wrapper">
                                                     <ul class="link-list">
                                                         <li>
-                                                            <router-link v-bind:to="'/personal/pratiche'"
-                                                                         class="list-item">
-                                                                <span>{{ $t('le_mie_pratiche') }}</span></router-link>
+                                                            <router-link v-bind:to="'/personal/pratiche'" class="list-item">
+                                                                <span>{{$t('le_mie_pratiche')}}</span></router-link>
                                                         </li>
                                                         <li>
-                                                            <router-link v-bind:to="'/personal/payments'"
-                                                                         class="list-item">
-                                                                <span>{{ $t('pagamenti') }}</span></router-link>
+                                                            <router-link v-bind:to="'/personal/payments'" class="list-item">
+                                                                <span>{{$t('pagamenti')}}</span></router-link>
                                                         </li>
                                                         <li>
-                                                            <router-link v-bind:to="'/personal/documents'"
-                                                                         class="list-item">
-                                                                <span>{{ $t('documenti') }}</span></router-link>
+                                                            <router-link v-bind:to="'/personal/documents'" class="list-item">
+                                                                <span>{{$t('documenti')}}</span></router-link>
                                                         </li>
                                                         <!--
                                                         <li>
@@ -85,15 +78,13 @@
                                                         </li>
                                                         <li>
                                                             <router-link v-bind:to="'/profile'">
-                                                                <span>{{ $t('profilo') }}</span>
+                                                                <span>{{$t('profilo')}}</span>
                                                             </router-link>
                                                         </li>
                                                         <li>
-                                                            <a class="list-item" href="#"
-                                                               @click="logout()"><span>{{ $t('logout') }}
+                                                            <a class="list-item" href="#" @click="logout()"><span>{{$t('logout')}}
                                                                 <svg class="icon icon-primary icon-sm left">
-                                                                    <use
-                                                                        xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                                                    <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                                                 </svg></span></a>
                                                         </li>
                                                     </ul>
@@ -104,13 +95,12 @@
                                 </div>
                                 <!-- not logged -->
                                 <router-link v-else v-bind:to="'/login'" class="btn btn-primary btn-icon btn-full"><span
-                                    class="rounded-icon">
+                                        class="rounded-icon">
                                             <svg class="icon icon-primary"><use
-                                                xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
+                                                    xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                             </svg>
                                         </span>
-                                    <span class="d-none d-lg-block">{{ $t('accedi_area_personale') }}</span>
-                                </router-link>
+                                    <span class="d-none d-lg-block">{{$t('accedi_area_personale')}}</span></router-link>
                             </div>
                         </div>
                     </div>
@@ -127,22 +117,21 @@
                                     <a v-bind:href="comune.links.comune">
                                         <img class="icon" src="Comune-di-Trento_header_logo.png">
                                         <div class="it-brand-text">
-                                            <h2 class="no_toc">{{ $t('comune') }}</h2>
-                                            <h3 class="no_toc d-none d-md-block">{{ $t('area_personale.titolo') }}</h3>
+                                            <h2 class="no_toc">{{$t('comune')}}</h2>
+                                            <h3 class="no_toc d-none d-md-block">{{$t('area_personale.titolo')}}</h3>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="it-right-zone">
                                     <div class="it-socials d-none d-md-flex">
-                                        <span>{{ $t('seguici_su') }}</span>
+                                        <span>{{$t('seguici_su')}}</span>
                                         <ul>
                                             <li v-if="comune.links.sezione_seguici.designers_italia">
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.designers_italia"
                                                    target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-designers-italia"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-designers-italia"></use>
                                                     </svg>
                                                     <span class="sr-only">Designers Italia</span></a>
                                             </li>
@@ -150,8 +139,7 @@
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.twitter" target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use>
                                                     </svg>
                                                     <span class="sr-only">Twitter</span></a>
                                             </li>
@@ -159,8 +147,7 @@
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.facebook" target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-facebook"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-facebook"></use>
                                                     </svg>
                                                     <span class="sr-only">Facebook</span></a>
                                             </li>
@@ -168,8 +155,7 @@
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.instagram" target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-instagram"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-instagram"></use>
                                                     </svg>
                                                     <span class="sr-only">Instagram</span></a>
                                             </li>
@@ -177,8 +163,7 @@
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.linkedin" target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-linkedin"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-linkedin"></use>
                                                     </svg>
                                                     <span class="sr-only">Linkedin</span></a>
                                             </li>
@@ -186,8 +171,7 @@
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.youtube" target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-youtube"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-youtube"></use>
                                                     </svg>
                                                     <span class="sr-only">YouTube</span></a>
                                             </li>
@@ -195,8 +179,7 @@
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.medium" target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-medium"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-medium"></use>
                                                     </svg>
                                                     <span class="sr-only">Medium</span></a>
                                             </li>
@@ -204,15 +187,14 @@
                                                 <a class="p-2 text-white"
                                                    v-bind:href="comune.links.sezione_seguici.behance" target="_blank">
                                                     <svg class="icon icon-sm icon-white align-top">
-                                                        <use
-                                                            xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-behance"></use>
+                                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-behance"></use>
                                                     </svg>
                                                     <span class="sr-only">Behance</span></a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="it-search-wrapper">
-                                        <span class="d-none d-md-block">{{ $t('cerca') }}</span>
+                                        <span class="d-none d-md-block">{{$t('cerca')}}</span>
                                         <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                                             <svg class="icon">
                                                 <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use>
@@ -246,51 +228,43 @@
                                     <div class="menu-wrapper">
                                         <ul class="navbar-nav">
                                             <li class="nav-item ">
-                                                <a class="nav-link"
-                                                   v-bind:href="comune.links.sezione_amministrazione.amministrazione">
-                                                    <span>{{ $t('amministrazione') }}</span></a>
+                                                <a class="nav-link" v-bind:href="comune.links.sezione_amministrazione.amministrazione">
+                                                    <span>{{$t('amministrazione')}}</span></a>
                                             </li>
                                             <li class="nav-item ">
                                                 <a class="nav-link"
-                                                   v-bind:href="comune.links.sezione_novita.novita"><span>{{
-                                                        $t('novita')
-                                                    }}</span>
+                                                   v-bind:href="comune.links.sezione_novita.novita"><span>{{$t('novita')}}</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item ">
                                                 <a class="nav-link"
-                                                   v-bind:href="comune.links.sezione_servizi.servizi"><span>{{
-                                                        $t('servizi')
-                                                    }}</span>
+                                                   v-bind:href="comune.links.sezione_servizi.servizi"><span>{{$t('servizi')}}</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item active">
                                                 <a class="nav-link"
-                                                   v-bind:href="comune.links.sezione_documenti.documenti"><span>{{
-                                                        $t('documenti')
-                                                    }}</span></a>
+                                                   v-bind:href="comune.links.sezione_documenti.documenti"><span>{{$t('documenti')}}</span></a>
                                             </li>
                                         </ul>
                                         <ul class="navbar-nav navbar-secondary">
                                             <li class="nav-item ">
                                                 <a class="nav-link "
                                                    v-bind:href="comune.links.abitazione">
-                                                    {{ $t('abitazione') }}</a>
+                                                    {{$t('abitazione')}}</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link"
                                                    v-bind:href="comune.links.istruzione">
-                                                    {{ $t('istruzione') }}</a>
+                                                    {{$t('istruzione')}}</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link"
                                                    v-bind:href="comune.links.procedure_elettorali_e_voto">
-                                                    {{ $t('procedura_elettorale_e_voto') }}</a>
+                                                    {{$t('procedura_elettorale_e_voto')}}</a>
                                             </li>
                                             <li class="nav-item ">
                                                 <a class="nav-link" v-bind:href="comune.links.tutti_gli_argomenti">
-                                                    <span
-                                                        class="font-weight-bold">{{ $t('tutti_gli_argomenti') }}</span>
+                                                    <span class="font-weight-bold">{{$t('tutti_gli_argomenti')}}</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -308,33 +282,27 @@
 
 
 <script>
-export default {
+  export default {
     name: 'Header',
     data() {
-        return {
-            comune: null,
-            locales: null,
-            completeName: null
-        }
+      return {
+        comune: this.$store.getters.comune,
+        locales: this.$store.getters.locales,
+      };
     },
     methods: {
-        setLocale: function (locale) {
-            this.$i18n = locale;
-        },
+      setLocale: function (locale) {
+        this.$i18n = locale;
+      },
         logout() {
             window.location.href = "https://area-personale.comune.trento.it/spid-auth/Logout";
         },
     },
-    mounted() {
-        this.comune = this.$store.getters.comune;
-        this.locales = this.$store.getters.locales;
-        this.completeName = this.$store.getters.completeName;
-    }
-};
+  };
 </script>
 
 <style scoped>
-.dropdown-menu a {
-    width: 400%;
-}
+    .dropdown-menu a {
+        width: 400%;
+    }
 </style>
