@@ -40,7 +40,7 @@
                                                 <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
                                             </svg>
                                         </span>
-                                        <span class="d-none d-lg-block">{{ this.$store.getters.completeName}}</span>
+                                        <span class="d-none d-lg-block">{{ $store.getters.completeName}}</span>
                                         <svg class="icon icon-white d-none d-lg-block">
                                             <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
                                         </svg>
