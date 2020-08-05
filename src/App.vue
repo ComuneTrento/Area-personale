@@ -23,7 +23,7 @@
     },
     methods: {
     },
-    mounted() {
+    beforeMount() {
       this.$http.get('https://area-personale.comune.trento.it/secure/globo/auth').then(result => {
           this.$store.commit('SET_SPID_INFO', result.body);
       }, () => {
