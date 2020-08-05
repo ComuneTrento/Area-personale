@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div v-if="$store.getters.account" id="app">
         <Header></Header>
         <MainContent></MainContent>
         <Footer></Footer>
