@@ -175,6 +175,21 @@
       "download": "Scarica",
       "show_more": "+{num_results} pagamenti su {tot_results} totali",
       "show_less": "Mostra meno"
+    },
+    "pratiche": {
+      "filtro_pratiche": "Filtro pratiche",
+      "oggetto_istanza": "Oggetto",
+      "tipo_servizio": "Servizio",
+      "data_protocollo": "Data",
+      "protocollo": "Protocollo",
+      "fascicolo": "Fascicolo",
+      "stato_avanzamento": "Stato",
+      "tipo_attivazione": "Attivazione",
+      "accedi": "Accedi",
+      "nominativoAltro": "Nominativo",
+      "cfAltro": "Codice Fiscale",
+      "show_more": "+{num_results} pagamenti su {tot_results} totali",
+      "show_less": "Mostra meno"
     }
   }
 }

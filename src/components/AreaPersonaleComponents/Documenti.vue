@@ -3,22 +3,6 @@
         <div class="row pt-md-5">
             <div class="col d-lg-inline-flex">
                 <h2>{{ $t('documenti') }}</h2>
-                <!--<div class="dropdown ml-lg-5 mt-4 mt-lg-0">
-                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                            id="dropdownMenuButton-documenti" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                        {{$t('area_personale.documenti.filtro_documenti')}}
-                        <span class="badge badge-light">4</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-documenti">
-                        <a class="dropdown-item d-flex justify-content-between align-items-center"
-                           href="#">
-                            <span>filtro</span>
-                            <span class="badge badge-light">4</span>
-                        </a>
-                        <a class="dropdown-item" href="#">filtro</a>
-                    </div>
-                </div>-->
             </div>
         </div>
         <div class="py-4">

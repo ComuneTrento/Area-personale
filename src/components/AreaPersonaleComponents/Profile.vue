@@ -325,7 +325,7 @@ export default {
                 if (result.body.status === 'OK') {
                     if (user) {
                         this.userData = result.body.results;
-                        this.getListaFamigliaREST();
+                        this.getListaFamigliaCodiceFiscaleREST();
                     } else {
                         this.familyList.push(result.body.results);
                     }
@@ -354,14 +354,16 @@ export default {
                 location.reload()
             });
         },
-        getListaFamigliaREST() {
-            this.$http.post('https://area-personale.comune.trento.it/secure/globo/ComuneServices/rest/SrvGlobo/globoUrl', {
-                'name': 'getListaFamigliaREST',
-                'parameters': {
-                    'codiceFamiglia': this.userData.codiceFamiglia,
-                },
-                'account': this.$store.getters.account,
-            }, {headers: {'authorization': 'Basic dnVlOldLVGtjSmtQNHJyNA=='}}).then(result => {
+        getListaFamigliaCodiceFiscaleREST() {
+            this.$http.post('https://area-personale.comune.trento.it/secure/sdc/ComuneServices/rest/SrvGlobo/globoUrl',
+                {
+                    "name": "getListaFamigliaCodiceFiscaleREST",
+                    "parameters": {
+                        "codiceFiscaleRicerca": this.$store.getters.account,
+                    },
+                    "account": this.$store.getters.account,
+                }
+                , {headers: {'authorization': 'Basic dnVlOldLVGtjSmtQNHJyNA=='}}).then(result => {
                 if (result.body.status === 'OK') {
                     Object.keys(result.body.results.listaCodiceFiscale).forEach((familyMember) => {
                         this.getPersonaREST(familyMember, false);

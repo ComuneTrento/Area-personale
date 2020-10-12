@@ -175,6 +175,21 @@
       "download": "Download",
       "show_more": "+{num_results} payments out of {tot_results} in total",
       "show_less": "Show less"
+    },
+    "pratiche": {
+      "filtro_pratiche": "Application filters",
+      "oggetto_istanza": "Object",
+      "tipo_servizio": "Service",
+      "data_protocollo": "Date",
+      "protocollo": "Protocol",
+      "fascicolo": "Project",
+      "stato_avanzamento": "State",
+      "tipo_attivazione": "Activation",
+      "accedi": "Access",
+      "nominativoAltro": "Name",
+      "cfAltro": "Fiscal code",
+      "show_more": "+{num_results} applications out of {tot_results} in total",
+      "show_less": "Show less"
     }
   }
 }
