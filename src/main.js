@@ -5,8 +5,6 @@ import VueCookies from 'vue-cookies';
 import VueResource from 'vue-resource';
 import store from './store/index';
 
-import DomandaAttiva from './components/DomandaAttiva';
-import NidiDisponibili from './components/NidiDisponibili';
 import Profile from './components/AreaPersonaleComponents/Profile';
 import Homepage from './components/Homepage';
 import PersonalArea from './components/AreaPersonaleComponents/PersonalArea';
@@ -28,8 +26,6 @@ Vue.config.productionTip = false;
 
 const routes = [
   {path: '/login', component: Login},
-  {path: '/domanda', component: DomandaAttiva},
-  {path: '/nidi', component: NidiDisponibili},
   {path: '/profile', component: Profile, name: 'profile'},
   {path: '/personal', component: PersonalArea, name: 'personal', children: [
       { path: '', component: Pratiche },

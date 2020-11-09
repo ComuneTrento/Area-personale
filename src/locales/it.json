@@ -33,6 +33,8 @@
   "cerca_contenuti_in": "Cerca contenuti in",
   "novita": "Novità",
   "amministrazione_trasparente": "Amministrazione trasparente",
+  "informazioni": "Informazioni",
+  "informazioni_testo": "Portale dei servizi offerti al cittadino",
   "contatti": "Contatti",
   "newsletter": "Newsletter",
   "seguici_su": "Seguici su",
@@ -40,10 +42,10 @@
   "abitazione": "Abitazione",
   "istruzione": "Istruzione",
   "procedura_elettorale_e_voto": "Procedura elettorale e voto",
-  "tutti_gli_argomenti": "Tutti gli argomenti...",
+  "tutti_gli_argomenti": "<b>Tutti gli argomenti...</b>",
   "comune": "Comune di Trento",
   "provincia": "Provincia Autonoma di Trento",
-  "descrizione_comune": "Uno dei tanti Comuni d'Italia",
+  "descrizione_comune": "Area personale",
   "vai_alla_pagina": "Vai alla pagina: ",
   "cerca": "Cerca",
   "caricamento": "Caricamento...",
@@ -63,14 +65,24 @@
         "domande_e_iscrizioni": "Domande e iscrizioni",
         "segnalazioni": "Segnalazioni",
         "autorizzazioni_e_concessioni": "Autorizzazioni e concessioni",
-        "certificati_e_dichiarazioni": "Certificati e dichiarazioni"
+        "certificati_e_dichiarazioni": "Certificati e dichiarazioni",
+        "agricoltura": "Agricoltura",
+        "ambiente": "Ambiente",
+        "anagrafe_e_stato_civile": "Anagrafe e stato civile",
+        "appalti_pubblici": "Appalti pubblici",
+        "attivita_produttive_e_commercio": "Attività produttive e commercio",
+        "vedi_tutto": "<i>Vedi tutto</i>"
       },
       "documenti": {
         "progetti_e_attivita": "Progetti e attività",
         "determine_delibere_e_ordinanze": "Determine, delibere e ordinanze",
         "bandi": "Bandi",
         "consorsi": "Concorsi",
-        "albo_pretorio": "Albo pretorio"
+        "albo_pretorio": "Albo pretorio",
+        "modulistica": "Modulistica",
+        "documenti_funzionamento_interno": "Documenti funzionamento interno",
+        "normative": "Normative",
+        "documenti_tecnici_supporto": "Documenti (tecnici) di supporto"
       },
       "novita": {
         "notizie": "Notizie",
@@ -79,6 +91,11 @@
       },
       "amministrazione_trasparente": {
         "testo": "I dati personali pubblicati sono riutilizzabili solo alle condizioni previste dalla direttiva comunitaria 2003/98/CE e dal d.lgs. 36/2006"
+      },
+      "informazioni": {
+        "informazioni": "Informazioni",
+        "testo": "Portale dei servizi offerti al cittadino",
+        "urp": "Ufficio Relazioni con il pubblico"
       },
       "contatti": {
         "pec": "Posta Elettronica Certficata",
@@ -89,6 +106,7 @@
         "iscriviti": "Iscriviti"
       },
       "link_utili": {
+        "privacy": "Privacy",
         "media_policy": "Media policy",
         "legal_notes": "Note legali",
         "privacy_policy": "Privacy policy",
