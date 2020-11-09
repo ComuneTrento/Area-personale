@@ -8,7 +8,6 @@ import store from './store/index';
 import Profile from './components/AreaPersonaleComponents/Profile';
 import Homepage from './components/Homepage';
 import PersonalArea from './components/AreaPersonaleComponents/PersonalArea';
-import Login from './components/MainComponents/Login';
 import i18n from './i18n'
 import Documenti from './components/AreaPersonaleComponents/Documenti';
 import Pratiche from './components/AreaPersonaleComponents/Pratiche';
@@ -25,7 +24,6 @@ Vue.http.options.root = '/';
 Vue.config.productionTip = false;
 
 const routes = [
-  {path: '/login', component: Login},
   {path: '/profile', component: Profile, name: 'profile'},
   {path: '/personal', component: PersonalArea, name: 'personal', children: [
       { path: '', component: Pratiche },

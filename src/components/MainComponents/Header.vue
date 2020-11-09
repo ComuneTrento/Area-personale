@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                                 <!-- not logged -->
-                                <router-link v-else v-bind:to="'/login'" class="btn btn-primary btn-icon btn-full"><span
+                                <router-link v-else v-bind:to="'/'" class="btn btn-primary btn-icon btn-full"><span
                                         class="rounded-icon">
                                             <svg class="icon icon-primary"><use
                                                     xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-user"></use>

@@ -160,7 +160,7 @@
     },
     beforeMount() {
       if (!this.$store.getters.account) {
-        this.$router.push('/login');
+          window.location.href = this.$store.state.comune.links.sezione_servizi.servizi;
       }
     },
     methods: {
