@@ -75,11 +75,7 @@
                                         <span class="sr-only">{{ $t('caricamento') }}</span>
                                     </div>
                                 </div>
-                                <div v-if="errorMessage" class="col-auto">
-                                    <div class="alert alert-info">
-                                        {{ errorMessage }}
-                                    </div>
-                                </div>
+                                <div v-else-if="errorMessage" class="alert alert-info bg-white" role="alert">{{ errorMessage }}</div>
                                 <div v-if="userData">
                                     <h3 class="font-weight-bold text-primary mb-5">{{ userData.nome }}
                                         {{ userData.cognome }}</h3>
@@ -384,7 +380,7 @@ export default {
         this.familyMessage = ''
         this.icefMessage = ''
         if (!this.$store.getters.account) {
-            location.reload();
+            window.location.href = this.$store.state.comune.links.sezione_servizi.servizi;
         } else {
             this.getPersonaREST(this.$store.getters.account, true);
             this.getIcef(this.$store.getters.account);

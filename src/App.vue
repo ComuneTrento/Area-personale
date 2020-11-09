@@ -31,9 +31,12 @@ export default {
         this.$http.get('https://area-personale.comune.trento.it/secure/globo/auth').then(result => {
             this.$store.commit('SET_SPID_INFO', result.body);
             this.login = true
+            if (this.$router.currentRoute.path === '/') {
+                this.$router.push('/personal/pratiche');
+            }
         }, () => {
-            location.reload()
             this.login = false
+            window.location.href = this.$store.state.comune.links.sezione_servizi.servizi;
         });
     }
 };

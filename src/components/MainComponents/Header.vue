@@ -114,13 +114,13 @@
                         <div class="col-12">
                             <div class="it-header-center-content-wrapper">
                                 <div class="it-brand-wrapper">
-                                    <a v-bind:href="comune.links.comune">
+                                    <router-link to="/personal/pratiche">
                                         <img class="icon" src="Comune-di-Trento_header_logo.png">
                                         <div class="it-brand-text">
                                             <h2 class="no_toc">{{$t('comune')}}</h2>
                                             <h3 class="no_toc d-none d-md-block">{{$t('area_personale.titolo')}}</h3>
                                         </div>
-                                    </a>
+                                    </router-link>
                                 </div>
                                 <div class="it-right-zone">
                                     <div class="it-socials d-none d-md-flex">
@@ -193,14 +193,6 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="it-search-wrapper">
-                                        <span class="d-none d-md-block">{{$t('cerca')}}</span>
-                                        <a class="search-link rounded-icon" aria-label="Cerca" href="#">
-                                            <svg class="icon">
-                                                <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-search"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -226,46 +218,15 @@
                                         </button>
                                     </div>
                                     <div class="menu-wrapper">
-                                        <ul class="navbar-nav">
-                                            <li class="nav-item ">
-                                                <a class="nav-link" v-bind:href="comune.links.sezione_amministrazione.amministrazione">
-                                                    <span>{{$t('amministrazione')}}</span></a>
-                                            </li>
-                                            <li class="nav-item ">
-                                                <a class="nav-link"
-                                                   v-bind:href="comune.links.sezione_novita.novita"><span>{{$t('novita')}}</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item ">
-                                                <a class="nav-link"
-                                                   v-bind:href="comune.links.sezione_servizi.servizi"><span>{{$t('servizi')}}</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item active">
-                                                <a class="nav-link"
-                                                   v-bind:href="comune.links.sezione_documenti.documenti"><span>{{$t('documenti')}}</span></a>
-                                            </li>
-                                        </ul>
-                                        <ul class="navbar-nav navbar-secondary">
+                                        <ul v-for="(item, index) in comune.links.main_nav" v-bind:key="'main' + index" class="navbar-nav">
                                             <li class="nav-item ">
                                                 <a class="nav-link "
-                                                   v-bind:href="comune.links.abitazione">
-                                                    {{$t('abitazione')}}</a>
+                                                   v-bind:href="item.url" v-html="$t(item.name)"></a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                   v-bind:href="comune.links.istruzione">
-                                                    {{$t('istruzione')}}</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                   v-bind:href="comune.links.procedure_elettorali_e_voto">
-                                                    {{$t('procedura_elettorale_e_voto')}}</a>
-                                            </li>
+                                        </ul>
+                                        <ul v-for="(item, index) in comune.links.secondary_nav" v-bind:key="'secondary' + index" class="navbar-nav navbar-secondary">
                                             <li class="nav-item ">
-                                                <a class="nav-link" v-bind:href="comune.links.tutti_gli_argomenti">
-                                                    <span class="font-weight-bold">{{$t('tutti_gli_argomenti')}}</span>
-                                                </a>
+                                                <a class="nav-link " v-bind:href="item.url" v-html="$t(item.name)"></a>
                                             </li>
                                         </ul>
                                     </div>

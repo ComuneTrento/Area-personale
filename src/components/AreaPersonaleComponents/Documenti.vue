@@ -13,7 +13,7 @@
                             <span class="sr-only">{{ $t('caricamento') }}</span>
                         </div>
                     </div>
-                    <div v-else-if="errorMessage" class="alert alert-info">{{ errorMessage }}</div>
+                    <div v-else-if="errorMessage" class="alert alert-info bg-white" role="alert">{{ errorMessage }}</div>
                     <div v-else-if="documents">
                         <div class="table-responsive my-5 shadow">
                             <table class="table mb-0 bg-white">
@@ -133,7 +133,7 @@
                             <span class="sr-only">{{ $t('caricamento') }}</span>
                         </div>
                     </div>
-                    <div v-else-if="errorMessage" class="alert alert-info">{{ errorMessage }}</div>
+                    <div v-else-if="errorMessage" class="alert alert-info bg-white" role="alert">{{ errorMessage }}</div>
                     <div v-else-if="documents.length !== 0">
                         <div class="mb-4 float-right bootstrap-select-wrapper">
                             <label>{{ $t('order_by') }}</label>
@@ -337,9 +337,9 @@ export default {
                     item.chiave.split(',').forEach((pair) => {
                         let splitted = pair.split(':');
                         tmp[splitted[0].replace(/"/g, '').trim()] = splitted[1].replace(/"/g, '').trim();
-                        tmp['ID'] = item.valore;
-                        this.documents.push(tmp);
                     });
+                    tmp['ID'] = item.valore;
+                    this.documents.push(tmp);
                 });
             }, () => {
                 location.reload()
@@ -374,7 +374,7 @@ export default {
         this.documents = [];
         this.errorMessage = null;
         if (!this.$store.getters.account) {
-            location.reload();
+            window.location.href = this.$store.state.comune.links.sezione_servizi.servizi;
         } else {
             this.getDocumentiLista();
         }

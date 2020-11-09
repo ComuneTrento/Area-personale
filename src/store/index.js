@@ -20,55 +20,55 @@ export default new Vuex.Store({
     completeName: null,
     spidInfo: null,
     comune: {
-      indirizzo: "Via Belenzani, 19 - 38122 Trento",
+      indirizzo: "via Belenzani, 19 - 38122 Trento",
+      telefono: "+39 0461 884111",
+      fax:  "+39 0461 884457",
+      email: "comurp@comune.trento.it",
+      pec: "protocollo@pec.comune.trento.it",
+      sito: "www.comune.trento.it",
+      p_iva: "P.IVA 00355870221",
+      cf: "C.F. 00355870221",
       links: {
         comune: "https://www.comune.trento.it/",
         provincia: "http://www.provincia.tn.it/home/",
         sezione_amministrazione: {
-          amministrazione: "https://www.comune.trento.it/Comune/",
-          giunta_e_consiglio: "https://www.comune.trento.it/Sezioni-politiche/Giunta/Giunta-Comunale",
-          aree_di_competenza: "https://www.comune.trento.it/Comune/Organizzazione-comunale/Organigramma",
-          dipendenti: "https://www.comune.trento.it/Comune/Organizzazione-comunale/Personale",
-          luoghi: "https://www.comune.trento.it/Aree-tematiche/Cartografia",
-          associazioni_e_societa_partecipate: "https://www.comune.trento.it/Aree-tematiche/Aziende-e-societa-partecipate"
+          url: "https://www.comune.trento.it/Comune/",
+          items: []
         },
         sezione_servizi: {
-          servizi: "https://servizi.comune.trento.it/Servizi",
-          pagamenti: "https://www.comune.trento.it/Comunicazione/In-evidenza/Modalita-di-pagamento",
-          supporto: "https://www.google.com/",
-          domande_e_iscrizioni: "https://www.google.com/",
-          segnalazioni: "https://www.google.com/",
-          autorizzazioni_e_concessioni: "https://www.google.com/",
-          certificati_e_dichiarazioni: "https://www.google.com/"
+          url: "https://servizi.comune.trento.it/Servizi",
+          items: [
+            {name: "agricoltura", url: "https://servizi.comune.trento.it/Servizi/(view)/Agricoltura"},
+            {name: "ambiente", url: "https://servizi.comune.trento.it/Servizi/(view)/Ambiente"},
+            {
+              name: "anagrafe_e_stato_civile",
+              url: "https://servizi.comune.trento.it/Servizi/(view)/Anagrafe%20e%20stato%20civile"
+            },
+            {name: "appalti_pubblici", url: "https://servizi.comune.trento.it/Servizi/(view)/Appalti%20pubblici"},
+            {
+              name: "attivita_produttive_e_commercio",
+              url: "https://servizi.comune.trento.it/Servizi/(view)/Attivit%C3%A0%20produttive%20e%20commercio"
+            },
+            {name: "vedi_tutto", url: "https://servizi.comune.trento.it/Servizi"}
+          ]
         },
         sezione_novita: {
-          novita: "https://www.comune.trento.it/Comunicazione/Il-Comune-informa",
-          notizie: "https://www.google.com/",
-          eventi: "https://www.google.com/",
-          comunicati_stampa: "https://www.google.com/"
+          url: "https://www.comune.trento.it/Comunicazione/Il-Comune-informa",
+          items: []
         },
         sezione_documenti: {
-          documenti: "https://servizi.comune.trento.it/Documenti-e-dati",
-          progetti_e_attivita: "https://www.google.com/",
-          determine_delibere_e_ordinanze: "https://www.google.com/",
-          bandi: "https://www.google.com/",
-          concorsi: "https://www.google.com/",
-          albo_pretorio: "https://www.google.com/"
+          url: "https://servizi.comune.trento.it/Documenti-e-dati",
+          items: [
+            {name: "modulistica", url: "https://servizi.comune.trento.it/Documenti-e-dati/Modulistica"},
+            {name: "documenti_funzionamento_interno", url: "https://servizi.comune.trento.it/Documenti-e-dati/Documenti-funzionamento-interno"},
+            {name: "normative", url: "https://servizi.comune.trento.it/Documenti-e-dati/Normative"},
+            {name: "documenti_tecnici_supporto", url: "https://servizi.comune.trento.it/Documenti-e-dati/Documenti-tecnici-di-supporto"}
+          ]
         },
-        sezione_amministrazione_trasparente: {
-          amministrazione_trasparente: "https://www.google.com/"
-        },
-        sezione_contatti: {
-          contatti: "https://www.google.com/",
-          pec: "https://www.google.com/",
-          urp: "https://www.google.com/"
-        },
-        sezione_newsletter: {
-          newsletter: "https://www.google.com/",
-          newsletter_subscribe: "https://www.google.com/"
+        sezione_informazioni: {
+          urp: "https://servizi.comune.trento.it/Amministrazione/Strutture/URP"
         },
         sezione_seguici: {
-          seguici: "https://www.google.com/",
           designers_italia: "",
           twitter: "https://twitter.com/comunetn",
           medium: "",
@@ -78,16 +78,32 @@ export default new Vuex.Store({
           linkedin: "https://www.linkedin.com/company/progetto-trento-smart-city",
           youtube: "https://www.youtube.com/channel/UCOQDc17RT6D7oEGCLUwgPQw"
         },
-        sezione_link_utili: {
-          media_policy: "https://www.google.com/",
-          legal_notes: "https://www.google.com/",
-          privacy_policy: "https://www.google.com/",
-          mappa_del_sito: "https://www.google.com/"
+        informazioni: {
+          informazioni: ""
         },
-        abitazione: "https://servizi.comune.trento.it/Argomenti/Abitazione",
-        istruzione: "https://servizi.comune.trento.it/Argomenti/Istruzione",
-        procedure_elettorali_e_voto: "https://servizi.comune.trento.it/Argomenti/Procedura-elettorale-e-voto",
-        tutti_gli_argomenti: "https://servizi.comune.trento.it/Argomenti"
+        sezione_link_utili: [
+          {name: "privacy", url: "https://www.comune.trento.it/Comunicazione/In-evidenza/Accesso-e-privacy/Privacy"},
+          {name: "legal_notes", url: "https://www.comune.trento.it/Comunicazione/In-evidenza/Copyright"}
+        ],
+        main_nav: [
+          // {name: "amministrazione", url: "https://www.comune.trento.it/Comune/"},
+          // {name: "novita", url: "https://www.comune.trento.it/Comunicazione/Il-Comune-informa"},
+          // {name: "documenti", url: "https://servizi.comune.trento.it/Documenti-e-dati"}
+          {name: "servizi", url: "https://servizi.comune.trento.it/Servizi"},
+          {name: "", url: "#"},
+          {name: "", url: "#"},
+          {name: "", url: "#"},
+
+        ],
+        secondary_nav: [
+          {name: "abitazione", url: "https://servizi.comune.trento.it/Argomenti/Abitazione/"},
+          {name: "istruzione", url: "https://servizi.comune.trento.it/Argomenti/Istruzione"},
+          {
+            name: "procedura_elettorale_e_voto",
+            url: "https://servizi.comune.trento.it/Argomenti/Procedura-elettorale-e-voto"
+          },
+          {name: "tutti_gli_argomenti", url: "https://servizi.comune.trento.it/Argomenti"}
+        ],
       }
     }
   },
@@ -103,7 +119,7 @@ export default new Vuex.Store({
 
       return {
         "numero": ciString[1],
-        "comune_rilascio":ciString[2].replace("COMUNE", ""),
+        "comune_rilascio": ciString[2].replace("COMUNE", ""),
         "data_rilascio": ciString[3],
         "data_scadenza": ciString[4]
       }
@@ -126,7 +142,5 @@ export default new Vuex.Store({
       state.spidInfo = spidInfo;
     },
   },
-  actions: {
-
-  },
+  actions: {},
 });

@@ -29,7 +29,7 @@
                             <span class="sr-only">{{ $t('caricamento') }}</span>
                         </div>
                     </div>
-                    <div v-else-if="errorMessage" class="alert alert-info">{{ errorMessage }}</div>
+                    <div v-else-if="errorMessage" class="alert alert-info bg-white" role="alert">{{ errorMessage }}</div>
                     <div v-else-if="payments.length !== 0">
                         <div class="table-responsive my-5 shadow" id="payments_table">
                             <table class="table mb-0 bg-white">
@@ -176,7 +176,7 @@
                             <span class="sr-only">{{ $t('caricamento') }}</span>
                         </div>
                     </div>
-                    <div v-else-if="errorMessage" class="alert alert-info">{{ errorMessage }}</div>
+                    <div v-else-if="errorMessage" class="alert alert-info bg-white" role="alert">{{ errorMessage }}</div>
                     <div v-else>
                         <div class="mb-4 float-right bootstrap-select-wrapper">
                             <label>{{ $t('order_by') }}</label>
@@ -380,17 +380,17 @@ export default {
                 if (result.data.results.DebitoLista.length === 1 && result.data.results.DebitoLista[0].chiave.endsWith("non esistono debiti in archivio")) {
                     return this.errorMessage = result.data.results.DebitoLista[0].chiave;
                 }
-                result.data.results.DebitoLista.forEach((item) => {
+                let results = JSON.parse(JSON.stringify(result.data.results.DebitoLista))
+                results.forEach((item) => {
                     let tmp = {};
                     item.chiave.split(',').forEach((pair) => {
                         let splitted = pair.split(':');
                         let key = splitted[0].replace(/"/g, '').trim();
                         tmp[key] = splitted[1].replace(/"/g, '').trim();
-                        tmp['IUV'] = item.valore;
-                        this.payments.push(tmp);
                     })
+                    tmp['IUV'] = item.valore;
+                    this.payments.push(tmp);
                 });
-                
             }, () => {
                 location.reload()
             });
@@ -428,7 +428,7 @@ export default {
         this.payments = [];
         this.errorMessage = null;
         if (!this.$store.getters.account) {
-            location.reload();
+            window.location.href = this.$store.state.comune.links.sezione_servizi.servizi;
         } else {
             this.getPaymentsLista();
         }

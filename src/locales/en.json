@@ -43,7 +43,7 @@
   "tutti_gli_argomenti": "All topics...",
   "comune": "Municipality of Trento",
   "provincia": "Autonomous Province of Trento",
-  "descrizione_comune": "One of the many Municipalities of Italy",
+  "descrizione_comune": "Personal area",
   "vai_alla_pagina": "Go to page: ",
   "cerca": "Search",
   "caricamento": "Loading...",
@@ -63,14 +63,24 @@
         "domande_e_iscrizioni": "Demands and subscriptions",
         "segnalazioni": "Reports",
         "autorizzazioni_e_concessioni": "Authorizations and concessions",
-        "certificati_e_dichiarazioni": "Certificates and declatarions"
+        "certificati_e_dichiarazioni": "Certificates and declatarions",
+        "agricoltura": "Agriculture",
+        "ambiente": "Environment",
+        "anagrafe_e_stato_civile": "Registry and marital status",
+        "appalti_pubblici": "Public procurements",
+        "attivita_produttive_e_commercio": "Productive activities and trade",
+        "vedi_tutto": "<i>See all</i>"
       },
       "documenti": {
         "progetti_e_attivita": "Projects and activities",
         "determine_delibere_e_ordinanze": "Determines, resolutions e decrees",
         "bandi": "Notices",
         "consorsi": "Competitions",
-        "albo_pretorio": "Praetorian register"
+        "albo_pretorio": "Praetorian register",
+        "modulistica": "Forms",
+        "documenti_funzionamento_interno": "Internal functioning documents",
+        "normative": "Regulations",
+        "documenti_tecnici_supporto": "Support (technical) documents"
       },
       "novita": {
         "notizie": "News",
@@ -79,6 +89,11 @@
       },
       "amministrazione_trasparente": {
         "testo": "The published personal data are reusable only under the conditions provided for by the EU directive 2003/98 / EC and by the legislative decree 36/2006"
+      },
+      "informazioni": {
+        "informazioni": "Informazions",
+        "testo": "Portal of services offered to citizens",
+        "urp": "Public relations office"
       },
       "contatti": {
         "pec": "Certified Electronic Mail",
@@ -89,10 +104,11 @@
         "iscriviti": "Sign up"
       },
       "link_utili": {
+        "privacy": "Privacy",
         "media_policy": "Media policy",
-        "legal_notes": "Note legali",
+        "legal_notes": "Legal Notes",
         "privacy_policy": "Privacy policy",
-        "mappa_del_sito": "Mappa del sito"
+        "mappa_del_sito": "Site Map"
       }
     }
   },

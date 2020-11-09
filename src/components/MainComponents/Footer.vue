@@ -25,97 +25,48 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
                             <h4>
-                                <a v-if="comune.links.sezione_amministrazione.amministrazione" v-bind:href="comune.links.sezione_amministrazione.amministrazione" v-bind:title="$t('vai_alla_pagina') + $t('amministrazione')"> {{$t('amministrazione')}}</a>
+                                <a v-if="comune.links.sezione_amministrazione" v-bind:href="comune.links.sezione_amministrazione.url" v-bind:title="$t('vai_alla_pagina') + $t('amministrazione')"> {{$t('amministrazione')}}</a>
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li>
-                                        <a v-if="comune.links.sezione_amministrazione.giunta_e_consiglio" class="list-item" v-bind:href="comune.links.sezione_amministrazione.giunta_e_consiglio" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.amministrazione.giunta_e_consiglio')">{{$t('footer.sezioni.amministrazione.giunta_e_consiglio')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_amministrazione.aree_di_competenza" class="list-item" v-bind:href="comune.links.sezione_amministrazione.aree_di_competenza" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.amministrazione.aree_competenza')">{{$t('footer.sezioni.amministrazione.aree_competenza')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_amministrazione.dipendenti" class="list-item" v-bind:href="comune.links.sezione_amministrazione.dipendenti" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.amministrazione.dipendenti')">{{$t('footer.sezioni.amministrazione.dipendenti')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_amministrazione.luoghi" class="list-item" v-bind:href="comune.links.sezione_amministrazione.luoghi" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.amministrazione.luoghi')">{{$t('footer.sezioni.amministrazione.luoghi')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_amministrazione.associazioni_e_societa_partecipate" class="list-item" v-bind:href="comune.links.sezione_amministrazione.associazioni_e_societa_partecipate" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.amministrazione.associazioni_e_società_partecipate')">{{$t('footer.sezioni.amministrazione.associazioni_e_società_partecipate')}}</a>
+                                    <li v-for="(item, index) in comune.links.sezione_amministrazione.items" v-bind:key="index" class="list-inline-item">
+                                        <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.amministrazione.${item.name}`)" v-html="$t(`footer.sezioni.amministrazione.${item.name}`)"></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
                             <h4>
-                                <a v-if="comune.links.sezione_servizi.servizi" v-bind:href="comune.links.sezione_servizi.servizi" v-bind:title="$t('vai_alla_pagina') + $t('servizi')">{{$t('servizi')}}</a>
+                                <a v-if="comune.links.sezione_servizi" v-bind:href="comune.links.sezione_servizi.url" v-bind:title="$t('vai_alla_pagina') + $t('servizi')">{{$t('servizi')}}</a>
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li>
-                                        <a v-if="comune.links.sezione_servizi.pagamenti" class="list-item" v-bind:href="comune.links.sezione_servizi.pagamenti" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.servizi.pagamenti')">{{$t('footer.sezioni.servizi.pagamenti')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_servizi.supporto" class="list-item" v-bind:href="comune.links.sezione_servizi.supporto" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.servizi.sostegno')">{{$t('footer.sezioni.servizi.sostegno')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_servizi.domande_e_iscrizioni" class="list-item" v-bind:href="comune.links.sezione_servizi.domande_e_iscrizioni" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.servizi.domande_e_iscrizioni')">{{$t('footer.sezioni.servizi.domande_e_iscrizioni')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_servizi.segnalazioni" class="list-item" v-bind:href="comune.links.sezione_servizi.segnalazioni"
-                                           v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.servizi.segnalazioni')">{{$t('footer.sezioni.servizi.segnalazioni')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_servizi.autorizzazioni_e_concessioni" class="list-item" v-bind:href="comune.links.sezione_servizi.autorizzazioni_e_concessioni"
-                                           v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.servizi.autorizzazioni_e_concessioni')">{{$t('footer.sezioni.servizi.autorizzazioni_e_concessioni')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_servizi.certificati_e_dichiarazioni" class="list-item" v-bind:href="comune.links.sezione_servizi.certificati_e_dichiarazioni"
-                                           v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.servizi.certificati_e_dichiarazioni')">{{$t('footer.sezioni.servizi.certificati_e_dichiarazioni')}}</a>
+                                    <li v-for="(item, index) in comune.links.sezione_servizi.items" v-bind:key="index" class="list-inline-item">
+                                        <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.servizi.${item.name}`)" v-html="$t(`footer.sezioni.servizi.${item.name}`)"></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
                             <h4>
-                                <a v-if="comune.links.sezione_novita.novita" v-bind:href="comune.links.sezione_novita.novita" v-bind:title="$t('vai_alla_pagina') + $t('novita')">{{$t('novita')}}</a>
+                                <a v-if="comune.links.sezione_novita" v-bind:href="comune.links.sezione_novita.novita" v-bind:title="$t('vai_alla_pagina') + $t('novita')">{{$t('novita')}}</a>
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li>
-                                        <a v-if="comune.links.sezione_novita.notizie" class="list-item" v-bind:href="comune.links.sezione_novita.notizie" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.novita.notizie')">{{$t('footer.sezioni.novita.notizie')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_novita.eventi" class="list-item" v-bind:href="comune.links.sezione_novita.eventi" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.novita.eventi')">{{$t('footer.sezioni.novita.eventi')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_novita.comunicati_stampa" class="list-item" v-bind:href="comune.links.sezione_novita.comunicati_stampa" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.novita.comunicati_stampa')">{{$t('footer.sezioni.novita.comunicati_stampa')}}</a>
+                                    <li v-for="(item, index) in comune.links.sezione_novita.items" v-bind:key="index" class="list-inline-item">
+                                        <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.novita.${item.name}`)" v-html="$t(`footer.sezioni.novita.${item.name}`)"></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6">
                             <h4>
-                                <a v-if="comune.links.sezione_documenti.documenti" v-bind:href="comune.links.sezione_documenti.documenti" v-bind:title="$t('vai_alla_pagina') + $t('documenti')">{{$t('documenti')}}</a>
+                                <a v-if="comune.links.sezione_documenti" v-bind:href="comune.links.sezione_documenti.url" v-bind:title="$t('vai_alla_pagina') + $t('documenti')">{{$t('documenti')}}</a>
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li>
-                                        <a v-if="comune.links.sezione_documenti.progetti_e_attivita" class="list-item" v-bind:href="comune.links.sezione_documenti.progetti_e_attivita" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.documenti.progetti_e_attivita')">{{$t('footer.sezioni.documenti.progetti_e_attivita')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_documenti.determine_delibere_e_ordinanze" class="list-item" v-bind:href="comune.links.sezione_documenti.determine_delibere_e_ordinanze"
-                                           v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.documenti.determine_delibere_e_ordinanze')">{{$t('footer.sezioni.documenti.determine_delibere_e_ordinanze')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_documenti.bandi" class="list-item" v-bind:href="comune.links.sezione_documenti.bandi" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.documenti.bandi')">{{$t('footer.sezioni.documenti.bandi')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_documenti.concorsi" class="list-item" v-bind:href="comune.links.sezione_documenti.concorsi" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.documenti.consorsi')">{{$t('footer.sezioni.documenti.consorsi')}}</a>
-                                    </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_documenti.albo_pretorio" class="list-item" v-bind:href="comune.links.sezione_documenti.albo_pretorio" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.documenti.albo_pretorio')">{{$t('footer.sezioni.documenti.albo_pretorio')}}</a>
+                                    <li v-for="(item, index) in comune.links.sezione_documenti.items" v-bind:key="index" class="list-inline-item">
+                                        <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.documenti.${item.name}`)" v-html="$t(`footer.sezioni.documenti.${item.name}`)"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -124,53 +75,76 @@
                 </section>
                 <section class="py-4 border-white border-top">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 pb-2">
-                            <h4>
-                                <a v-if="comune.links.sezione_amministrazione_trasparente.amministrazione_trasparente"  v-bind:href="comune.links.sezione_amministrazione_trasparente.amministrazione_trasparente" v-bind:title="$t('vai_alla_pagina') + $t('amministrazione_trasparente')">{{$t('amministrazione_trasparente')}}</a>
-                            </h4>
-                            <p>{{$t('footer.sezioni.amministrazione_trasparente.testo')}}</p>
+                        <div class="col-lg-4 col-md-4 pb-2">
+                            <h4><a>{{$t('footer.sezioni.informazioni.informazioni')}}</a></h4>
+                            <div class="clearfix">
+                                <p>{{$t('footer.sezioni.informazioni.testo')}}</p>
+                                <p>
+                                    <a v-bind:href="comune.links.sezione_informazioni.urp" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.informazioni.urp`)" v-html="$t(`footer.sezioni.informazioni.urp`)"></a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 pb-2">
+                        <div class="col-lg-4 col-md-4 pb-2">
                             <h4>
-                                <a v-if="comune.links.sezione_contatti.contatti"  v-bind:href="comune.links.sezione_contatti.contatti" v-bind:title="$t('vai_alla_pagina') + $t('contatti')">{{$t('contatti')}}</a>
+                                <a>{{$t('contatti')}}</a>
                             </h4>
-                            <p>
-                                <strong>{{$t('comune')}}</strong><br>
-                                {{comune.indirizzo}}
-                            </p>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li>
-                                        <a v-if="comune.links.sezione_contatti.pec"  class="list-item" v-bind:href="'mailto:' + comune.links.sezione_contatti.pec"
-                                           v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.contatti.pec')">{{$t('footer.sezioni.contatti.pec')}}</a>
+                                    <li v-if="comune.indirizzo">
+                                        <a class="list-item" v-bind:href="'http://maps.google.com/maps?q=' +  comune.indirizzo">
+                                            <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use></svg>
+                                            {{comune.indirizzo}}
+                                        </a>
                                     </li>
-                                    <li>
-                                        <a v-if="comune.links.sezione_contatti.urp"  class="list-item" v-bind:href="'mailto:' + comune.links.sezione_contatti.urp"
-                                           v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.contatti.urp')">{{$t('footer.sezioni.contatti.urp')}}</a>
+                                    <li v-if="comune.telefono">
+                                        <a class="list-item" v-bind:href="'tel:'+comune.telefono">
+                                            <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-telephone"></use></svg>
+                                            {{comune.telefono}}
+                                        </a>
+                                    </li>
+                                    <li v-if="comune.fax">
+                                        <a class="list-item" v-bind:href="'tel:'+comune.fax">
+                                            <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-file"></use></svg>
+                                            {{comune.fax}}
+                                        </a>
+                                    </li>
+                                    <li v-if="comune.email">
+                                        <a class="list-item" v-bind:href="'mailto:'+comune.email">
+                                            <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-mail"></use></svg>
+                                            {{comune.email}}
+                                        </a>
+                                    </li>
+                                    <li v-if="comune.pec">
+                                        <a class="list-item" v-bind:href="'mailto:'+comune.pec">
+                                            <svg class="icon icon-sm icon-warning"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-mail"></use></svg>
+                                            {{comune.pec}}
+                                        </a>
+                                    </li>
+                                    <li v-if="comune.sito">
+                                        <a class="list-item" v-bind:href="comune.sito">
+                                            <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-link"></use></svg>
+                                            {{comune.sito}}
+                                        </a>
+                                    </li>
+                                    <li v-if="comune.p_iva">
+                                        <a class="list-item">
+                                            <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-card"></use></svg>
+                                            {{comune.p_iva}}
+                                        </a>
+                                    </li>
+                                    <li v-if="comune.cf">
+                                        <a class="list-item">
+                                            <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-card"></use></svg>
+                                            {{comune.cf}}
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 pb-2">
+                        
+                        <div class="col-lg-4 col-md-4 pb-2">
                             <h4>
-                                <a v-if="comune.links.sezione_newsletter.newsletter" v-bind:href="comune.links.sezione_newsletter.newsletter" v-bind:title="$t('vai_alla_pagina') + $t('newsletter')">{{$t('newsletter')}}</a>
-                            </h4>
-                            <form v-if="comune.links.sezione_newsletter.newsletter_subscribe" v-bind:action="comune.links.sezione_newsletter.newsletter_subscribe" class="form-newsletter" method="post">
-                                <label class="text-white font-weight-semibold active" for="input-newsletter"
-                                       style="transition: none 0s ease 0s;">{{$t('footer.sezioni.newsletter.iscriviti_per_ricevere')}}</label>
-                                <input class="form-control" id="input-newsletter" name="input-newsletter"
-                                       placeholder="mail@example.com" type="email">
-                                <button class="btn btn-primary btn-icon" type="submit">
-                                    <svg class="icon icon-white">
-                                        <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-mail"></use>
-                                    </svg>
-                                    <span>{{$t('footer.sezioni.newsletter.iscriviti')}}</span>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="col-lg-3 col-md-3 pb-2">
-                            <h4>
-                                <a v-if="comune.links.sezione_seguici.seguici" v-bind:href="comune.links.sezione_seguici.seguici" v-bind:title="$t('vai_alla_pagina') + $t('seguici_su')">{{$t('seguici_su')}}</a>
+                                <a>{{$t('seguici_su')}}</a>
                             </h4>
                             <ul class="list-inline text-left social">
                                 <li v-if="comune.links.sezione_seguici.designers_italia" class="list-inline-item">
@@ -235,21 +209,12 @@
                 </section>
             </div>
         </div>
-        <div class="it-footer-small-prints clearfix">
+        <div v-if="comune.links.sezione_link_utili" class="it-footer-small-prints clearfix">
             <div class="container">
                 <h3 class="sr-only">{{$t('link_utili')}}</h3>
                 <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-                    <li class="list-inline-item">
-                        <a href="#" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.link_utili.media_policy')">{{$t('footer.sezioni.link_utili.media_policy')}}</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.link_utili.legal_notes')">{{$t('footer.sezioni.link_utili.legal_notes')}}</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.link_utili.privacy_policy')">{{$t('footer.sezioni.link_utili.privacy_policy')}}</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" v-bind:title="$t('vai_alla_pagina') + $t('footer.sezioni.link_utili.mappa_del_sito')">{{$t('footer.sezioni.link_utili.mappa_del_sito')}}</a>
+                    <li v-for="(item, index) in comune.links.sezione_link_utili" v-bind:key="index" class="list-inline-item">
+                        <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.link_utili.${item.name}`)">{{$t(`footer.sezioni.link_utili.${item.name}`)}}</a>
                     </li>
                 </ul>
             </div>

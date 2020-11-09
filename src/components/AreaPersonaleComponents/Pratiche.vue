@@ -3,7 +3,7 @@
         <div class="row pt-md-5">
             <div class="col d-lg-inline-flex">
                 <h2>{{ $t('le_mie_pratiche') }}</h2>
-                <div class="dropdown ml-lg-5 mt-4 mt-lg-0">
+                <!--div class="dropdown ml-lg-5 mt-4 mt-lg-0">
                     <button class="btn btn-secondary dropdown-toggle" type="button"
                             id="dropdownMenuButton-pratiche" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -32,10 +32,42 @@
                             <span class="badge badge-light">{{ filters.PerContoDiAltri.num }}</span>
                         </a>
                     </div>
-                </div>
+                </div-->
             </div>
         </div>
         <div class="py-4">
+            <div class="mb-5">
+                <ul class="nav nav-tabs auto no-border no-background">
+                    <li class="nav-item">
+                        <a v-bind:class="[currentFilter === 'Tutti' ? 'active' : '', 'nav-link']" href="#"
+                           @click="updateApplications('Tutti', $event)">
+                            <span class="mr-2">{{ filters.Tutti.name }}</span>
+                            <span class="badge badge-light">{{ filters.Tutti.num }}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a v-bind:class="[currentFilter === 'Propri' ? 'active' : '', 'nav-link']" href="#"
+                           @click="updateApplications('Propri', $event)">
+                            <span class="mr-2">{{ filters.Propri.name }}</span>
+                            <span class="badge badge-light">{{ filters.Propri.num }}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a v-bind:class="[currentFilter === 'DaAltri' ? 'active' : '', 'nav-link']" href="#"
+                           @click="updateApplications('DaAltri', $event)">
+                            <span class="mr-2">{{ filters.DaAltri.name }}</span>
+                            <span class="badge badge-light">{{ filters.DaAltri.num }}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a v-bind:class="[currentFilter === 'PerContoDiAltri' ? 'active' : '', 'nav-link']" href="#"
+                           @click="updateApplications('PerContoDiAltri', $event)">
+                            <span class="mr-2">{{ filters.PerContoDiAltri.name }}</span>
+                            <span class="badge badge-light">{{ filters.PerContoDiAltri.num }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="row d-none d-sm-block">
                 <div class="col">
                     <div v-if="applications.length===0 && !errorMessage">
@@ -43,9 +75,9 @@
                             <span class="sr-only">{{ $t('caricamento') }}</span>
                         </div>
                     </div>
-                    <div v-else-if="errorMessage" class="alert alert-info">{{ errorMessage }}</div>
+                    <div v-else-if="errorMessage" class="alert alert-info bg-white" role="alert">{{ errorMessage }}</div>
                     <div v-else-if="applications">
-                        <div class="table-responsive my-5 shadow">
+                        <div class="table-responsive mb-5 shadow">
                             <table class="table mb-0 bg-white">
                                 <thead>
                                 <tr>
@@ -177,7 +209,7 @@
                             <span class="sr-only">{{ $t('caricamento') }}</span>
                         </div>
                     </div>
-                    <div v-else-if="errorMessage" class="alert alert-info">{{ errorMessage }}</div>
+                    <div v-else-if="errorMessage" class="alert alert-info bg-white" role="alert">{{ errorMessage }}</div>
                     <div v-else-if="applications.length !== 0">
                         <div class="mb-4 float-right bootstrap-select-wrapper">
                             <label>{{ $t('order_by') }}</label>
@@ -495,7 +527,7 @@ export default {
         this.applications = [];
         this.errorMessage = null;
         if (!this.$store.getters.account) {
-            location.reload();
+            window.location.href = this.$store.state.comune.links.sezione_servizi.servizi;
         } else {
             this.getSelfApplications(true);
         }
