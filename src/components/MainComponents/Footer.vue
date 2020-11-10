@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
                             <h4>
-                                <a v-if="comune.links.sezione_novita" v-bind:href="comune.links.sezione_novita.novita" v-bind:title="$t('vai_alla_pagina') + $t('novita')">{{$t('novita')}}</a>
+                                <a v-if="comune.links.sezione_novita" v-bind:href="comune.links.sezione_novita.url" v-bind:title="$t('vai_alla_pagina') + $t('novita')">{{$t('novita')}}</a>
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
