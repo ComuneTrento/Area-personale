@@ -121,9 +121,9 @@
                                         </a>
                                     </li>
                                     <li v-if="comune.sito">
-                                        <a class="list-item" v-bind:href="comune.sito">
+                                        <a class="list-item" href="https://www.comune.trento.it">
                                             <svg class="icon icon-sm icon-white"><use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-link"></use></svg>
-                                            {{comune.sito}}
+                                            www.comune.trento.it
                                         </a>
                                     </li>
                                     <li v-if="comune.p_iva">
