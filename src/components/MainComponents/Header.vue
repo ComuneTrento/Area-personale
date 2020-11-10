@@ -117,8 +117,8 @@
                                     <router-link to="/personal/pratiche">
                                         <img class="icon" src="Comune-di-Trento_header_logo.png">
                                         <div class="it-brand-text">
-                                            <h2 class="no_toc">{{$t('comune')}}</h2>
-                                            <h3 class="no_toc d-none d-md-block">{{$t('area_personale.titolo')}}</h3>
+                                            <h2 class="no_toc">{{$t('titolo')}}</h2>
+                                            <h3 class="no_toc d-none d-md-block">{{$t('sottotitolo')}}</h3>
                                         </div>
                                     </router-link>
                                 </div>

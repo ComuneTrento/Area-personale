@@ -11,9 +11,9 @@
                                         <use xlink:href="bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
                                     </svg>
                                     <div class="it-brand-text">
-                                        <h2 class="no_toc">{{$t('comune')}}</h2>
+                                        <h2 class="no_toc">{{$t('titolo')}}</h2>
                                         <h3 class="no_toc d-none d-md-block">
-                                            {{$t('descrizione_comune')}}
+                                            {{$t('sottotitolo')}}
                                         </h3>
                                     </div>
                                 </a>

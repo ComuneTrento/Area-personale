@@ -41,9 +41,10 @@
   "istruzione": "Education",
   "procedura_elettorale_e_voto": "Electoral procedure and vote",
   "tutti_gli_argomenti": "All topics...",
+  "titolo": "Personal Area",
+  "sottotitolo": "of the Municipality of Trento",
   "comune": "Municipality of Trento",
   "provincia": "Autonomous Province of Trento",
-  "descrizione_comune": "Personal area",
   "vai_alla_pagina": "Go to page: ",
   "cerca": "Search",
   "caricamento": "Loading...",
@@ -121,7 +122,6 @@
     "scopri": "Find out more."
   },
   "area_personale": {
-    "titolo": "Personal area",
     "bentornato": "Welcome",
     "bentornata": "Welcome",
     "i_miei_documenti": "My documents",

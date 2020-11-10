@@ -43,9 +43,10 @@
   "istruzione": "Istruzione",
   "procedura_elettorale_e_voto": "Procedura elettorale e voto",
   "tutti_gli_argomenti": "<b>Tutti gli argomenti...</b>",
+  "titolo": "Area Personale",
+  "sottotitolo": "del Comune di Trento",
   "comune": "Comune di Trento",
   "provincia": "Provincia Autonoma di Trento",
-  "descrizione_comune": "Area personale",
   "vai_alla_pagina": "Vai alla pagina: ",
   "cerca": "Cerca",
   "caricamento": "Caricamento...",
@@ -123,7 +124,6 @@
     "scopri": "Scopri di piu."
   },
   "area_personale": {
-    "titolo": "Area personale",
     "bentornato": "Bentornato",
     "bentornata": "Bentornata",
     "i_miei_documenti": "I miei documenti",
