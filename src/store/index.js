@@ -25,7 +25,7 @@ export default new Vuex.Store({
       fax:  "+39 0461 884457",
       email: "comurp@comune.trento.it",
       pec: "protocollo@pec.comune.trento.it",
-      sito: "www.comune.trento.it",
+      sito: "https://www.comune.trento.it",
       p_iva: "P.IVA 00355870221",
       cf: "C.F. 00355870221",
       links: {
