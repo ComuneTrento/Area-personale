@@ -29,7 +29,7 @@
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li v-for="(item, index) in comune.links.sezione_amministrazione.items" v-bind:key="index" class="list-inline-item">
+                                    <li v-for="(item, index) in comune.links.sezione_amministrazione.items" v-bind:key="'amministrazione_' + index" class="list-item">
                                         <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.amministrazione.${item.name}`)" v-html="$t(`footer.sezioni.amministrazione.${item.name}`)"></a>
                                     </li>
                                 </ul>
@@ -41,7 +41,7 @@
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li v-for="(item, index) in comune.links.sezione_servizi.items" v-bind:key="index" class="list-inline-item">
+                                    <li v-for="(item, index) in comune.links.sezione_servizi.items" v-bind:key="'servizi_' + index" class="list-item">
                                         <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.servizi.${item.name}`)" v-html="$t(`footer.sezioni.servizi.${item.name}`)"></a>
                                     </li>
                                 </ul>
@@ -53,7 +53,7 @@
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li v-for="(item, index) in comune.links.sezione_novita.items" v-bind:key="index" class="list-inline-item">
+                                    <li v-for="(item, index) in comune.links.sezione_novita.items" v-bind:key="'novita_' + index" class="list-item">
                                         <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.novita.${item.name}`)" v-html="$t(`footer.sezioni.novita.${item.name}`)"></a>
                                     </li>
                                 </ul>
@@ -65,7 +65,7 @@
                             </h4>
                             <div class="link-list-wrapper">
                                 <ul class="footer-list link-list clearfix">
-                                    <li v-for="(item, index) in comune.links.sezione_documenti.items" v-bind:key="index" class="list-inline-item">
+                                    <li v-for="(item, index) in comune.links.sezione_documenti.items" v-bind:key="'documenti_' + index" class="list-item">
                                         <a v-bind:href="item.url" v-bind:title="$t('vai_alla_pagina') + $t(`footer.sezioni.documenti.${item.name}`)" v-html="$t(`footer.sezioni.documenti.${item.name}`)"></a>
                                     </li>
                                 </ul>
