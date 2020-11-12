@@ -66,9 +66,9 @@ maintenance:
 name: Area Personale del Comune di Trento
 platforms:
   - web
-releaseDate: '2020-06-30'
+releaseDate: '2020-11-12'
 softwareType: addon
-softwareVersion: 1.0.0
+softwareVersion: 1.1.0
 url: 'https://github.com/ComuneTrento/Area-personale'
 usedBy:
   - Comune di Trento
