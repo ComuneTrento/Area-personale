@@ -12,7 +12,7 @@
     "@babel/helper-compilation-targets": "^7.10.4",
     "bootstrap-italia": "^1.4.0",
     "core-js": "3.6.4",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "vue": "2.6.11",
     "vue-cookies": "1.6.1",
     "vue-i18n": "8.16.0",
