@@ -43,6 +43,8 @@ description:
     shortDescription: Area personale del Cittadino
 developmentStatus: stable
 it:
+  riuso:
+    codiceIPA: c_l378
   conforme:
     gdpr: false
     lineeGuidaDesign: true
